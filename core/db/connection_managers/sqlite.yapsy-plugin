@@ -1,0 +1,9 @@
+[Core]
+Name = SQLite Connection Manager
+Module = sqlite
+
+[Documentation]
+Author = Ajeet Singh
+Version = 1.0
+Description = This plugin helps in creating a connection with SQLite database
+
