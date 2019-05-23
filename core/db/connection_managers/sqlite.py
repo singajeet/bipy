@@ -20,35 +20,39 @@ class ConnectionManager(categories.SQLite):
     Session = None
     __instance = None
 
-    """def __new__(cls, val):
+    def __new__(cls):
+        """
          The singleton constructor for this
 
             Args:
                 cls (object): cls
-                val (object): obj
 
             Return:
                 ConnectionManager: An singleton instance of this
-        
+        """
         if ConnectionManager.__instance is None:
             ConnectionManager.__instance = object.__new__(cls)
-        ConnectionManager.__instance.val = val
         return ConnectionManager.__instance
 
-     def __init__(self, conn_string):
-         Default consttructor of the Connection Manager class
+    def __init__(self):
+        """
+            Default consttructor of the Connection Manager class
+        """
+        categories.SQLite.__init__()
+
+    def connect(self, conn_string):
+        """Setups the connection using the connection string passed as param
 
             Args:
-                conn_string (String): The connection string to be used by
-                                        database engine for making connection
-        
+                conn_string (string): The connection string to connect with the
+                                        database
+        """
         self.connection_string = conn_string
         self.engine = create_engine(conn_string)
         self.Session = sessionmaker()
         self.Session.configure(bind=self.engine)
         self.ConnectedSession = self.Session()
         self.inspector = inspect(self.engine)
-    """
 
     def get_connection_string(self):
         """Returns the connection string used in this for mmaking

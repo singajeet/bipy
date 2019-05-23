@@ -5,6 +5,7 @@
 """
 from sqlalchemy import Column, String
 from sqlalchemy.ext.declarative import declarative_base
+from bipy.core.db import categories
 
 Base = declarative_base()
 
@@ -31,7 +32,7 @@ class MetaModel(Base):
         return "SQLiteMetaModel (Name=%s, Type=%s)" % (self.name, self.type)
 
 
-class Browser:
+class Browser(categories.SQLite):
     """
         An SQLite Metadata browser class implemented using sqlite_master table and
         SQLAlchemy's inspector function. It helps to browse through Tables, Views,
@@ -51,16 +52,20 @@ class Browser:
     inspector = None
     __instance = None
 
-    def __new__(cls, val):
+    def __new__(cls):
         """The singleton constructor for this class
         """
         if Browser.__instance is None:
             Browser.__instance = object.__new__(cls)
-        Browser.__instance.val = val
         return Browser.__instance
 
-    def __init__(self, connection):
+    def __init__(self):
         """Default constructor of the SQLite's browser class
+        """
+        categories.SQLite.__init__()
+
+    def connect(self, connection):
+        """Connects the browser to an database using connection passed as param
 
             Args:
                 connection (ConnectionManager): An connection object to SQLite DB

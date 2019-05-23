@@ -11,12 +11,14 @@
 from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
 from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
 from bipy.core.db.repository.objects import WarehouseView, WarehouseMaterializedView
+from bipy.core.db import categories
 
 
-class MetaGenerator:
+
+class MetaGenerator(categories.SQLite):
     """ This class will deal with the core logic of generating metadata using
     an SQLite objects passed as list to the function parameters. This class will
-    not browse database to get list of objects but instead an list of each DB 
+    not browse database to get list of objects but instead an list of each DB
     object will be passed to respective function. Further, browser object will be
     passed to get the value of additional attributes. This will help in keeping GUI,
     DB Browsing, Meta generation and saving objects in repository loosely coupled.
@@ -25,14 +27,17 @@ class MetaGenerator:
 
     __instance = None
 
-    def __new__(cls, val):
+    def __new__(cls):
+        """Singleton class implementation
+        """
         if MetaGenerator.__instance is None:
             MetaGenerator.__instance = object.__new__(cls)
-        MetaGenerator.__instance.val = val
         return MetaGenerator.__instance
 
     def __init__(self):
-        pass
+        """Default constructor
+        """
+        categories.SQLite.__init__()
 
     def generate_database_meta(self, db_type, conn_str, username, password):
         """Generates an repository database object with the parameters passed
@@ -56,8 +61,7 @@ class MetaGenerator:
 
             Args:
                 schema_list (List): An list of schema names
-                database_id (Integer): An database id field from repository
-                                        object of type - WarehouseDatabase
+                database_id (Integer): An database id of db instance (WarehouseDatabase)
         """
         schemas = []
         for schema in schema_list:
@@ -72,8 +76,7 @@ class MetaGenerator:
 
             Args:
                 table_list (Dict): A list of table names
-                schema_id (string): A uniue id of schema from repository
-                                    object - WarehouseSchema
+                schema_id (Integer): A uniue id of schema instance (WarehouseSchema)
                 browser (Browser): An database browser object
         """
         tables = []
@@ -95,8 +98,7 @@ class MetaGenerator:
 
             Args:
                 view_list (List): A list of view names
-                schema_id (string): A unique id of schema from repository
-                                        object - WarehouseSchema
+                schema_id (Integer): A unique id of schema instance (WarehouseSchema)
                 browser (Browser): An database browser object
         """
         views = []
@@ -109,17 +111,64 @@ class MetaGenerator:
                 if col['type'].__str__().__eq__('INTEGER'):
                     view_obj.contains_numeric_column = True
             view_obj.schema_id = schema_id
-            views.extend(view)
+            views.extend(view_obj)
         return views
 
-    def generate_mviews_meta(self, mview_list):
-        pass
+    def generate_mviews_meta(self, mview_list, schema_id, browser):
+        """Generates an list of Materialized View as repo objects
+            **WARNING**: Materialized Views are not supported in SQLite
+                         Please don't use this method
+            Args:
+                mview_list (List): A list of materialized view names
+                schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                browser (Browser): An database browser instance
+        """
+        raise NotImplementedError("Materialized Views are not supported by SQLite")
 
-    def generate_procedures_meta(self, proc_list):
-        pass
+    def generate_procedures_meta(self, proc_list, schema_id, browser):
+        """Generates an list of Procedures as repo objects
+            **WARNING**: Procedures are not supported in SQLite
+                            Please don't use this method
+            Args:
+                 proc_list (List): A list of procedure names
+                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                 browser (Browser): An database browser instance
+        """
+        raise NotImplementedError("Procedures are not supported by SQLite")
 
-    def generate_functions_meta(self, func_list):
-        pass
+    def generate_functions_meta(self, func_list, schema_id, browser):
+        """Generates an list of Functions as repo objects
+            **WARNING**: Functions are not supported in SQLite
+                            Please don't use this method
+            Args:
+                 func_list (List): A list of function names
+                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                 browser (Browser): An database browser instance
+        """
+        raise NotImplementedError("Functions are not supported by SQLite")
 
-    def generate_columns_meta(self, column_list):
-        pass
+    def generate_columns_meta(self, column_list, schema_id, table_id, table_name, browser):
+        """Generates an list of columns as repo objects
+
+            Args:
+                 column_list (List): A list of procedure names
+                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                 table_id (Integer): A unique id of table instance (WarehouseTable)
+                 table_name (string): Name of the table containing column
+                 browser (Browser): An database browser instance
+        """
+        columns = []
+        for column in column_list:
+            col_obj = WarehouseColumn()
+            col_obj.name = column
+            col_obj.column_type = browser.get_column_type(table_name, column)
+            pk_cols = browser.get_primary_key_columns(table_name)
+            for pk in pk_cols:
+                if pk.__eq__(column):
+                    col_obj.is_primary_key = True
+            if col_obj.column_type.__eq__('INTEGER'):
+                col_obj.is_fact_candidate = True
+            if col_obj.column_type.__ne__('INTEGER'):
+                col_obj.is_dim_candidate = True
+            columns.extend(col_obj)
+        return columns
