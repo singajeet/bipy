@@ -5,6 +5,7 @@
 """
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
+#from bipy.core.db.categories import SQLite
 import bipy.core.db.categories as categories
 
 
@@ -34,11 +35,13 @@ class ConnectionManager(categories.SQLite):
             ConnectionManager.__instance = object.__new__(cls)
         return ConnectionManager.__instance
 
+
     def __init__(self):
         """
             Default consttructor of the Connection Manager class
         """
-        categories.SQLite.__init__()
+        categories.SQLite.__init__(self)
+
 
     def connect(self, conn_string):
         """Setups the connection using the connection string passed as param

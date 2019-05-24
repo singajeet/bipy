@@ -5,5 +5,5 @@ Module = sqlite
 [Documentation]
 Author = Ajeet Singh
 Version = 1.0
-Description = This plugin helps in generating metadata to be stored in repository using an browser instance
+Description = This plugin helps in generating metadata objects using an browser instance and to be stored in repository
 

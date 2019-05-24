@@ -55,30 +55,36 @@ class MetaGenerator(categories.SQLite):
         database.password = password
         return database
 
-    def generate_schemas_meta(self, schema_list, database_id):
+    def generate_schemas_meta(self, schema_list, database):
         """Generates an list of repository schema object and fill in the
             required info
 
             Args:
                 schema_list (List): An list of schema names
-                database_id (Integer): An database id of db instance (WarehouseDatabase)
+                database (WarehouseDatabase): An database instance (WarehouseDatabase)
         """
+        if database is None:
+            raise ValueError("Database parameter should not be a None value")
         schemas = []
         for schema in schema_list:
             schema_obj = WarehouseSchema()
             schema_obj.name = schema
-            schema_obj.database_id = database_id
+            schema_obj.database_id = database.id
             schemas.extend(schema_obj)
         return schemas
 
-    def generate_tables_meta(self, table_list, schema_id, browser):
+    def generate_tables_meta(self, table_list, schema, browser):
         """Generates an list of tables as repository objects
 
             Args:
                 table_list (Dict): A list of table names
-                schema_id (Integer): A uniue id of schema instance (WarehouseSchema)
+                schema (WarehouseSchema): A schema instance (WarehouseSchema)
                 browser (Browser): An database browser object
         """
+        if schema is None:
+            raise ValueError("Schema parameter should not be a None value")
+        if browser is None:
+            raise ValueError("Browser parameter should not be a None value")
         tables = []
         for table in table_list:
             table_obj = WarehouseTable()
@@ -88,19 +94,23 @@ class MetaGenerator(categories.SQLite):
             for col in columns:
                 if col['type'].__str__().__eq__('INTEGER'):
                     table_obj.contains_numeric_column = True
-            table_obj.schema_id = schema_id
+            table_obj.schema_id = schema.id
             tables.extend(table_obj)
         return tables
 
 
-    def generate_views_meta(self, view_list, schema_id, browser):
+    def generate_views_meta(self, view_list, schema, browser):
         """Generates an list of views as repository objects
 
             Args:
                 view_list (List): A list of view names
-                schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                schema (WarehouseSchema): A schema instance (WarehouseSchema)
                 browser (Browser): An database browser object
         """
+        if schema is None:
+            raise ValueError("Schema parameter should not be a None value")
+        if browser is None:
+            raise ValueError("Browser parameter should not be a None value")
         views = []
         for view in view_list:
             view_obj = WarehouseView()
@@ -110,59 +120,64 @@ class MetaGenerator(categories.SQLite):
             for col in columns:
                 if col['type'].__str__().__eq__('INTEGER'):
                     view_obj.contains_numeric_column = True
-            view_obj.schema_id = schema_id
+            view_obj.schema_id = schema.id
             views.extend(view_obj)
         return views
 
-    def generate_mviews_meta(self, mview_list, schema_id, browser):
+    def generate_mviews_meta(self, mview_list, schema, browser):
         """Generates an list of Materialized View as repo objects
             **WARNING**: Materialized Views are not supported in SQLite
                          Please don't use this method
             Args:
                 mview_list (List): A list of materialized view names
-                schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                schema (WarehouseSchema): A schema instance (WarehouseSchema)
                 browser (Browser): An database browser instance
         """
         raise NotImplementedError("Materialized Views are not supported by SQLite")
 
-    def generate_procedures_meta(self, proc_list, schema_id, browser):
+    def generate_procedures_meta(self, proc_list, schema, browser):
         """Generates an list of Procedures as repo objects
             **WARNING**: Procedures are not supported in SQLite
                             Please don't use this method
             Args:
                  proc_list (List): A list of procedure names
-                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                 schema (WarehouseSchema): A schema instance (WarehouseSchema)
                  browser (Browser): An database browser instance
         """
         raise NotImplementedError("Procedures are not supported by SQLite")
 
-    def generate_functions_meta(self, func_list, schema_id, browser):
+    def generate_functions_meta(self, func_list, schema, browser):
         """Generates an list of Functions as repo objects
             **WARNING**: Functions are not supported in SQLite
                             Please don't use this method
             Args:
                  func_list (List): A list of function names
-                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
+                 schema (WarehouseSchema): A schema instance (WarehouseSchema)
                  browser (Browser): An database browser instance
         """
         raise NotImplementedError("Functions are not supported by SQLite")
 
-    def generate_columns_meta(self, column_list, schema_id, table_id, table_name, browser):
+    def generate_columns_meta(self, column_list, schema, table, browser):
         """Generates an list of columns as repo objects
 
             Args:
                  column_list (List): A list of procedure names
-                 schema_id (Integer): A unique id of schema instance (WarehouseSchema)
-                 table_id (Integer): A unique id of table instance (WarehouseTable)
-                 table_name (string): Name of the table containing column
+                 schema (WarehouseSchema): A schema instance (WarehouseSchema)
+                 table (WarehouseTable): A table instance (WarehouseTable)
                  browser (Browser): An database browser instance
         """
+        if schema is None:
+            raise ValueError("Schema parameter should not be a None value")
+        if browser is None:
+            raise ValueError("Browser parameter should not be a None value")
+        if table is None:
+            raise ValueError("Table parameter should not be a None value")
         columns = []
         for column in column_list:
             col_obj = WarehouseColumn()
             col_obj.name = column
-            col_obj.column_type = browser.get_column_type(table_name, column)
-            pk_cols = browser.get_primary_key_columns(table_name)
+            col_obj.column_type = browser.get_column_type(table.name, column)
+            pk_cols = browser.get_primary_key_columns(table.name)
             for pk in pk_cols:
                 if pk.__eq__(column):
                     col_obj.is_primary_key = True
@@ -170,5 +185,6 @@ class MetaGenerator(categories.SQLite):
                 col_obj.is_fact_candidate = True
             if col_obj.column_type.__ne__('INTEGER'):
                 col_obj.is_dim_candidate = True
+            col_obj.table_id = table.id
             columns.extend(col_obj)
         return columns
