@@ -31,7 +31,7 @@ class AbstractCategory(IPlugin):
         return self.name
 
 
-class SQLite(IPlugin):
+class SQLite(AbstractCategory):
     """ An SQLite db type as category
     """
     name = "SQLITE"

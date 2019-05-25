@@ -62,7 +62,7 @@ class Browser(categories.SQLite):
     def __init__(self):
         """Default constructor of the SQLite's browser class
         """
-        categories.SQLite.__init__()
+        categories.SQLite.__init__(self)
 
     def connect(self, connection):
         """Connects the browser to an database using connection passed as param
@@ -78,70 +78,83 @@ class Browser(categories.SQLite):
         """
         return "SQLite browser instance"
 
-    def get_tables(self):
+    def get_schemas(self):
+        """Returns list of schemas
+        """
+        return self.inspector.get_schema_names()
+
+    def get_tables(self, schema=None):
         """Returns list of tables
         """
-        return self.ConnectedSession.query(MetaModel).filter_by(type='table').all()
+        return self.inspector.get_table_names(schema)
 
-    def get_views(self):
+    def get_views(self, schema=None):
         """Returns list of views
         """
-        return self.ConnectedSession.query(MetaModel).filter_by(type='view').all()
+        return self.inspector.get_view_names(schema)
 
-    def get_columns(self, table_or_view_name):
+    def get_view_definition(self, schema=None):
+        """Returns the SQL query used to create view
         """
-            Returns list of columns available in table or view
+        return self.inspector.get_view_definition(schema)
+
+    def get_columns(self, table_name):
+        """
+            Returns list of columns available as dict object of a given table
 
             Args:
-                table_or_view_name (string): name of the table or view
+                table_name (string): name of the table
         """
-        return self.inspector.get_columns(table_or_view_name)
+        return self.inspector.get_columns(table_name)
 
-    def get_column_names(self, table_or_view_name):
+    def get_column_names(self, table_name):
         """
             Return list of column names
 
             Args:
-                table_or_view_name (string): name of the table or view
+                table_name (string): name of the table
         """
         column_names = []
-        for col in self.inspector.get_columns(table_or_view_name):
+        for col in self.inspector.get_columns(table_name):
             column_names.append(col['name'])
         return column_names
 
-    def get_column_type(self, table_or_view_name, column_name):
+    def get_column_type(self, table_name, column_name):
         """
-            Returns the type of column passed as arg of specific table
+            Returns the type of column, passed as arg of specific table
             passed as arg too
 
             Args:
-                table_or_view_name (string): name of table or view
+                table_name (string): name of the table
                 column_name (string): name of the column
         """
-        for col in self.inspector.get_columns(table_or_view_name):
+        for col in self.inspector.get_columns(table_name):
             if col['name'] == column_name:
-                return col['type']
-
+                col_str = str(col['type'])
+                if col_str.find("(", 0) >= 0:
+                    index = col_str.index("(", 0)
+                    return col_str[0:index]
+                return col_str
         return None
 
-    def get_primary_key_columns(self, table_or_view_name):
+    def get_primary_key_columns(self, table_name):
         """
-            Returns an primary key column of the table passed as arg
+            Returns all columns available as primary key of the table passed as arg
 
             Args:
-                table_or_view_name (string): name of table or view
+                table_name (string): name of the table
         """
-        pk_const = self.inspector.get_pk_constraint(table_or_view_name)
+        pk_const = self.inspector.get_pk_constraint(table_name)
         return pk_const['constrained_columns']
 
-    def get_primary_key_name(self, table_or_view_name):
+    def get_primary_key_name(self, table_name):
         """
-            Returns the name of the primary key column
+            Returns the name of the primary key (i.e., name of PK constraint)
 
             Args:
-                table_or_view_name (string): name of the table or column
+                table_name (string): name of the table
         """
-        pk_const = self.inspector.get_pk_constraint(table_or_view_name)
+        pk_const = self.inspector.get_pk_constraint(table_name)
         return pk_const['name']
 
     def get_table_options(self, table_name):
@@ -153,23 +166,17 @@ class Browser(categories.SQLite):
         """
         return self.inspector.get_table_options(table_name)
 
-    def get_schema_names(self):
+    def get_foreign_keys(self, table_name):
         """
-            Returns list of schema names available
-        """
-        return self.inspector.get_schema_names()
-
-    def get_foreign_keys(self, table_or_view_name):
-        """
-            Returns list of foreign keys available in the passed table
+            Returns list of foreign keys as dict objects of a given table
 
             Args:
-                table_or_view_name (string): name of the table or view
+                table_name (string): name of the table
         """
-        return self.inspector.get_foreign_keys(table_or_view_name)
+        return self.inspector.get_foreign_keys(table_name)
 
     def close(self):
         """
             Closes the connected session with the database
         """
-        self.ConnectedSession.disconnect()
+        self.ConnectedSession.close()

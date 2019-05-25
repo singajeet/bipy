@@ -27,12 +27,12 @@ class AbstractWarehouseObject(AbstractConcreteBase, Base):
     modified_by = Column(String(255))
     modified_on = Column(DateTime)
 
-    def __repr__(self):
-        """ Returns the string representation of this class
-        """
+    """def __repr__(self):
+        Returns the string representation of this class
         repr_str = ("Abstract Warehouse [Name = %s]") % (
             self.name)
         return repr_str
+    """
 
 class WarehouseDatabase(AbstractWarehouseObject):
     """ Represents an warehouse database
@@ -68,7 +68,7 @@ class WarehouseSchema(AbstractWarehouseObject):
     def __repr__(self):
         """String representation
         """
-        return ("Warehouse Schema [Name=%s]") % self.name
+        return ("Warehouse Schema [Name=%s]") % (self.name)
 
 class WarehouseTable(AbstractWarehouseObject):
     """Represents an table in the target warehouse database

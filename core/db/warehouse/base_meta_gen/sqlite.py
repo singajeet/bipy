@@ -10,7 +10,7 @@
 """
 from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
 from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
-from bipy.core.db.repository.objects import WarehouseView, WarehouseMaterializedView
+from bipy.core.db.repository.objects import WarehouseView
 from bipy.core.db import categories
 
 
@@ -37,7 +37,7 @@ class MetaGenerator(categories.SQLite):
     def __init__(self):
         """Default constructor
         """
-        categories.SQLite.__init__()
+        categories.SQLite.__init__(self)
 
     def generate_database_meta(self, db_type, conn_str, username, password):
         """Generates an repository database object with the parameters passed
@@ -69,8 +69,9 @@ class MetaGenerator(categories.SQLite):
         for schema in schema_list:
             schema_obj = WarehouseSchema()
             schema_obj.name = schema
-            schema_obj.database_id = database.id
-            schemas.extend(schema_obj)
+            #schema_obj.database_id = database.id
+            database.schemas.append(schema_obj)
+            schemas.append(schema_obj)
         return schemas
 
     def generate_tables_meta(self, table_list, schema, browser):
@@ -94,8 +95,9 @@ class MetaGenerator(categories.SQLite):
             for col in columns:
                 if col['type'].__str__().__eq__('INTEGER'):
                     table_obj.contains_numeric_column = True
-            table_obj.schema_id = schema.id
-            tables.extend(table_obj)
+            #table_obj.schema_id = schema.id
+            schema.tables.append(table_obj)
+            tables.append(table_obj)
         return tables
 
 
