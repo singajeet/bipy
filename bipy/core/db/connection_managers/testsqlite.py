@@ -6,6 +6,7 @@
 import unittest
 from yapsy.PluginManager import PluginManager
 from bipy.core.db.categories import SQLite
+from bipy.core.constants import PATHS, URLS
 
 class ConnectionManagerTestCase(unittest.TestCase):
     """TestCase for ConnectionManager class and its methods
@@ -15,7 +16,7 @@ class ConnectionManagerTestCase(unittest.TestCase):
 
     def setUp(self):
         self.manager = PluginManager(categories_filter={'SQLITE': SQLite})
-        self.manager.setPluginPlaces(["."])
+        self.manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
         self.manager.locatePlugins()
         self.connection = self.manager.loadPlugins()
 
@@ -27,7 +28,7 @@ class ConnectionManagerTestCase(unittest.TestCase):
 
     def testConnect(self):
         try:
-            self.connection[0].plugin_object.connect("sqlite:///test.db")
+            self.connection[0].plugin_object.connect(URLS.TEST_DB)
         except Exception:
             self.fail("Exception thrown while connecting to DB")
 

@@ -13,6 +13,50 @@ Base = declarative_base()
 class MetaModel(Base):
     """
         An metadata table mapped to SQLite's sqlite_master tabele to browse for DB objects
+
+        >>> from bipy.core.db.categories import SQLite
+
+        >>> from yapsy.PluginManager import PluginManager
+
+        >>> from bipy.core.constants import PATHS, URLS
+
+        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+
+        >>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
+
+        >>> manager.locatePlugins()
+
+        >>> connections = manager.loadPlugins()
+
+        >>> connections.__len__()
+        1
+        >>> connections[0].name
+        'SQLite Connection Manager'
+
+        >>> conn = connections[0].plugin_object
+
+        >>> manager.setPluginPlaces([PATHS.BROWSERS])
+
+        >>> manager.locatePlugins()
+
+        >>> browsers = manager.loadPlugins()
+
+        >>> browsers.__len__()
+        1
+        >>> browsers[0].name
+        'SQLite Metadata Browser'
+        >>> browser = browsers[0].plugin_object
+
+        >>> conn.connect(URLS.TEST_DB)
+
+        >>> browser.connect(conn)
+
+        >>> browser.get_schemas()
+        ['main']
+        >>> browser.get_tables()
+        []
+        >>>
+
     """
     __tablename__ = 'sqlite_master'
 
@@ -180,3 +224,8 @@ class Browser(categories.SQLite):
             Closes the connected session with the database
         """
         self.ConnectedSession.close()
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

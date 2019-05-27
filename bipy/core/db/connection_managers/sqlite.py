@@ -16,9 +16,11 @@ class ConnectionManager(categories.SQLite):
 
         >>> from yapsy.PluginManager import PluginManager
 
+        >>> from bipy.core.constants import PATHS
+
         >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
 
-        >>> manager.setPluginPlaces(["."])
+        >>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
 
         >>> manager.locatePlugins()
 
