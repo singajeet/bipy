@@ -16,13 +16,74 @@ from bipy.core.db import categories
 
 
 class MetaGenerator(categories.SQLite):
-    """ This class will deal with the core logic of generating metadata using
-    an SQLite objects passed as list to the function parameters. This class will
-    not browse database to get list of objects but instead an list of each DB
-    object will be passed to respective function. Further, browser object will be
-    passed to get the value of additional attributes. This will help in keeping GUI,
-    DB Browsing, Meta generation and saving objects in repository loosely coupled.
-    This class will be an singleton class
+    """
+        This class will deal with the core logic of generating metadata using
+        an SQLite objects passed as list to the function parameters. This class will
+        not browse database to get list of objects but instead an list of each DB
+        object will be passed to respective function. Further, browser object will be
+        passed to get the value of additional attributes. This will help in keeping GUI,
+        DB Browsing, Meta generation and saving objects in repository loosely coupled.
+        This class will be an singleton class.
+
+	>>> from bipy.core.db.categories import SQLite
+
+	>>> from bipy.core.constants import PATHS, URLS
+
+	>>> from yapsy.PluginManager import PluginManager
+
+        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+
+	>>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
+
+        >>> manager.locatePlugins()
+
+        >>> connections = manager.loadPlugins()
+
+        >>> connections.__len__()
+        1
+        >>> connections[0].name
+        'SQLite Connection Manager'
+
+	>>> conn = connections[0].plugin_object
+
+        >>> manager.setPluginPlaces([PATHS.BROWSERS])
+
+        >>> manager.locatePlugins()
+
+        >>> browsers = manager.loadPlugins()
+
+        >>> browsers.__len__()
+        1
+        >>> browsers[0].name
+        'SQLite Metadata Browser'
+        >>> browser = browsers[0].plugin_object
+
+        >>> conn.connect(URLS.TEST_DB)
+
+        >>> browser.connect(conn)
+
+        >>> browser.get_schemas()
+        ['main']
+        >>> browser.get_tables()
+        []
+        >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
+
+	>>> manager.locatePlugins()
+
+        >>> bmg = manager.loadPlugins()
+
+        >>> bmg.__len__()
+        1
+        >>> bmg[0].name
+        'SQLite MetaData Generator'
+        >>> mg = bmg[0].plugin_object
+
+        >>> db = mg.generate_database_meta("SQLITE", URLS.TEST_DB, "user", "pass")
+
+        >>> db
+        Warehouse [Name=None, Type=SQLITE]
+
+	>>>
     """
 
     __instance = None
@@ -190,3 +251,8 @@ class MetaGenerator(categories.SQLite):
             col_obj.table_id = table.id
             columns.extend(col_obj)
         return columns
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

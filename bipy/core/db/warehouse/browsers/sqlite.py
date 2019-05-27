@@ -13,8 +13,41 @@ Base = declarative_base()
 class MetaModel(Base):
     """
         An metadata table mapped to SQLite's sqlite_master tabele to browse for DB objects
+    """
+    __tablename__ = 'sqlite_master'
 
-        >>> from bipy.core.db.categories import SQLite
+    type = Column(String)
+    name = Column(String, primary_key=True)
+    tbl_name = Column(String)
+    rootpage = Column(String)
+    sql = Column(String)
+
+    def __repr__(self):
+        """
+            Returns the representation of MetaModel class
+
+            Returns:
+                String: Object Name and Type
+        """
+        return "SQLiteMetaModel (Name=%s, Type=%s)" % (self.name, self.type)
+
+
+class Browser(categories.SQLite):
+    """
+        An SQLite Metadata browser class implemented using sqlite_master table and
+        SQLAlchemy's inspector function. It helps to browse through Tables, Views,
+        etc available in an given database
+
+        Args:
+            connection (ConnectionManager): An instance of the ConnectionManager class
+            pointing to the SQLite database
+
+        Attributes:
+            ConnectedSession (get_session): Stores the connected session to the database
+            inspector (get_inspector): stores the inspector instance available
+                                        though get_inspector function
+
+	>>> from bipy.core.db.categories import SQLite
 
         >>> from yapsy.PluginManager import PluginManager
 
@@ -57,39 +90,6 @@ class MetaModel(Base):
         []
         >>>
 
-    """
-    __tablename__ = 'sqlite_master'
-
-    type = Column(String)
-    name = Column(String, primary_key=True)
-    tbl_name = Column(String)
-    rootpage = Column(String)
-    sql = Column(String)
-
-    def __repr__(self):
-        """
-            Returns the representation of MetaModel class
-
-            Returns:
-                String: Object Name and Type
-        """
-        return "SQLiteMetaModel (Name=%s, Type=%s)" % (self.name, self.type)
-
-
-class Browser(categories.SQLite):
-    """
-        An SQLite Metadata browser class implemented using sqlite_master table and
-        SQLAlchemy's inspector function. It helps to browse through Tables, Views,
-        etc available in an given database
-
-        Args:
-            connection (ConnectionManager): An instance of the ConnectionManager class
-            pointing to the SQLite database
-
-        Attributes:
-            ConnectedSession (get_session): Stores the connected session to the database
-            inspector (get_inspector): stores the inspector instance available
-                                        though get_inspector function
     """
 
     ConnectedSession = None
