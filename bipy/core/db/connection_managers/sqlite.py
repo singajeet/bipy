@@ -5,13 +5,31 @@
 """
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
-#from bipy.core.db.categories import SQLite
 import bipy.core.db.categories as categories
 
 
 class ConnectionManager(categories.SQLite):
-    """ A SQLite connection manager which is a
-        singleton and should return same instance always
+    """ A SQLite connection manager which is a singleton and should return same
+        instance always
+
+        >>> from bipy.core.db.categories import SQLite
+
+        >>> from yapsy.PluginManager import PluginManager
+
+        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+
+        >>> manager.setPluginPlaces(["."])
+
+        >>> manager.locatePlugins()
+
+        >>> connections = manager.loadPlugins()
+
+        >>> connections.__len__()
+        1
+        >>> connections[0].name
+        'SQLite Connection Manager'
+        >>>
+
     """
 
     connection_string = ""
@@ -38,7 +56,7 @@ class ConnectionManager(categories.SQLite):
 
     def __init__(self):
         """
-            Default consttructor of the Connection Manager class
+            Default constructor of the Connection Manager class
         """
         categories.SQLite.__init__(self)
 
@@ -83,3 +101,8 @@ class ConnectionManager(categories.SQLite):
         """Closes the connection made with the SQLite database
         """
         self.ConnectedSession.close_all()
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
