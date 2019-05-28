@@ -1,4 +1,5 @@
 README.txt
+setup.py
 bipy/__init__.py
 bipy.egg-info/PKG-INFO
 bipy.egg-info/SOURCES.txt
@@ -6,12 +7,14 @@ bipy.egg-info/dependency_links.txt
 bipy.egg-info/requires.txt
 bipy.egg-info/top_level.txt
 bipy/core/__init__.py
+bipy/core/constants.py
 bipy/core/db/__init__.py
 bipy/core/db/categories.py
 bipy/core/db/analytic/__init__.py
 bipy/core/db/analytic/objects.py
 bipy/core/db/connection_managers/__init__.py
 bipy/core/db/connection_managers/sqlite.py
+bipy/core/db/connection_managers/testsqlite.py
 bipy/core/db/repository/__init__.py
 bipy/core/db/repository/objects.py
 bipy/core/db/repository/types.py
@@ -20,6 +23,7 @@ bipy/core/db/warehouse/base_meta_gen/__init__.py
 bipy/core/db/warehouse/base_meta_gen/sqlite.py
 bipy/core/db/warehouse/browsers/__init__.py
 bipy/core/db/warehouse/browsers/sqlite.py
+bipy/core/db/warehouse/browsers/testsqlite.py
 bipy/core/decorators/__init__.py
 bipy/core/decorators/security.py
 bipy/core/security/__init__.py
