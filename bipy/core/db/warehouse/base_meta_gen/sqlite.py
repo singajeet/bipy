@@ -31,57 +31,57 @@ class MetaGenerator(categories.SQLite):
 
 	>>> from yapsy.PluginManager import PluginManager
 
-        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+    >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
 
 	>>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
 
-        >>> manager.locatePlugins()
+    >>> manager.locatePlugins()
 
-        >>> connections = manager.loadPlugins()
+    >>> connections = manager.loadPlugins()
 
-        >>> connections.__len__()
-        1
-        >>> connections[0].name
-        'SQLite Connection Manager'
+    >>> connections.__len__()
+    1
+    >>> connections[0].name
+    'SQLite Connection Manager'
 
 	>>> conn = connections[0].plugin_object
 
-        >>> manager.setPluginPlaces([PATHS.BROWSERS])
+    >>> manager.setPluginPlaces([PATHS.BROWSERS])
 
-        >>> manager.locatePlugins()
+    >>> manager.locatePlugins()
 
-        >>> browsers = manager.loadPlugins()
+    >>> browsers = manager.loadPlugins()
 
-        >>> browsers.__len__()
-        1
-        >>> browsers[0].name
-        'SQLite Metadata Browser'
-        >>> browser = browsers[0].plugin_object
+    >>> browsers.__len__()
+    1
+    >>> browsers[0].name
+    'SQLite Metadata Browser'
+    >>> browser = browsers[0].plugin_object
 
-        >>> conn.connect(URLS.TEST_DB)
+    >>> conn.connect(URLS.TEST_DB)
 
-        >>> browser.connect(conn)
+    >>> browser.connect(conn)
 
-        >>> browser.get_schemas()
-        ['main']
-        >>> browser.get_tables()
-        []
-        >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
+    >>> browser.get_schemas()
+    ['main']
+    >>> browser.get_tables()
+    []
+    >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
 
 	>>> manager.locatePlugins()
 
-        >>> bmg = manager.loadPlugins()
+    >>> bmg = manager.loadPlugins()
 
-        >>> bmg.__len__()
-        1
-        >>> bmg[0].name
-        'SQLite MetaData Generator'
-        >>> mg = bmg[0].plugin_object
+    >>> bmg.__len__()
+    1
+    >>> bmg[0].name
+    'SQLite MetaData Generator'
+    >>> mg = bmg[0].plugin_object
 
-        >>> db = mg.generate_database_meta("SQLITE", URLS.TEST_DB, "user", "pass")
+    >>> db = mg.generate_database_meta("SQLITE", URLS.TEST_DB, "user", "pass")
 
-        >>> db
-        Warehouse [Name=None, Type=SQLITE]
+    >>> db
+    Warehouse [Name=None, Type=SQLITE]
 
 	>>>
     """

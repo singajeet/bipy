@@ -33,10 +33,10 @@ class BrowserTestCase(unittest.TestCase):
         assert self.browsers.__len__() == 1
 
     def testConnectionPluginName(self):
-        self.connections[0].name == 'SQLite Connection Manager'
+        assert self.connections[0].name == 'SQLite Connection Manager'
 
     def testBrowserPluginName(self):
-        self.browsers[0].name == 'SQLite Metadata Browser'
+        assert self.browsers[0].name == 'SQLite Metadata Browser'
 
     def testConnection(self):
         try:
