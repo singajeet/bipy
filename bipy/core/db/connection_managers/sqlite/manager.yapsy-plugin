@@ -1,6 +1,6 @@
 [Core]
 Name = SQLite Connection Manager
-Module = sqlite
+Module = manager 
 
 [Documentation]
 Author = Ajeet Singh

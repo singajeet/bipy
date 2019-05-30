@@ -1,6 +1,6 @@
 [Core]
 Name = SQLite MetaData Generator
-Module = sqlite
+Module = generator
 
 [Documentation]
 Author = Ajeet Singh

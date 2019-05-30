@@ -5,10 +5,10 @@
 """
 import unittest
 from bipy.core.constants import PATHS, URLS
-from bipy.core.db.warehouse.browsers import testsqlite
+from bipy.core.db.warehouse.browsers.sqlite import testmetadata
 
 
-class MetaGeneratorTestCase(testsqlite.BrowserTestCase):
+class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
     """Yest case for MetaGenerator class
     """
     bmg = None
@@ -20,7 +20,7 @@ class MetaGeneratorTestCase(testsqlite.BrowserTestCase):
     columns = None
 
     def setUp(self):
-        testsqlite.BrowserTestCase.setUp(self)
+        testmetadata.BrowserTestCase.setUp(self)
         self.manager.setPluginPlaces([PATHS.BASE_META_GEN])
         self.manager.locatePlugins()
         self.bmg = self.manager.loadPlugins()
@@ -69,7 +69,7 @@ class MetaGeneratorTestCase(testsqlite.BrowserTestCase):
 
 
 def suite():
-    suite = testsqlite.suite()
+    suite = testmetadata.suite()
     suite.addTest(MetaGeneratorTestCase("testMetaGeneratorPluginCount"))
     suite.addTest(MetaGeneratorTestCase("testMetaGeneratorPluginName"))
     suite.addTest(MetaGeneratorTestCase("testMGDatabaseObject"))
