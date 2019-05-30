@@ -62,7 +62,7 @@ class BrowserTestCase(unittest.TestCase):
     def testBrowseTables(self):
         if self.browser is None:
             self.testBrowserConnection()
-        assert self.browser.get_tables() == []
+        assert self.browser.get_tables() == ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence']
 
 
 def suite():

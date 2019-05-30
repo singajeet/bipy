@@ -12,6 +12,7 @@ from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
 from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
 from bipy.core.db.repository.objects import WarehouseView
 from bipy.core.db import categories
+from bipy.core.db.repository.types import DataTypes
 
 
 
@@ -65,7 +66,7 @@ class MetaGenerator(categories.SQLite):
     >>> browser.get_schemas()
     ['main']
     >>> browser.get_tables()
-    []
+    ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence']
     >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
 
 	>>> manager.locatePlugins()
@@ -178,13 +179,9 @@ class MetaGenerator(categories.SQLite):
         for view in view_list:
             view_obj = WarehouseView()
             view_obj.name = view
-            columns = browser.get_columns(view)
-            view_obj.number_of_columns = columns.__len__()
-            for col in columns:
-                if col['type'].__str__().__eq__('INTEGER'):
-                    view_obj.contains_numeric_column = True
-            view_obj.schema_id = schema.id
-            views.extend(view_obj)
+            view_obj.sql = browser.get_view_definition(view)
+            schema.views.append(view_obj)
+            views.append(view_obj)
         return views
 
     def generate_mviews_meta(self, mview_list, schema, browser):
@@ -220,17 +217,14 @@ class MetaGenerator(categories.SQLite):
         """
         raise NotImplementedError("Functions are not supported by SQLite")
 
-    def generate_columns_meta(self, column_list, schema, table, browser):
+    def generate_columns_meta(self, column_list, table, browser):
         """Generates an list of columns as repo objects
 
             Args:
-                 column_list (List): A list of procedure names
-                 schema (WarehouseSchema): A schema instance (WarehouseSchema)
+                 column_list (List): A list of columns as dict object
                  table (WarehouseTable): A table instance (WarehouseTable)
                  browser (Browser): An database browser instance
         """
-        if schema is None:
-            raise ValueError("Schema parameter should not be a None value")
         if browser is None:
             raise ValueError("Browser parameter should not be a None value")
         if table is None:
@@ -238,18 +232,24 @@ class MetaGenerator(categories.SQLite):
         columns = []
         for column in column_list:
             col_obj = WarehouseColumn()
-            col_obj.name = column
-            col_obj.column_type = browser.get_column_type(table.name, column)
-            pk_cols = browser.get_primary_key_columns(table.name)
-            for pk in pk_cols:
-                if pk.__eq__(column):
-                    col_obj.is_primary_key = True
-            if col_obj.column_type.__eq__('INTEGER'):
+            col_obj.name = column['name']
+            raw_column_type = column['type']
+            if column['primary_key'] == 1:
+                col_obj.is_primary_key = True
+            col_string = str(raw_column_type)
+            paran_index = col_string.find("(", 0)
+            if paran_index >= 0:
+                col_type = col_string[0:paran_index]
+            else:
+                col_type = col_string
+            col_obj.column_type = DataTypes[col_type].value
+            if col_type in ['FLOAT', 'DOUBLE', 'LONG', 'INTEGER', 'NUMERIC']:
                 col_obj.is_fact_candidate = True
-            if col_obj.column_type.__ne__('INTEGER'):
+            else:
                 col_obj.is_dim_candidate = True
-            col_obj.table_id = table.id
-            columns.extend(col_obj)
+            #col_obj.table_id = table.id
+            table.columns.append(col_obj)
+            columns.append(col_obj)
         return columns
 
 

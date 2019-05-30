@@ -15,7 +15,9 @@ class MetaGeneratorTestCase(testsqlite.BrowserTestCase):
     mg = None
     db = None
     schema = None
-    table = None
+    tables = None
+    views = None
+    columns = None
 
     def setUp(self):
         testsqlite.BrowserTestCase.setUp(self)
@@ -45,9 +47,25 @@ class MetaGeneratorTestCase(testsqlite.BrowserTestCase):
     def testMGTableObject(self):
         if self.schema is None:
             self.testMGSchemaObject()
-        self.table = self.mg.generate_tables_meta(self.browser.get_tables(),
-                                                  self.schema, self.browser)
-        assert self.table.__repr__() == '[]'
+        tbl_list = self.browser.get_tables()
+        tbl_list.remove('sqlite_sequence') #remove table used for sequence
+        self.tables = self.mg.generate_tables_meta(tbl_list,
+                                                  self.schema[0], self.browser)
+        assert self.tables.__repr__() == """[Warehouse Table [Name=CUSTOMER_MASTER, SchemaId=-1], Warehouse Table [Name=PRODUCT_MASTER, SchemaId=-1], Warehouse Table [Name=SALES_DETAILS, SchemaId=-1]]"""
+
+    def testMGViewObject(self):
+        if self.schema is None:
+            self.testMGSchemaObject()
+        self.views = self.mg.generate_views_meta(self.browser.get_views(),
+                                                 self.schema[0], self.browser)
+        assert self.views.__repr__() == '[Warehouse View [Name=revenue_details, SchemaId=-1]]'
+
+    def testMGColumnObject(self):
+        if self.tables is None:
+            self.testMGTableObject()
+        #self.tables[1] is an instance of product_master table
+        self.columns = self.mg.generate_columns_meta(self.browser.get_columns('product_master'), self.tables[1], self.browser)
+        assert self.columns[0].__repr__() == 'Warehouse Column [Name=id, TypeId=2, TableId=-1, ViewId=-1, MViewId=-1]'
 
 
 def suite():
@@ -57,6 +75,8 @@ def suite():
     suite.addTest(MetaGeneratorTestCase("testMGDatabaseObject"))
     suite.addTest(MetaGeneratorTestCase("testMGSchemaObject"))
     suite.addTest(MetaGeneratorTestCase("testMGTableObject"))
+    suite.addTest(MetaGeneratorTestCase("testMGViewObject"))
+    suite.addTest(MetaGeneratorTestCase("testMGColumnObject"))
     return suite
 
 if __name__ == "__main__":
