@@ -41,8 +41,8 @@ class ConnectionManager(categories.SQLite):
     Session = None
     __instance = None
 
-    def __new__(cls):
-        """
+    """def __new__(cls):
+
          The singleton constructor for this
 
             Args:
@@ -50,10 +50,11 @@ class ConnectionManager(categories.SQLite):
 
             Return:
                 ConnectionManager: An singleton instance of this
-        """
+
         if ConnectionManager.__instance is None:
             ConnectionManager.__instance = object.__new__(cls)
         return ConnectionManager.__instance
+    """
 
 
     def __init__(self):

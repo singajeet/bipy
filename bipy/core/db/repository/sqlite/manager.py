@@ -48,6 +48,15 @@ class RepositoryManager(categories.SQLite):
         self.__session.add(repo_obj)
         self.__session.commit()
 
+    def save_all(self, repo_objs):
+        """ Save all repo objects passed as list
+
+            Args:
+                repo_objs(List): An list of `AbstractWarehouseObject` objects
+        """
+        self.__session.add_all(repo_objs)
+        self.__session.commit()
+
     def update(self):
         """ Updates all objects associated with current session
         """
@@ -69,7 +78,38 @@ class RepositoryManager(categories.SQLite):
             Args:
                 param (int/str): An id or name of the database
         """
-        if type(param) == int:
-            return self.__session.query(WarehouseDatabase).filter(WarehouseDatabase.id == param).first()
-        elif type(param) == str:
-            return self.__session.query(WarehouseDatabase).filter(WarehouseDatabase.name == param).first()
+        if isinstance(param, int):
+            return self.__session.query(WarehouseDatabase)\
+                    .filter(WarehouseDatabase.id == param).first()
+        elif isinstance(param, str):
+            return self.__session.query(WarehouseDatabase)\
+                    .filter(WarehouseDatabase.name == param).first()
+        return None
+
+    def get_all_databases(self):
+        """ Returns an list of all `WarehouseDatabase` objects
+        """
+        return self.__session.query(WarehouseDatabase).all()
+
+    def get_database_names(self):
+        """ Returns an list of names of all databases
+        """
+        _names = []
+        dbs = self.__session.query(WarehouseDatabase).all()
+        for _db in dbs:
+            _names.append(_db.name)
+        return _names
+
+    def get_schema(self, param):
+        """ returns an instance of `WarehouseSchema` class stored in database
+
+            Args:
+                param(int/str): An Id or name of the schema
+        """
+        if isinstance(param, int):
+            return self.__session.query(WarehouseSchema)\
+                    .filter(WarehouseSchema.id == param).first()
+        elif isinstance(param, str):
+            return self.__session.query(WarehouseSchema)\
+                    .filter(WarehouseSchema.name == param).first()
+        return None
