@@ -222,5 +222,121 @@ class RepositoryManager(categories.SQLite):
 
         return _names
 
-    def get_column(self, table=None, schema=None, db=None):
-        pass
+    def get_column(self, column, table):
+        """ Returns an instance of `WarehouseColumn` under an table
+            passed as argument to this method
+
+            Args:
+                column(int/str): Name of the column or id
+                table(WarehouseTable): An instance of table
+        """
+        if isinstance(column, str):
+            return self.__session.query(WarehouseColumn)\
+                .filter(WarehouseColumn.table_id == table.id\
+                        and WarehouseColumn.name == column)\
+                .first()
+        elif isinstance(column, int):
+            return self.__session.query(WarehouseColumn)\
+                .filter(WarehouseColumn.id == column and\
+                        WarehouseColumn.table_id == table.id)\
+                .first()
+        return None
+
+    def get_all_columns(self, table):
+        """ Returns instance list of all columns available
+            under an table passed as argument
+
+            Args:
+                table(WarehouseTable): An instance of table
+        """
+        return self.__session.query(WarehouseColumn)\
+            .filter(WarehouseColumn.table_id == table.id)\
+            .all()
+
+    def get_all_column_names(self, table):
+        _names = []
+        _columns = self.__session.query(WarehouseColumn)\
+            .filter(WarehouseColumn.table_id == table.id)\
+            .all()
+        for col in _columns:
+            _names.append(col.name)
+        return _names
+
+    def add_schema_to_db(self, schema, db):
+        """ Add an schema passed as argument to the db passed
+            as well
+
+            Args:
+                schema(WarehouseSchema): An instance of schema
+                db(WarehouseDatabase): An instance of db
+        """
+        db_exists = self.get_database(db.name)\
+            .__len__() != 0
+        schema_exists = self.get_schema(schema.name, db)\
+            .__len__() != 0
+        if not db_exists:
+            self.save(db)
+        if not schema_exists:
+            self.save(schema)
+        db.schemas.append(schema)
+        self.__session.commit()
+
+    def add_schemas_to_db(self, schemas, db):
+        """ Same as add_schema_to_db but this adds an list of
+            schemas to db
+
+            Args:
+                schemas(List): An list of schema objects
+                db(WarehouseDatabase): An db object
+        """
+        for schema in schemas:
+            self.add_schema_to_db(schema, db)
+
+    def add_table_to_schema(self, table, schema):
+        """ Add's an table to provided schema. It also saves the
+            table and schema objects if not already saved
+
+            Args:
+                table(WarehouseTable): An table object
+                schema(WarehouseSchema): An schema object
+        """
+        schema_exists = self.get_schema(schema.name)\
+            .__len__() != 0
+        table_exists = self.get_table(table.name, schema)\
+            .__len__() != 0
+        if not schema_exists:
+            self.save(schema)
+        if not table_exists:
+            self.save(table)
+        schema.tables.append(table)
+        self.__session.commit()
+
+    def add_tables_to_schema(self, tables, schema):
+        """ Add's a list of tables under the provided
+            schema. It is similar to add_table_to_schema
+
+            Args:
+                tables(List): A list of table instances
+                schema(WarehouseSchema): An instance of schema objects
+        """
+        for tab in tables:
+            self.add_table_to_schema(tab, schema)
+
+    def add_column_to_table(self, column, table):
+        """ Add's an column instance to the table provided as
+            parameter
+
+            Args:
+                column(WarehouseColumn): An instance of column
+                table(WarehouseTable): An instance of table
+        """
+        table_exists = self.get_table(table.name)\
+            .__len__() != 0
+        column_exists = self.get_column(column.name, table)\
+            .__len__() != 0
+        if not table_exists:
+            self.save(table)
+        if not column_exists:
+            self.save(column)
+        table.columns.append(column)
+        self.__session.commit()
