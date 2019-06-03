@@ -371,9 +371,51 @@ class RepositoryManager(categories.SQLite):
             Args:
                 table(WarehouseTable): Table object that needs to be
                     removed
-                    schema(WarehouseSchema): Schema object that contains
+                schema(WarehouseSchema): Schema object that contains
                         the tables
         """
         for tb in schema.tables:
             if tb.id == table.id:
                 schema.tables.remove(tb)
+
+    def remove_column_from_table(self, column, table):
+        """ Removes the column from the table. Both table and column are passed
+            as argument to this method
+
+            Args:
+                column(WarehouseColumn): Column that needs to be removed
+                table(WarehouseTable): Table from where column needs to be removed
+        """
+        for col in table.columns:
+            if col.id == column.id:
+                table.columns.remove(col)
+
+    def remove_schemas_from_db(self, schemas, db):
+        """ Same as `remove_schema_from_db` but removes all schemas passed as list
+
+            Args:
+                schemas(List): List of schemas
+                db(WarehouseDatabase): Instance of DB from where schemas will be removed
+        """
+        for sch in schemas:
+            self.remove_schema_from_db(sch, db)
+
+    def remove_tables_from_schema(self, tables, schema):
+        """ Same as `remove_table_from_schema` but removes all tables passed as list
+
+            Args:
+                tables(List): List of tables
+                schema(WarehouseSchema): Instance of schema from where tables will be removed
+        """
+        for tab in tables:
+            self.remove_table_from_schema(tab, schema)
+
+    def remove_columns_from_schema(self, columns, table):
+        """ Same as `remove_column_from_table` but removes all columns passed as list
+
+            Args:
+                colums(List): List of columns that needs to be removed
+                table(WarehouseTable): Table from where columns will be removed
+        """
+        for col in columns:
+            self.remove_column_from_table(col, table)
