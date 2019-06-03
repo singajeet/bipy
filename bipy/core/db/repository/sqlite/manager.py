@@ -340,3 +340,40 @@ class RepositoryManager(categories.SQLite):
             self.save(column)
         table.columns.append(column)
         self.__session.commit()
+
+    def add_columns_to_table(self, columns, table):
+        """ Add columns from provided list to table ppassed as
+            argument
+
+            Args:
+                columns(List): A list of columns to be added to DB
+                table(WarehouseTable): An instance of table class
+        """
+        for col in columns:
+            self.add_column_to_table(col, table)
+
+    def remove_schema_from_db(self, schema, db):
+        """ Removes provided schema from list of schemas available
+            under db passed as argument
+
+            Args:
+                schema(WarehouseSchema): Schema object to be removed
+                table(WarehouseTable): Table containing the schema object
+        """
+        for sch in db.schemas:
+            if sch.id == schema.id:
+                db.schemas.remove(sch)
+
+    def remove_table_from_schema(self, table, schema):
+        """ Removes the provided table from list of tables available
+            under passed schema
+
+            Args:
+                table(WarehouseTable): Table object that needs to be
+                    removed
+                    schema(WarehouseSchema): Schema object that contains
+                        the tables
+        """
+        for tb in schema.tables:
+            if tb.id == table.id:
+                schema.tables.remove(tb)
