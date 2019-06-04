@@ -1,0 +1,9 @@
+[Core]
+Name = SQLite Repository Manager
+Module = manager 
+
+[Documentation]
+Author = Ajeet Singh
+Version = 1.0
+Description = This plugin helps in working with repository to store and fetch metadata of an warehouse
+

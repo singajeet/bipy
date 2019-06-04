@@ -6,7 +6,10 @@
 from sqlalchemy import Column, String
 from sqlalchemy.ext.declarative import declarative_base
 from bipy.core.db import categories
+from bipy.logging import logger
 
+
+LOGGER = logger.get_logger(__name__)
 Base = declarative_base()
 
 
@@ -87,7 +90,7 @@ class Browser(categories.SQLite):
         >>> browser.get_schemas()
         ['main']
         >>> browser.get_tables()
-        ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence']
+        ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence', 'warehouse_privileges', 'warehouse_roles', 'warehouse_roles_privileges', 'warehouse_users', 'warehouse_users_roles']
         >>>
 
     """
@@ -106,6 +109,7 @@ class Browser(categories.SQLite):
     def __init__(self):
         """Default constructor of the SQLite's browser class
         """
+        LOGGER.debug("Init SQLite Browser instance")
         categories.SQLite.__init__(self)
 
     def connect(self, connection):
@@ -116,6 +120,7 @@ class Browser(categories.SQLite):
         """
         self.ConnectedSession = connection.get_session()
         self.inspector = connection.get_inspector()
+        LOGGER.debug("SQLite Browser connected to database successfully")
 
     def __repr__(self):
         """Returns string representation
@@ -158,9 +163,12 @@ class Browser(categories.SQLite):
             Args:
                 table_name (string): name of the table
         """
+        LOGGER.debug("Preparing to get column names for table: %s" % (table_name))
         column_names = []
         for col in self.inspector.get_columns(table_name):
             column_names.append(col['name'])
+            LOGGER.debug("Column '%s' added to columns list" % (col['name']))
+        LOGGER.debug("Columns list compiled and will be returned now")
         return column_names
 
     def get_column_type(self, table_name, column_name):
@@ -172,12 +180,20 @@ class Browser(categories.SQLite):
                 table_name (string): name of the table
                 column_name (string): name of the column
         """
+        LOGGER.debug("Preparing to get datatype of column '%s' in table '%s'"\
+                      % (column_name, table_name))
         for col in self.inspector.get_columns(table_name):
             if col['name'] == column_name:
+                LOGGER.debug("Column '%s' found in the respective table"\
+                              % (column_name))
                 col_str = str(col['type'])
                 if col_str.find("(", 0) >= 0:
                     index = col_str.index("(", 0)
+                    LOGGER.debug("'%s' will be returned as datatype for column '%s'"\
+                                  % (col_str[0:index], column_name))
                     return col_str[0:index]
+                LOGGER.debug("'%s' will be returned as datatype for column '%s'"\
+                              % (col_str, column_name))
                 return col_str
         return None
 
@@ -224,6 +240,7 @@ class Browser(categories.SQLite):
             Closes the connected session with the database
         """
         self.ConnectedSession.close()
+        LOGGER.debug("SQLite browser session has been closed")
 
 
 if __name__ == "__main__":

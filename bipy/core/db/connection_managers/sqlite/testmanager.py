@@ -15,7 +15,6 @@ class ConnectionManagerTestCase(unittest.TestCase):
     manager = None
 
     def setUp(self):
-        #self.manager = ConnectionManager()
         self.manager = PluginManager(categories_filter={'SQLITE': SQLite})
         self.manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
         self.manager.locatePlugins()
@@ -33,27 +32,13 @@ class ConnectionManagerTestCase(unittest.TestCase):
         except Exception:
             self.fail("Exception thrown while connecting to DB")
 
-    #def testConnectionString(self):
-     #   assert self.manager.connection_string == URLS.TEST_DB
-
-    def tearDown(self):
-        pass
-        #self.connection[0].plugin_object.disconnect()
-        #self.connection = None
-        #self.manager = None
-
-
 def suite():
     suite = unittest.TestSuite()
     suite.addTest(ConnectionManagerTestCase("testPluginCount"))
     suite.addTest(ConnectionManagerTestCase("testPluginName"))
     suite.addTest(ConnectionManagerTestCase("testConnect"))
-    #suite.addTest(ConnectionManagerTestCase("testConnectionString"))
     return suite
 
 
 if __name__ == "__main__":
     unittest.main()
-    #c = ConnectionManagerTestCase()
-    #c.setUp()
-    #c.testConnectionString()

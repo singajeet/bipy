@@ -18,9 +18,12 @@ class PATHS:
     CONNECTION_MANAGERS = os.path.abspath(os.path.join(DB, "connection_managers"))
     REPOSITORY = os.path.abspath(os.path.join(DB, "repository"))
     ANALYTIC = os.path.abspath(os.path.join(DB, "analytic"))
+    REPO_MGR = os.path.abspath(os.path.join(DB, "repository"))
+    LOG_CONFIG_PATH = os.path.abspath(os.path.join(ROOT_PARENT, "log_config.json"))
 
 
 class URLS:
     """ Various URLs used application wise
     """
     TEST_DB = "sqlite:///" + PATHS.ROOT_PARENT + "/test.db"
+    META_DB = "sqlite:///" + PATHS.ROOT_PARENT + "/meta.db"

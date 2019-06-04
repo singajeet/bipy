@@ -6,6 +6,11 @@
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 import bipy.core.db.categories as categories
+from bipy.core.constants import URLS
+from bipy.logging import logger
+
+#init logs---------------------------------
+LOGGER = logger.get_logger(__name__)
 
 
 class ConnectionManager(categories.SQLite):
@@ -16,7 +21,7 @@ class ConnectionManager(categories.SQLite):
 
         >>> from yapsy.PluginManager import PluginManager
 
-        >>> from bipy.core.constants import PATHS
+        >>> from bipy.core.constants import PATHS, URLS
 
         >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
 
@@ -30,6 +35,8 @@ class ConnectionManager(categories.SQLite):
         1
         >>> connections[0].name
         'SQLite Connection Manager'
+        >>> connections[0].plugin_object.connect(URLS.TEST_DB)
+
         >>>
 
     """
@@ -62,6 +69,7 @@ class ConnectionManager(categories.SQLite):
             Default constructor of the Connection Manager class
         """
         categories.SQLite.__init__(self)
+        LOGGER.debug("Init Connection Manager")
 
 
     def connect(self, conn_string):
@@ -71,12 +79,14 @@ class ConnectionManager(categories.SQLite):
                 conn_string (string): The connection string to connect with the
                                         database
         """
+        LOGGER.debug("Connecting to target database server using URL: {0}".format(conn_string))
         self.connection_string = conn_string
         self.engine = create_engine(conn_string)
         self.Session = sessionmaker()
         self.Session.configure(bind=self.engine)
         self.ConnectedSession = self.Session()
         self.inspector = inspect(self.engine)
+        LOGGER.debug("Connected to database successfully")
 
     def get_connection_string(self):
         """Returns the connection string used in this for mmaking
@@ -103,6 +113,7 @@ class ConnectionManager(categories.SQLite):
     def disconnect(self):
         """Closes the connection made with the SQLite database
         """
+        LOGGER.debug("Closing the open connection to database")
         self.ConnectedSession.close_all()
 
 
