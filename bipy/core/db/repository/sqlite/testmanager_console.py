@@ -2,13 +2,12 @@
     Author: Ajeet Singh
     Date: 06/03/2019
 """
-import unittest
 from yapsy.PluginManager import PluginManager
 from bipy.core.constants import URLS, PATHS
 from bipy.core.db.categories import SQLite
 
 
-class RepositoryManagerTestCase(unittest.TestCase):
+class RepositoryManagerTestCase():
     """Testcase for Repository Maager
     """
     __plugin_mgr = None
@@ -31,6 +30,7 @@ class RepositoryManagerTestCase(unittest.TestCase):
         self.__plugin_mgr.locatePlugins()
         conns = self.__plugin_mgr.loadPlugins()
         self.__conn_wh = conns[0].plugin_object
+        print("Warehouse Connection: " + str(self.__conn_wh))
         self.__conn_wh.connect(URLS.TEST_DB)
         #---------- Load Warehouse Browser plugin -----------------------
         self.__plugin_mgr.setPluginPlaces([PATHS.BROWSERS])
@@ -38,6 +38,7 @@ class RepositoryManagerTestCase(unittest.TestCase):
         browsers = self.__plugin_mgr.loadPlugins()
         self.__browser = browsers[0].plugin_object
         self.__browser.connect(self.__conn_wh)
+        print("Browser: " + str(self.__browser))
         #--------- Load Base Meta Generator plugin ----------------------
         self.__plugin_mgr.setPluginPlaces([PATHS.BASE_META_GEN])
         self.__plugin_mgr.locatePlugins()
@@ -136,17 +137,8 @@ class RepositoryManagerTestCase(unittest.TestCase):
                 assert column_names.__len__() == 3
 
 
-def load_tests(loader, tests, pattern):
-    """Function to create test suite for execution of test methods
-    """
-    suite = unittest.TestSuite()
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_db"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_schema"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_table"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_column"))
-    return suite
 
 if __name__ == "__main__":
-    test_loader = unittest.TestLoader()
-    test_loader.sortTestMethodsUsing = None
-    unittest.main(testLoader=test_loader)
+    t = RepositoryManagerTestCase()
+    t.setUp()
+    t.test_save_and_get_column()
