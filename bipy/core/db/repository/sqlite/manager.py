@@ -6,6 +6,7 @@
 from bipy.core.db import categories
 from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
 from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
+from bipy.core.db.repository.objects import WarehouseView
 from bipy.logging import logger
 
 
@@ -231,7 +232,7 @@ class RepositoryManager(categories.SQLite):
                 LOGGER.debug("Request to get table with id: '%d' under schema id: '%d'"\
                               % (param, schema.id))
                 return self.__session.query(WarehouseTable)\
-                        .filter(WarehouseTable.name == param\
+                        .filter(WarehouseTable.id == param\
                                 and WarehouseTable.schema_id == schema.id)\
                         .first()
         LOGGER.debug("Incorrect datatype passed for parameter. Only 'int' and 'str' are accepted")
@@ -317,6 +318,12 @@ class RepositoryManager(categories.SQLite):
             .all()
 
     def get_all_column_names(self, table):
+        """ Returns list of column names available
+            under an table passed as argument
+
+            Args:
+                table(WarehouseTable): An instance of table
+        """
         _names = []
         LOGGER.debug("Request to get all column names available under table with id: '%d'"\
                       % (table.id))
@@ -329,6 +336,126 @@ class RepositoryManager(categories.SQLite):
         LOGGER.debug("Returning all column names available under table with id: '%d'"\
                       % table.id)
         return _names
+
+    def get_view(self, param, schema=None):
+        """ Returns an instance of WarehoueView available
+            under an schema passed as parameter
+
+            Args:
+                param(int/str): Id or name of the view
+                schema(WarehouseSchema): An instance of the WarehouseSchema
+        """
+        if schema is None:
+            if isinstance(param, str):
+                LOGGER.debug("Request to get view with name: '%s'" % param)
+                return self.__session.query(WarehouseView)\
+                        .filter(WarehouseView.name == param).first()
+            elif isinstance(param, int):
+                LOGGER.debug("request to get view with id: '%d'" % param)
+                return self.__session.query(WarehouseView)\
+                        .filter(WarehouseView.id == param).first()
+        else:
+            if isinstance(param, str):
+                LOGGER.debug("Request to get view with name: '%s' under schema id: '%d'"\
+                              % (param, schema.id))
+                return self.__session.query(WarehouseView)\
+                        .filter(WarehouseView.name == param\
+                                and WarehouseView.schema_id == schema.id)\
+                        .first()
+            elif isinstance(param, int):
+                LOGGER.debug("Request to get view with id: '%d' under schema id: '%d'"\
+                              % (param, schema.id))
+                return self.__session.query(WarehouseView)\
+                        .filter(WarehouseView.id == param and\
+                                WarehouseView.schema_id == schema.id).first()
+        LOGGER.debug("Incorrect datatype passed for parameter. \
+                     Only 'int' and 'str' datatypes are allowed for parameter")
+        return None
+
+    def get_all_views(self, schema=None):
+        """ Returns instances of all views available under an schema passed as
+            parameter
+
+            Args:
+                schema(WarehouseSchema): An instance of warehouse schema object
+        """
+        if schema is None:
+            LOGGER.debug("Request to get all views available in database")
+            return self.__session.query(WarehouseView).all()
+
+        LOGGER.debug("Request to get all views available under schema id: '%d'" % schema.id)
+        return self.__session.query(WarehouseView)\
+                .filter(WarehouseView.schema_id == schema.id).all()
+
+    def get_all_view_names(self, schema=None):
+        """ Returns name of all available views under an schema passed as
+            parameter
+
+            Args:
+                schema(WarehouseSchema): An instance of warehouse schema
+        """
+        _views = None
+        _names = []
+        if schema is None:
+            LOGGER.debug("Request to get all view names available")
+            _views = self.__session.query(WarehouseView).all()
+        else:
+            LOGGER.debug("Request to get all view names available under schema id: '%d'"\
+                          % schema.id)
+            _views = self.__session.query(WarehouseView)\
+                    .filter(WarehouseView.schema_id == schema.id).all()
+        for vw in _views:
+            LOGGER.debug("Adding view name '%s' to the list" % vw.name)
+            _names.append(vw.name)
+
+        LOGGER.debug("Returning the list of view names available")
+        return _names
+
+    def get_materialized_view(self, param, schema=None):
+        """ Returns the MV instance matching the name or id passed as parameter.
+            If schema is passed, it will lookup MVs under that schema only
+            **WARNING**: SQLite doesn't support MVs
+
+            Args:
+                param(int/str): Id or name of the MV
+                schema(WarehouseSchema): Instance of the warehouse schema
+        """
+        LOGGER.error("SQLite does not support Materialized Views")
+        raise NotImplementedError("SQLite does not support Materialized Views")
+
+    def get_all_materialized_view(self, schema=None):
+        """ Returns all MV instance available in the database.
+            If schema is passed, it will lookup MVs under that schema only
+            **WARNING**: SQLite doesn't support MVs
+
+            Args:
+                schema(WarehouseSchema): Instance of the warehouse schema
+        """
+        LOGGER.error("SQLite does not support Materialized Views")
+        raise NotImplementedError("SQLite does not support Materialized Views")
+
+    def get_all_materialized_view_names(self, schema=None):
+        """ Returns list of names of all MV instance available in the database.
+            If schema is passed, it will lookup MVs under that schema only
+            **WARNING**: SQLite doesn't support MVs
+
+            Args:
+                schema(WarehouseSchema): Instance of the warehouse schema
+        """
+        LOGGER.error("SQLite does not support Materialized Views")
+        raise NotImplementedError("SQLite does not support Materialized Views")
+
+    def get_package(self, param, schema=None):
+        """ Returns the package instance matching the name or id passed as parameter.
+            If schema is passed, it will lookup Packages under that schema only
+            **WARNING**: SQLite doesn't support Packages
+
+            Args:
+                param(int/str): Id or name of the package
+                schema(WarehouseSchema): Instance of the warehouse schema
+        """
+        LOGGER.error("SQLite does not support Packages")
+        raise NotImplementedError("SQLite does not support Packages")
 
     def add_schema_to_db(self, schema, db):
         """ Add an schema passed as argument to the db passed
