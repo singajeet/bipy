@@ -269,8 +269,8 @@ class MetaGenerator(categories.SQLite):
             col_obj.name = column['name']
             raw_column_type = column['type']
             LOGGER.debug("WarehouseColumn instance created for column '%s'\
-                          with datatype as '%s'",\
-                         (col_obj.name, raw_column_type))
+                          with datatype as '%s'" % \
+                         (col_obj.name, str(raw_column_type)))
             if column['primary_key'] == 1:
                 LOGGER.debug("Column '%s' is a primary key" % (col_obj.name))
                 col_obj.is_primary_key = True

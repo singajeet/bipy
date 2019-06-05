@@ -22,4 +22,6 @@ def get_logger(log_name):
         #replace the filename with the absolute path to root's parent
         file_handler["filename"] = file_name
         logging.config.dictConfig(config_dict)
+        # Do not show debug and info message from 3rd party
+        logging.getLogger("yapsy").setLevel(logging.WARNING)
         return logging.getLogger(log_name)
