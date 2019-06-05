@@ -69,7 +69,7 @@ class MetaGenerator(categories.SQLite):
     >>> browser.get_schemas()
     ['main']
     >>> browser.get_tables()
-    ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence']
+    ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'android_metadata', 'sqlite_sequence']
     >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
 
 	>>> manager.locatePlugins()
@@ -219,7 +219,9 @@ class MetaGenerator(categories.SQLite):
                 schema (WarehouseSchema): A schema instance (WarehouseSchema)
                 browser (Browser): An database browser instance
         """
-        raise NotImplementedError("Materialized Views are not supported by SQLite")
+        LOGGER.error("Materialized Views are not supported by SQLite")
+        raise \
+            NotImplementedError("Materialized Views are not supported by SQLite")
 
     def generate_procedures_meta(self, proc_list, schema, browser):
         """Generates an list of Procedures as repo objects
@@ -230,6 +232,7 @@ class MetaGenerator(categories.SQLite):
                  schema (WarehouseSchema): A schema instance (WarehouseSchema)
                  browser (Browser): An database browser instance
         """
+        LOGGER.error("Procedures are not supported by SQLite")
         raise NotImplementedError("Procedures are not supported by SQLite")
 
     def generate_functions_meta(self, func_list, schema, browser):
@@ -241,6 +244,7 @@ class MetaGenerator(categories.SQLite):
                  schema (WarehouseSchema): A schema instance (WarehouseSchema)
                  browser (Browser): An database browser instance
         """
+        LOGGER.error("Functions are not suppoeted by SQLite")
         raise NotImplementedError("Functions are not supported by SQLite")
 
     def generate_columns_meta(self, column_list, table, browser):
@@ -252,15 +256,23 @@ class MetaGenerator(categories.SQLite):
                  browser (Browser): An database browser instance
         """
         if browser is None:
+            LOGGER.error("Browser parameter should not be a None value")
             raise ValueError("Browser parameter should not be a None value")
         if table is None:
+            LOGGER.error("Table parameter should not be a None value")
             raise ValueError("Table parameter should not be a None value")
         columns = []
+        LOGGER.error("Preparing to create columns meta for table '%s'" \
+                     % (table.name))
         for column in column_list:
             col_obj = WarehouseColumn()
             col_obj.name = column['name']
             raw_column_type = column['type']
+            LOGGER.debug("WarehouseColumn instance created for column '%s'\
+                          with datatype as '%s'",\
+                         (col_obj.name, raw_column_type))
             if column['primary_key'] == 1:
+                LOGGER.debug("Column '%s' is a primary key" % (col_obj.name))
                 col_obj.is_primary_key = True
             col_string = str(raw_column_type)
             paran_index = col_string.find("(", 0)
@@ -271,10 +283,16 @@ class MetaGenerator(categories.SQLite):
             col_obj.column_type = DataTypes[col_type].value
             if col_type in ['FLOAT', 'DOUBLE', 'LONG', 'INTEGER', 'NUMERIC']:
                 col_obj.is_fact_candidate = True
+                LOGGER.debug("Column '%s' is a fact candidate" \
+                             % (col_obj.name))
             else:
                 col_obj.is_dim_candidate = True
+                LOGGER.debug("Column '%s' is a dim candidate" \
+                             % (col_obj.name))
             #col_obj.table_id = table.id
             table.columns.append(col_obj)
+            LOGGER.debug("Column '%s' has been added to table '%s'" \
+                         % (col_obj.name, table.name))
             columns.append(col_obj)
         return columns
 

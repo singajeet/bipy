@@ -49,6 +49,7 @@ class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
             self.testMGSchemaObject()
         tbl_list = self.browser.get_tables()
         tbl_list.remove('sqlite_sequence') #remove table used for sequence
+        tbl_list.remove('android_metadata')
         self.tables = self.mg.generate_tables_meta(tbl_list,
                                                   self.schema[0], self.browser)
         assert self.tables.__repr__() == """[Warehouse Table [Name=CUSTOMER_MASTER, SchemaId=-1], Warehouse Table [Name=PRODUCT_MASTER, SchemaId=-1], Warehouse Table [Name=SALES_DETAILS, SchemaId=-1]]"""

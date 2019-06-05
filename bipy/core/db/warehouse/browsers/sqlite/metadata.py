@@ -90,7 +90,7 @@ class Browser(categories.SQLite):
         >>> browser.get_schemas()
         ['main']
         >>> browser.get_tables()
-        ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence', 'warehouse_privileges', 'warehouse_roles', 'warehouse_roles_privileges', 'warehouse_users', 'warehouse_users_roles']
+        ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'sqlite_sequence', 'android_metadata']
         >>>
 
     """
