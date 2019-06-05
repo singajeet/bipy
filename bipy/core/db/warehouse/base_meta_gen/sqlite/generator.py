@@ -13,7 +13,10 @@ from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
 from bipy.core.db.repository.objects import WarehouseView
 from bipy.core.db import categories
 from bipy.core.db.repository.types import DataTypes
+from bipy.logging import logger
 
+
+LOGGER = logger.get_logger(__name__)
 
 
 class MetaGenerator(categories.SQLite):
@@ -99,6 +102,7 @@ class MetaGenerator(categories.SQLite):
     def __init__(self):
         """Default constructor
         """
+        LOGGER.debug("SQLite Metadata generator instance created")
         categories.SQLite.__init__(self)
 
     def generate_database_meta(self, db_type, conn_str, username, password):
@@ -110,6 +114,8 @@ class MetaGenerator(categories.SQLite):
                 username (string): username to connect with DB
                 password (string): password to connect with DB
         """
+        LOGGER.debug("WarehouseDatabase instance will be created: DBTYPE: %s, ConnectionString: %s, \
+                     Username: %s, Password: %s" % (db_type, conn_str, username, password))
         database = WarehouseDatabase()
         database.db_type = db_type
         database.connection_string = conn_str
@@ -126,14 +132,19 @@ class MetaGenerator(categories.SQLite):
                 database (WarehouseDatabase): An database instance (WarehouseDatabase)
         """
         if database is None:
+            LOGGER.error("Database parameter should not be a None value")
             raise ValueError("Database parameter should not be a None value")
         schemas = []
+        LOGGER.debug("Schemas metadata creation is in progress")
         for schema in schema_list:
             schema_obj = WarehouseSchema()
             schema_obj.name = schema
             #schema_obj.database_id = database.id
             database.schemas.append(schema_obj)
             schemas.append(schema_obj)
+            LOGGER.debug("WarehouseSchema instance created for schema '%s' and added to list" \
+                         % (schema))
+        LOGGER.debug("Schemas metadata creation completed and will be returned now")
         return schemas
 
     def generate_tables_meta(self, table_list, schema, browser):
@@ -145,20 +156,31 @@ class MetaGenerator(categories.SQLite):
                 browser (Browser): An database browser object
         """
         if schema is None:
+            LOGGER.error("Schema parameter should not be a None value")
             raise ValueError("Schema parameter should not be a None value")
         if browser is None:
+            LOGGER.error("Browser parameter should not be a None value")
             raise ValueError("Browser parameter should not be a None value")
         tables = []
+        LOGGER.debug("Tables metadata (under schema '%s') creation is in progress" \
+                     % (schema.name))
         for table in table_list:
             table_obj = WarehouseTable()
             table_obj.name = table
+            LOGGER.debug("WarehouseTable instance created for table '%s' and added to list"\
+                          % (table))
             columns = browser.get_columns(table)
             table_obj.number_of_columns = columns.__len__()
             for col in columns:
-                if col['type'].__str__().__eq__('INTEGER'):
+                LOGGER.debug("Column '%s' has been created under table '%s'" \
+                             % (col['name'], table))
+                if col['type'].__str__() in ['INTEGER', 'NUMERIC', 'FLOAT', 'DOUBLE', 'LONG']:
                     table_obj.contains_numeric_column = True
+                    LOGGER.debug("Table '%s' marked as 'contains_numeric_column' as the column\
+                                  '%s' has datatype as NUMBER" % (table, col['name']))
             #table_obj.schema_id = schema.id
             schema.tables.append(table_obj)
+            LOGGER.debug("Table '%s' has been created under schema '%s'" % (table, schema.name))
             tables.append(table_obj)
         return tables
 
@@ -172,15 +194,19 @@ class MetaGenerator(categories.SQLite):
                 browser (Browser): An database browser object
         """
         if schema is None:
+            LOGGER.error("Schema parameter should not be a None value")
             raise ValueError("Schema parameter should not be a None value")
         if browser is None:
+            LOGGER.error("Browser parameter should not be a None value")
             raise ValueError("Browser parameter should not be a None value")
         views = []
+        LOGGER.debug("Views metadata (under schema '%s') creation is in progress" % (schema.name))
         for view in view_list:
             view_obj = WarehouseView()
             view_obj.name = view
             view_obj.sql = browser.get_view_definition(view)
             schema.views.append(view_obj)
+            LOGGER.debug("View '%s' has been created under schema '%s'" % (view, schema.name))
             views.append(view_obj)
         return views
 
