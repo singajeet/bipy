@@ -6,6 +6,10 @@
 from bipy.core.db import categories
 from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
 from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
+from bipy.logging import logger
+
+
+LOGGER = logger.get_logger(__name__)
 
 
 class RepositoryManager(categories.SQLite):
@@ -27,6 +31,7 @@ class RepositoryManager(categories.SQLite):
     def __init__(self):
         """ Default constructor
         """
+        LOGGER.debug("RepositoryManager instance created")
         categories.SQLite.__init__(self)
 
     def connect(self, conn):
@@ -36,8 +41,10 @@ class RepositoryManager(categories.SQLite):
                 conn(ConnectionManager): An connection instance to DB
 
         """
+        LOGGER.debug("Connecting to database...")
         self.__connection = conn
         self.__session = self.__connection.get_session()
+        LOGGER.debug("Connected to database successfully")
 
     def save(self, repo_obj):
         """ Saves the repo object to database
@@ -46,8 +53,10 @@ class RepositoryManager(categories.SQLite):
                 repo_obj(AbstractWarehouseObject): An instance of warehouse
                 object
         """
+        LOGGER.debug("Saving repository object '%s' to repoistory database" % repo_obj.name)
         self.__session.add(repo_obj)
         self.__session.commit()
+        LOGGER.debug("Repository object saved successfully")
 
     def save_all(self, repo_objs):
         """ Save all repo objects passed as list
@@ -55,13 +64,18 @@ class RepositoryManager(categories.SQLite):
             Args:
                 repo_objs(List): An list of `AbstractWarehouseObject` objects
         """
+        for obj in repo_objs:
+            LOGGER.debug("Saving repository object instance '%s' from list to repository\
+                          database" % obj.name)
         self.__session.add_all(repo_objs)
         self.__session.commit()
+        LOGGER.debug("All repository object instances have bee saved successfully")
 
     def update(self):
         """ Updates all objects associated with current session
         """
         self.__session.commit()
+        LOGGER.debug("All changes pending under current session have been updated")
 
     def delete(self, repo_obj):
         """Delete an repo object from db
@@ -70,8 +84,14 @@ class RepositoryManager(categories.SQLite):
                 repo_obj(AbstractWarehouseObject): An instance of warehouse
                 item
         """
-        repo_obj.delete()
-        self.__session.commit()
+        try:
+            repo_obj.delete()
+            self.__session.commit()
+            LOGGER.debug("Repository object '%s' have been deleted from repository" \
+                         % repo_obj.name)
+        except Exception:
+            LOGGER.error("Unable to delete repository object '%s'" % repo_obj.name)
+            raise
 
     def get_database(self, param):
         """ Returns an instance of `WarehouseDatabase` class
@@ -80,25 +100,32 @@ class RepositoryManager(categories.SQLite):
                 param (int/str): An id or name of the database
         """
         if isinstance(param, int):
+            LOGGER.debug("Get request for WarehouseDatabase instance with id: '%d'" % param)
             return self.__session.query(WarehouseDatabase)\
                     .filter(WarehouseDatabase.id == param).first()
         elif isinstance(param, str):
+            LOGGER.debug("Get request for WarehouseDatabase instance with name: '%s'" % param)
             return self.__session.query(WarehouseDatabase)\
                     .filter(WarehouseDatabase.name == param).first()
+        LOGGER.warn("Incorreect datatype of parameter provided. Only 'int' and 'str' are accepted")
         return None
 
     def get_all_databases(self):
         """ Returns an list of all `WarehouseDatabase` objects
         """
+        LOGGER.debug("Request to get all instances of WarehouseDatabase")
         return self.__session.query(WarehouseDatabase).all()
 
     def get_database_names(self):
         """ Returns an list of names of all databases
         """
         _names = []
+        LOGGER.debug("Request to get names of all WarehouseDatabase objects")
         dbs = self.__session.query(WarehouseDatabase).all()
         for _db in dbs:
+            LOGGER.debug("Adding '%s' database name to the list" % _db.name)
             _names.append(_db.name)
+        LOGGER.debug("Returning the WarehouseDatabase names list")
         return _names
 
     def get_schema(self, param, database=None):
@@ -112,20 +139,27 @@ class RepositoryManager(categories.SQLite):
         """
         if database is None:
             if isinstance(param, int):
+                LOGGER.debug("Request to get WarehouseSchema object with id: '%d'" % param)
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.id == param).first()
             elif isinstance(param, str):
+                LOGGER.debug("Request to get WarehouseSchema object with name: '%s'" % param)
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.name == param).first()
         else:
             if isinstance(param, int):
+                LOGGER.debug("Request to get WarehouseSchema object with id: '%d' and database id: '%d'"\
+                              % (param, database.id))
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.id == param \
                                 and WarehouseSchema.database_id == database.id).first()
             elif isinstance(param, str):
+                LOGGER.debug("Request to get WarehouseSchema object with name: '%s' and database id: '%d'"\
+                              % (param, database.id))
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.name == param \
                                and WarehouseSchema.database_id == database.id).first()
+        LOGGER.warn("Incorrect datatype of parameter provided. Only 'int' and 'str' are allowed")
         return None
 
     def get_all_schemas(self, database=None):
@@ -136,8 +170,11 @@ class RepositoryManager(categories.SQLite):
                 database(WarehouseDatabase): An instance of WarehouseDatabase class
         """
         if database is None:
+            LOGGER.debug("Request to get all schemas available")
             return self.__session.query(WarehouseSchema).all()
 
+        LOGGER.debug("Request to get all schemas available under database with id: '%d'"\
+                      % database.id)
         return self.__session.query(WarehouseSchema)\
                     .filter(WarehouseSchema.database_id == database.id).all()
 
@@ -151,12 +188,17 @@ class RepositoryManager(categories.SQLite):
         _names = []
         _schemas = None
         if database is None:
+            LOGGER.debug("Request to get all schema names available")
             _schemas = self.__session.query(WarehouseSchema).all()
         else:
+            LOGGER.debug("Request to get all schema names available under database id: '%d'"\
+                          % database.id)
             _schemas = self.__session.query(WarehouseSchema)\
                     .filter(WarehouseSchema.database_id == database.id).all()
         for sch in _schemas:
+            LOGGER.debug("Schema name '%s' added to the list" % sch.name)
             _names.append(sch.name)
+        LOGGER.debug("Returning back list of schema names")
         return _names
 
     def get_table(self, param, schema=None):
@@ -170,22 +212,29 @@ class RepositoryManager(categories.SQLite):
         """
         if schema is None:
             if isinstance(param, str):
+                LOGGER.debug("Request to get table with name: '%s'" % param)
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.name == param).first()
             elif isinstance(param, int):
+                LOGGER.debug("Request to get table with id: '%d'" % param)
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.id == param).first()
         else:
             if isinstance(param, str):
+                LOGGER.debug("Request to get table with name: '%s' under schema id: '%d'"\
+                              % (param, schema.id))
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.name == param and\
                                 WarehouseTable.schema_id == schema.id)\
                         .first()
             elif isinstance(param, int):
+                LOGGER.debug("Request to get table with id: '%d' under schema id: '%d'"\
+                              % (param, schema.id))
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.name == param\
                                 and WarehouseTable.schema_id == schema.id)\
                         .first()
+        LOGGER.debug("Incorrect datatype passed for parameter. Only 'int' and 'str' are accepted")
         return None
 
     def get_all_tables(self, schema=None):
@@ -197,8 +246,10 @@ class RepositoryManager(categories.SQLite):
                 schema(WarehouseSchema): An instance of schema class
         """
         if schema is None:
+            LOGGER.debug("Request to get all tables available")
             return self.__session.query(WarehouseTable).all()
 
+        LOGGER.debug("Request to get all tables available under schema: '%d'" % schema.id)
         return self.__session.query(WarehouseTable)\
                     .filter(WarehouseTable.schema_id == schema.id).all()
 
@@ -213,13 +264,18 @@ class RepositoryManager(categories.SQLite):
         _tables = None
         _names = []
         if schema is None:
+            LOGGER.debug("Request to get all table names available")
             _tables = self.__session.query(WarehouseTable).all()
         else:
+            LOGGER.debug("Request to get all table names available under schema id: '%d'"\
+                          % schema.id)
             _tables = self.__session.query(WarehouseTable)\
                     .filter(WarehouseTable.schema_id == schema.id).all()
         for tab in _tables:
+            LOGGER.debug("Adding table name '%s' to the list" % tab.name)
             _names.append(tab.name)
 
+        LOGGER.debug("Returning the list of table names available")
         return _names
 
     def get_column(self, column, table):
@@ -231,15 +287,20 @@ class RepositoryManager(categories.SQLite):
                 table(WarehouseTable): An instance of table
         """
         if isinstance(column, str):
+            LOGGER.debug("Request to get column with name: '%s' under table with id: '%d'"\
+                          % (column, table.id))
             return self.__session.query(WarehouseColumn)\
                 .filter(WarehouseColumn.table_id == table.id\
                         and WarehouseColumn.name == column)\
                 .first()
         elif isinstance(column, int):
+            LOGGER.debug("Request to get column with id: '%d' under table with id: '%id'"\
+                          % (column, table.id))
             return self.__session.query(WarehouseColumn)\
                 .filter(WarehouseColumn.id == column and\
                         WarehouseColumn.table_id == table.id)\
                 .first()
+        LOGGER.warn("Incorrect datatype provided as parameter. Only 'int' and 'str' are accepted")
         return None
 
     def get_all_columns(self, table):
@@ -249,17 +310,24 @@ class RepositoryManager(categories.SQLite):
             Args:
                 table(WarehouseTable): An instance of table
         """
+        LOGGER.debug("Request to get all columns available under table with id: '%d'"\
+                      % (table.id))
         return self.__session.query(WarehouseColumn)\
             .filter(WarehouseColumn.table_id == table.id)\
             .all()
 
     def get_all_column_names(self, table):
         _names = []
+        LOGGER.debug("Request to get all column names available under table with id: '%d'"\
+                      % (table.id))
         _columns = self.__session.query(WarehouseColumn)\
             .filter(WarehouseColumn.table_id == table.id)\
             .all()
         for col in _columns:
+            LOGGER.debug("Adding column name '%s' to the list" % col.name)
             _names.append(col.name)
+        LOGGER.debug("Returning all column names available under table with id: '%d'"\
+                      % table.id)
         return _names
 
     def add_schema_to_db(self, schema, db):
