@@ -22144,3 +22144,260 @@ TypeError: issubclass() arg 1 must be a class
 2019-06-05 20:28:39,823 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_id' to the list
 2019-06-05 20:28:39,824 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_qty' to the list
 2019-06-05 20:28:39,826 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '3'
+2019-06-05 21:52:36,549 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-05 21:52:36,555 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db
+2019-06-05 21:52:36,715 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-05 21:52:36,817 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-05 21:52:36,820 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-05 21:52:37,303 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-05 21:52:37,357 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-05 21:52:37,407 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-05 21:52:37,409 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/meta.db
+2019-06-05 21:52:37,432 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-05 21:52:37,436 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-05 21:52:37,438 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-05 21:52:37,483 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-05 21:52:37,900 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-05 21:52:37,950 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
+2019-06-05 21:52:37,952 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-05 21:52:37,978 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-05 21:52:37,981 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-05 21:52:38,027 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-05 21:52:38,086 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db
+2019-06-05 21:52:38,120 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-05 21:52:38,182 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-05 21:52:38,185 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-05 21:52:38,228 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-05 21:52:38,272 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - RepositoryManager instance created
+2019-06-05 21:52:38,326 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-05 21:52:38,328 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/meta.db
+2019-06-05 21:52:38,354 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-05 21:52:38,358 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connecting to database...
+2019-06-05 21:52:38,361 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connected to database successfully
+2019-06-05 21:52:38,414 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-05 21:52:38,423 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-05 21:52:38,478 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Repository object saved successfully
+2019-06-05 21:52:38,481 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-05 21:52:38,500 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-05 21:52:38,503 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-05 21:52:38,550 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation is in progress
+2019-06-05 21:52:38,574 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-05 21:52:38,576 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-05 21:52:38,578 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-05 21:52:38,627 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:38,630 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get all schema names available
+2019-06-05 21:52:38,650 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Schema name 'main' added to the list
+2019-06-05 21:52:38,652 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning back list of schema names
+2019-06-05 21:52:38,701 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-05 21:52:38,704 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db
+2019-06-05 21:52:38,730 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-05 21:52:38,804 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-05 21:52:38,807 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-05 21:52:38,859 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-05 21:52:38,902 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - RepositoryManager instance created
+2019-06-05 21:52:38,952 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-05 21:52:38,954 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/meta.db
+2019-06-05 21:52:38,975 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-05 21:52:38,978 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connecting to database...
+2019-06-05 21:52:38,980 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connected to database successfully
+2019-06-05 21:52:39,019 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-05 21:52:39,027 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-05 21:52:39,074 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Repository object saved successfully
+2019-06-05 21:52:39,077 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-05 21:52:39,101 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-05 21:52:39,104 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-05 21:52:39,152 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation is in progress
+2019-06-05 21:52:39,170 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-05 21:52:39,172 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-05 21:52:39,174 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-05 21:52:39,224 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:39,227 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all schema names available
+2019-06-05 21:52:39,247 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Schema name 'main' added to the list
+2019-06-05 21:52:39,250 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning back list of schema names
+2019-06-05 21:52:39,292 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-05 21:52:39,295 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-05 21:52:39,312 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:39,314 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:39,321 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:39,324 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:39,351 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-05 21:52:39,355 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-05 21:52:39,369 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:39,372 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:39,375 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:39,378 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:39,381 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-05 21:52:39,384 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-05 21:52:39,387 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-05 21:52:39,401 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:39,403 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:39,406 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:39,409 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-05 21:52:39,411 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:39,414 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-05 21:52:39,417 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:39,420 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-05 21:52:39,423 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-05 21:52:39,426 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-05 21:52:39,428 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-05 21:52:39,430 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-05 21:52:39,488 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:39,490 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all table names available
+2019-06-05 21:52:39,514 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-05 21:52:39,518 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-05 21:52:39,520 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-05 21:52:39,524 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the list of table names available
+2019-06-05 21:52:39,577 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-05 21:52:39,580 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db
+2019-06-05 21:52:39,608 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-05 21:52:39,681 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-05 21:52:39,684 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-05 21:52:39,739 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-05 21:52:39,781 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - RepositoryManager instance created
+2019-06-05 21:52:39,835 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-05 21:52:39,838 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/meta.db
+2019-06-05 21:52:39,874 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-05 21:52:39,878 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connecting to database...
+2019-06-05 21:52:39,881 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connected to database successfully
+2019-06-05 21:52:39,924 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-05 21:52:39,933 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-05 21:52:39,984 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Repository object saved successfully
+2019-06-05 21:52:39,986 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-05 21:52:40,012 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-05 21:52:40,014 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-05 21:52:40,054 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation is in progress
+2019-06-05 21:52:40,070 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-05 21:52:40,072 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-05 21:52:40,075 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-05 21:52:40,124 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:40,126 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all schema names available
+2019-06-05 21:52:40,147 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Schema name 'main' added to the list
+2019-06-05 21:52:40,150 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning back list of schema names
+2019-06-05 21:52:40,193 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-05 21:52:40,195 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-05 21:52:40,216 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,219 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:40,221 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,223 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,240 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-05 21:52:40,243 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-05 21:52:40,259 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,263 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:40,267 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,269 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,272 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-05 21:52:40,275 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-05 21:52:40,278 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-05 21:52:40,293 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:40,297 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-05 21:52:40,300 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:40,303 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-05 21:52:40,305 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:40,309 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-05 21:52:40,312 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-05 21:52:40,315 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-05 21:52:40,319 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-05 21:52:40,322 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-05 21:52:40,325 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-05 21:52:40,327 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-05 21:52:40,375 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:40,378 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all table names available
+2019-06-05 21:52:40,400 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-05 21:52:40,402 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-05 21:52:40,404 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-05 21:52:40,406 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the list of table names available
+2019-06-05 21:52:40,435 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,438 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,441 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-05 21:52:40,444 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-05 21:52:40,482 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,485 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'name'                          with datatype as 'VARCHAR(255)'
+2019-06-05 21:52:40,488 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' is a dim candidate
+2019-06-05 21:52:40,492 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been added to table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,496 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'address'                          with datatype as 'VARCHAR(1000)'
+2019-06-05 21:52:40,500 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' is a dim candidate
+2019-06-05 21:52:40,504 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been added to table 'CUSTOMER_MASTER'
+2019-06-05 21:52:40,506 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-05 21:52:40,509 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'name' from list to repository                          database
+2019-06-05 21:52:40,511 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'address' from list to repository                          database
+2019-06-05 21:52:40,565 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:40,585 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,592 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,594 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-05 21:52:40,597 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-05 21:52:40,607 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,611 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_name'                          with datatype as 'VARCHAR(255)'
+2019-06-05 21:52:40,615 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' is a dim candidate
+2019-06-05 21:52:40,621 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been added to table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,624 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'cost'                          with datatype as 'FLOAT'
+2019-06-05 21:52:40,628 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' is a fact candidate
+2019-06-05 21:52:40,631 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been added to table 'PRODUCT_MASTER'
+2019-06-05 21:52:40,634 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-05 21:52:40,637 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_name' from list to repository                          database
+2019-06-05 21:52:40,640 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'cost' from list to repository                          database
+2019-06-05 21:52:40,697 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:40,719 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'SALES_DETAILS'
+2019-06-05 21:52:40,722 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,725 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-05 21:52:40,727 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-05 21:52:40,736 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'SALES_DETAILS'
+2019-06-05 21:52:40,740 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'customer_id'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,744 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' is a fact candidate
+2019-06-05 21:52:40,747 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been added to table 'SALES_DETAILS'
+2019-06-05 21:52:40,750 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_id'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,753 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' is a fact candidate
+2019-06-05 21:52:40,757 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been added to table 'SALES_DETAILS'
+2019-06-05 21:52:40,760 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_qty'                          with datatype as 'INTEGER'
+2019-06-05 21:52:40,763 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' is a fact candidate
+2019-06-05 21:52:40,766 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been added to table 'SALES_DETAILS'
+2019-06-05 21:52:40,770 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-05 21:52:40,773 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'customer_id' from list to repository                          database
+2019-06-05 21:52:40,775 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_id' from list to repository                          database
+2019-06-05 21:52:40,777 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_qty' from list to repository                          database
+2019-06-05 21:52:40,822 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:40,842 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '1'
+2019-06-05 21:52:40,866 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-05 21:52:40,869 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'name' to the list
+2019-06-05 21:52:40,871 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'address' to the list
+2019-06-05 21:52:40,873 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '1'
+2019-06-05 21:52:40,889 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '2'
+2019-06-05 21:52:40,907 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-05 21:52:40,910 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_name' to the list
+2019-06-05 21:52:40,912 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'cost' to the list
+2019-06-05 21:52:40,914 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '2'
+2019-06-05 21:52:40,929 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '3'
+2019-06-05 21:52:40,948 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-05 21:52:40,951 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'customer_id' to the list
+2019-06-05 21:52:40,953 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_id' to the list
+2019-06-05 21:52:40,955 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_qty' to the list
+2019-06-05 21:52:40,957 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '3'
+2019-06-05 21:52:41,003 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-05 21:52:41,005 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db
+2019-06-05 21:52:41,032 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-05 21:52:41,098 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-05 21:52:41,101 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-05 21:52:41,155 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-05 21:52:41,193 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - RepositoryManager instance created
+2019-06-05 21:52:41,238 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-05 21:52:41,241 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/meta.db
+2019-06-05 21:52:41,264 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-05 21:52:41,267 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connecting to database...
+2019-06-05 21:52:41,270 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connected to database successfully
+2019-06-05 21:52:41,306 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////data/data/com.termux/files/home/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-05 21:52:41,316 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-05 21:52:41,372 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Repository object saved successfully
+2019-06-05 21:52:41,376 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-05 21:52:41,407 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-05 21:52:41,410 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-05 21:52:41,449 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation is in progress
+2019-06-05 21:52:41,466 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-05 21:52:41,468 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-05 21:52:41,470 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-05 21:52:41,519 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-05 21:52:41,527 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get all schema names available
+2019-06-05 21:52:41,549 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Schema name 'main' added to the list
+2019-06-05 21:52:41,551 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning back list of schema names
+2019-06-05 21:52:41,595 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-05 21:52:41,632 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-05 21:52:41,636 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
+2019-06-05 21:52:41,688 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
