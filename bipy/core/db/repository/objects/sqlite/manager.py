@@ -4,9 +4,9 @@
     Date: 05/31/2019
 """
 from bipy.core.db import categories
-from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
-from bipy.core.db.repository.objects import WarehouseTable, WarehouseColumn
-from bipy.core.db.repository.objects import WarehouseView
+from bipy.core.db.repository.meta_objects import WarehouseDatabase, WarehouseSchema
+from bipy.core.db.repository.meta_objects import WarehouseTable, WarehouseColumn
+from bipy.core.db.repository.meta_objects import WarehouseView
 from bipy.logging import logger
 
 
@@ -457,160 +457,92 @@ class RepositoryManager(categories.SQLite):
         LOGGER.error("SQLite does not support Packages")
         raise NotImplementedError("SQLite does not support Packages")
 
-    def add_schema_to_db(self, schema, db):
-        """ Add an schema passed as argument to the db passed
-            as well
+    def get_all_package(self, schema=None):
+        """ Returns all package instances available in the database.
+            If schema is passed, it will lookup Packages under that schema only
+            **WARNING**: SQLite doesn't support Packages
 
             Args:
-                schema(WarehouseSchema): An instance of schema
-                db(WarehouseDatabase): An instance of db
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        db_exists = self.get_database(db.name)\
-            .__len__() != 0
-        schema_exists = self.get_schema(schema.name, db)\
-            .__len__() != 0
-        if not db_exists:
-            self.save(db)
-        if not schema_exists:
-            self.save(schema)
-        db.schemas.append(schema)
-        self.__session.commit()
+        LOGGER.error("SQLite does not support Packages")
+        raise NotImplementedError("SQLite does not support Packages")
 
-    def add_schemas_to_db(self, schemas, db):
-        """ Same as add_schema_to_db but this adds an list of
-            schemas to db
+    def get_all_package_names(self, schema=None):
+        """ Returns list of names of all package instance available in the database.
+            If schema is passed, it will lookup Packages under that schema only
+            **WARNING**: SQLite doesn't support Packages
 
             Args:
-                schemas(List): An list of schema objects
-                db(WarehouseDatabase): An db object
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        for schema in schemas:
-            self.add_schema_to_db(schema, db)
+        LOGGER.error("SQLite does not support Packages")
+        raise NotImplementedError("SQLite does not support Packages")
 
-    def add_table_to_schema(self, table, schema):
-        """ Add's an table to provided schema. It also saves the
-            table and schema objects if not already saved
+    def get_procedure(self, param, schema=None):
+        """ Returns the procedure instance matching the name or id passed as parameter.
+            If schema is passed, it will lookup Procedures under that schema only
+            **WARNING**: SQLite doesn't support Procedures
 
             Args:
-                table(WarehouseTable): An table object
-                schema(WarehouseSchema): An schema object
+                param(int/str): Id or name of the procedure
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        schema_exists = self.get_schema(schema.name)\
-            .__len__() != 0
-        table_exists = self.get_table(table.name, schema)\
-            .__len__() != 0
-        if not schema_exists:
-            self.save(schema)
-        if not table_exists:
-            self.save(table)
-        schema.tables.append(table)
-        self.__session.commit()
+        LOGGER.error("SQLite does not support Procedures")
+        raise NotImplementedError("SQLite does not support Procedures")
 
-    def add_tables_to_schema(self, tables, schema):
-        """ Add's a list of tables under the provided
-            schema. It is similar to add_table_to_schema
+    def get_all_procedure(self, schema=None):
+        """ Returns all procedure instances available in the database.
+            If schema is passed, it will lookup Procedures under that schema only
+            **WARNING**: SQLite doesn't support Procedure
 
             Args:
-                tables(List): A list of table instances
-                schema(WarehouseSchema): An instance of schema objects
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        for tab in tables:
-            self.add_table_to_schema(tab, schema)
+        LOGGER.error("SQLite does not support Procedures")
+        raise NotImplementedError("SQLite does not support Procedures")
 
-    def add_column_to_table(self, column, table):
-        """ Add's an column instance to the table provided as
-            parameter
+    def get_all_procedure_names(self, schema=None):
+        """ Returns list of names of all procedure instance available in the database.
+            If schema is passed, it will lookup Procedures under that schema only
+            **WARNING**: SQLite doesn't support Procedures
 
             Args:
-                column(WarehouseColumn): An instance of column
-                table(WarehouseTable): An instance of table
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        table_exists = self.get_table(table.name)\
-            .__len__() != 0
-        column_exists = self.get_column(column.name, table)\
-            .__len__() != 0
-        if not table_exists:
-            self.save(table)
-        if not column_exists:
-            self.save(column)
-        table.columns.append(column)
-        self.__session.commit()
+        LOGGER.error("SQLite does not support Procedures")
+        raise NotImplementedError("SQLite does not support Procedures")
 
-    def add_columns_to_table(self, columns, table):
-        """ Add columns from provided list to table ppassed as
-            argument
+    def get_function(self, param, schema=None):
+        """ Returns the function instance matching the name or id passed as parameter.
+            If schema is passed, it will lookup Function under that schema only
+            **WARNING**: SQLite doesn't support functions
 
             Args:
-                columns(List): A list of columns to be added to DB
-                table(WarehouseTable): An instance of table class
+                param(int/str): Id or name of the function
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        for col in columns:
-            self.add_column_to_table(col, table)
+        LOGGER.error("SQLite does not support Functions")
+        raise NotImplementedError("SQLite does not support Functions")
 
-    def remove_schema_from_db(self, schema, db):
-        """ Removes provided schema from list of schemas available
-            under db passed as argument
+    def get_all_function(self, schema=None):
+        """ Returns all function instances available in the database.
+            If schema is passed, it will lookup functions under that schema only
+            **WARNING**: SQLite doesn't support functions
 
             Args:
-                schema(WarehouseSchema): Schema object to be removed
-                table(WarehouseTable): Table containing the schema object
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        for sch in db.schemas:
-            if sch.id == schema.id:
-                db.schemas.remove(sch)
+        LOGGER.error("SQLite does not support functions")
+        raise NotImplementedError("SQLite does not support functions")
 
-    def remove_table_from_schema(self, table, schema):
-        """ Removes the provided table from list of tables available
-            under passed schema
+    def get_all_function_names(self, schema=None):
+        """ Returns list of names of all function instance available in the database.
+            If schema is passed, it will lookup function under that schema only
+            **WARNING**: SQLite doesn't support functions
 
             Args:
-                table(WarehouseTable): Table object that needs to be
-                    removed
-                schema(WarehouseSchema): Schema object that contains
-                        the tables
+                schema(WarehouseSchema): Instance of the warehouse schema
         """
-        for tb in schema.tables:
-            if tb.id == table.id:
-                schema.tables.remove(tb)
-
-    def remove_column_from_table(self, column, table):
-        """ Removes the column from the table. Both table and column are passed
-            as argument to this method
-
-            Args:
-                column(WarehouseColumn): Column that needs to be removed
-                table(WarehouseTable): Table from where column needs to be removed
-        """
-        for col in table.columns:
-            if col.id == column.id:
-                table.columns.remove(col)
-
-    def remove_schemas_from_db(self, schemas, db):
-        """ Same as `remove_schema_from_db` but removes all schemas passed as list
-
-            Args:
-                schemas(List): List of schemas
-                db(WarehouseDatabase): Instance of DB from where schemas will be removed
-        """
-        for sch in schemas:
-            self.remove_schema_from_db(sch, db)
-
-    def remove_tables_from_schema(self, tables, schema):
-        """ Same as `remove_table_from_schema` but removes all tables passed as list
-
-            Args:
-                tables(List): List of tables
-                schema(WarehouseSchema): Instance of schema from where tables will be removed
-        """
-        for tab in tables:
-            self.remove_table_from_schema(tab, schema)
-
-    def remove_columns_from_schema(self, columns, table):
-        """ Same as `remove_column_from_table` but removes all columns passed as list
-
-            Args:
-                colums(List): List of columns that needs to be removed
-                table(WarehouseTable): Table from where columns will be removed
-        """
-        for col in columns:
-            self.remove_column_from_table(col, table)
+        LOGGER.error("SQLite does not support functions")
+        raise NotImplementedError("SQLite does not support functions")

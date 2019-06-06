@@ -1,0 +1,9 @@
+[Core]
+Name = SQLite Repository Relationship Manager
+Module = manager 
+
+[Documentation]
+Author = Ajeet Singh
+Version = 1.0
+Description = This plugin helps in working with repository objects and make relationship between them
+

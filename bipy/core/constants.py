@@ -18,7 +18,8 @@ class PATHS:
     CONNECTION_MANAGERS = os.path.abspath(os.path.join(DB, "connection_managers"))
     REPOSITORY = os.path.abspath(os.path.join(DB, "repository"))
     ANALYTIC = os.path.abspath(os.path.join(DB, "analytic"))
-    REPO_MGR = os.path.abspath(os.path.join(DB, "repository"))
+    REPO_MGR = os.path.abspath(os.path.join(REPOSITORY, "objects"))
+    REPO_REL_MGR = os.path.abspath(os.path.join(REPOSITORY, "relationship"))
     LOG_CONFIG_PATH = os.path.abspath(os.path.join(ROOT_PARENT, "log_config.json"))
 
 

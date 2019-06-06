@@ -22401,3 +22401,1350 @@ TypeError: issubclass() arg 1 must be a class
 2019-06-05 21:52:41,632 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - View 'revenue_details' has been created under schema 'main'
 2019-06-05 21:52:41,636 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
 2019-06-05 21:52:41,688 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:11:52,413 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:11:52,429 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:11:52,536 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:11:52,612 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:11:52,612 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:11:52,783 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:11:52,796 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-06 16:11:53,203 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-06 16:11:53,208 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,209 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:11:53,237 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,245 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,246 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:11:53,252 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,263 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:11:53,264 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:11:53,270 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:11:53,278 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_1 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-06 16:11:53,281 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - RepositoryManager instance created
+2019-06-06 16:11:53,289 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,289 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:11:53,295 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,303 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,304 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:11:53,340 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,353 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:11:53,354 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:11:53,360 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:11:53,392 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_2 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-06 16:11:53,395 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - RepositoryManager instance created
+2019-06-06 16:11:53,400 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,401 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:11:53,408 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,415 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,416 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:11:53,421 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,434 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:11:53,435 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:11:53,441 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:11:53,450 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_3 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-06 16:11:53,455 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - RepositoryManager instance created
+2019-06-06 16:11:53,461 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,462 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:11:53,467 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,473 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,474 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:11:53,486 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:11:53,498 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:11:53,498 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:11:53,505 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:11:53,512 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_4 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-06 16:11:53,515 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - RepositoryManager instance created
+2019-06-06 16:11:53,522 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:11:53,523 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:11:53,529 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:25:04,998 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:25:04,999 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:25:05,023 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,043 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:25:05,044 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:25:05,051 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,077 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,083 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,084 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:25:05,089 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,099 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,099 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:25:05,104 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,117 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:25:05,118 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:25:05,123 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,128 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,134 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,135 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:25:05,140 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,146 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,147 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:25:05,153 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,164 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:25:05,165 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:25:05,169 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,174 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,180 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,180 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:25:05,186 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,196 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,197 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:25:05,202 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,213 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:25:05,213 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:25:05,221 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,226 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,232 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,233 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:25:05,238 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,244 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,244 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:25:05,251 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:25:05,262 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:25:05,263 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:25:05,267 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,272 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:25:05,278 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:25:05,279 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:25:05,284 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,559 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,559 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:26:39,584 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,604 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:26:39,604 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:26:39,611 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,624 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,631 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,631 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:26:39,638 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,644 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,645 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:26:39,650 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,663 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:26:39,664 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:26:39,668 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,673 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,680 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,680 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:26:39,685 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,691 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,692 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:26:39,698 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,709 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:26:39,709 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:26:39,714 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,719 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,725 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,726 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:26:39,731 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,741 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,741 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:26:39,746 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,758 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:26:39,759 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:26:39,764 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,771 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,778 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,779 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:26:39,784 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,790 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,791 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:26:39,822 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:26:39,834 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:26:39,835 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:26:39,839 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,845 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:26:39,855 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:26:39,859 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:26:39,866 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,388 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,389 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:45,413 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,435 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:45,435 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:45,441 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,447 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,454 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,454 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:45,461 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,467 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,468 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:45,473 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,486 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:45,487 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:45,491 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,496 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,503 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,503 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:45,508 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,514 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,515 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:45,522 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,532 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:45,533 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:45,537 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,542 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,548 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,549 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:45,554 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,564 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,565 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:45,570 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,581 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:45,582 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:45,586 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,591 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,597 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,598 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:45,604 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,610 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,611 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:45,618 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:32:45,628 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:45,629 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:45,633 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,638 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:45,644 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:32:45,645 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:45,650 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,215 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,215 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:54,239 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,259 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:54,260 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:54,266 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,272 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,278 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,279 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:54,285 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,291 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,292 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:54,297 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,311 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:54,312 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:54,316 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,321 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,327 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,328 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:54,333 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,339 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,340 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:54,347 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,357 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:54,358 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:54,362 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,367 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,374 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,375 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:54,381 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,391 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,392 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:54,397 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,408 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:54,408 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:54,413 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,418 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,424 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,425 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:54,430 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,437 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,437 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:32:54,444 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:32:54,454 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:32:54,455 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:32:54,460 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,466 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:32:54,473 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:32:54,474 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:32:54,479 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:33:30,583 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:33:30,584 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:33:30,607 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:33:30,628 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:33:30,629 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:33:30,635 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/warehouse/base_meta_gen/sqlite/generator.py", line 11, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:33:30,641 - yapsy - ERROR - Unable to import plugin: /home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager
+Traceback (most recent call last):
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 510, in loadPlugins
+    candidate_module = PluginManager._importModule(plugin_module_name, candidate_filepath)
+  File "/home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py", line 576, in _importModule
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "/usr/lib/python3.5/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.5/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/armin/projects/python/bipy/bipy/core/db/repository/objects/sqlite/manager.py", line 7, in <module>
+    from bipy.core.db.repository.objects import WarehouseDatabase, WarehouseSchema
+ImportError: cannot import name 'WarehouseDatabase'
+2019-06-06 16:33:30,648 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:33:30,648 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:33:30,656 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:40:08,882 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:40:08,895 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:08,896 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:08,921 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:40:08,921 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:08,936 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:08,937 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:26,906 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:40:26,927 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,041 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,042 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,066 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,067 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,075 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,087 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,092 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,093 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,101 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,102 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,110 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,121 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,128 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,128 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,134 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,134 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,141 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,152 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,158 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,164 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,177 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,183 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,190 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,202 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,207 - yapsy_loaded_plugin_SQLite_MetaData_Generator_5 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,208 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,214 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,220 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,233 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,238 - yapsy_loaded_plugin_SQLite_MetaData_Generator_6 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,244 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,256 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,263 - yapsy_loaded_plugin_SQLite_MetaData_Generator_7 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,268 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,283 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,289 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,290 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:27,412 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,420 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,421 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,423 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:40:27,424 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:40:27,424 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:40:27,426 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-06 16:40:27,427 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-06 16:40:27,430 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,431 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,431 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,432 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,432 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-06 16:40:27,433 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-06 16:40:27,435 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,435 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,436 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,436 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,437 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-06 16:40:27,437 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-06 16:40:27,438 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-06 16:40:27,439 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,440 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,440 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,441 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-06 16:40:27,442 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,442 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-06 16:40:27,442 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,443 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-06 16:40:27,444 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-06 16:40:27,446 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - ERROR - Preparing to create columns meta for table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,447 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-06 16:40:27,447 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' is a primary key
+2019-06-06 16:40:27,448 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' is a fact candidate
+2019-06-06 16:40:27,448 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,449 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'product_name'                          with datatype as 'VARCHAR(255)'
+2019-06-06 16:40:27,450 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' is a dim candidate
+2019-06-06 16:40:27,451 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,451 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'cost'                          with datatype as 'FLOAT'
+2019-06-06 16:40:27,452 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' is a fact candidate
+2019-06-06 16:40:27,453 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,458 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,470 - yapsy_loaded_plugin_SQLite_Metadata_Browser_9 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,475 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,476 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:27,483 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,495 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,500 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,501 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:27,503 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,509 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,510 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,512 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:40:27,512 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:40:27,513 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:40:27,519 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,531 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,537 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,537 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:27,539 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,545 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,545 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,547 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:40:27,548 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:40:27,549 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:40:27,551 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-06 16:40:27,552 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-06 16:40:27,554 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,555 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,555 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,556 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:40:27,556 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-06 16:40:27,557 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-06 16:40:27,559 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,559 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,560 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,560 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:40:27,561 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-06 16:40:27,561 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-06 16:40:27,562 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-06 16:40:27,564 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,564 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:40:27,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-06 16:40:27,566 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,566 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-06 16:40:27,567 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-06 16:40:27,567 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-06 16:40:27,568 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-06 16:40:27,574 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,586 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,593 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,594 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-06 16:40:27,596 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:40:27,603 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Connected to database successfully
+2019-06-06 16:40:27,603 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:40:27,605 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:40:27,606 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:40:27,606 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:40:27,609 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-06 16:40:27,612 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-06 16:40:27,619 - yapsy_loaded_plugin_SQLite_Connection_Manager_13 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,630 - yapsy_loaded_plugin_SQLite_Metadata_Browser_13 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,636 - yapsy_loaded_plugin_SQLite_MetaData_Generator_13 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:40:27,642 - yapsy_loaded_plugin_SQLite_Connection_Manager_14 - DEBUG - Init Connection Manager
+2019-06-06 16:40:27,654 - yapsy_loaded_plugin_SQLite_Metadata_Browser_14 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:40:27,659 - yapsy_loaded_plugin_SQLite_MetaData_Generator_14 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:02,669 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-06 16:41:02,670 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:41:02,694 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:41:02,715 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:41:02,716 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:41:02,834 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:02,847 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-06 16:41:02,854 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-06 16:41:02,854 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:41:02,859 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:41:02,860 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-06 16:41:02,860 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-06 16:41:03,099 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-06 16:41:03,207 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-06 16:41:03,411 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
+2019-06-06 16:41:03,411 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-06 16:41:03,417 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-06 16:41:03,418 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-06 16:41:03,424 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-06 16:41:03,425 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:41:03,430 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:41:03,443 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:41:03,443 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:41:03,450 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:03,455 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - RepositoryManager instance created
+2019-06-06 16:41:03,460 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-06 16:41:03,461 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:41:03,467 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:41:03,468 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connecting to database...
+2019-06-06 16:41:03,468 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connected to database successfully
+2019-06-06 16:41:03,666 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-06 16:41:03,668 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-06 16:41:03,888 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Repository object saved successfully
+2019-06-06 16:41:03,889 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-06 16:41:03,893 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-06 16:41:03,894 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-06 16:41:04,101 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:41:04,107 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:41:04,108 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:41:04,108 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-06 16:41:04,333 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:04,334 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get all schema names available
+2019-06-06 16:41:04,338 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Schema name 'main' added to the list
+2019-06-06 16:41:04,338 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning back list of schema names
+2019-06-06 16:41:04,344 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-06 16:41:04,344 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:41:04,351 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:41:04,361 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:41:04,362 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:41:04,368 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:04,375 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - RepositoryManager instance created
+2019-06-06 16:41:04,381 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-06 16:41:04,382 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:41:04,387 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-06 16:41:04,387 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connecting to database...
+2019-06-06 16:41:04,388 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connected to database successfully
+2019-06-06 16:41:04,599 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-06 16:41:04,602 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-06 16:41:04,822 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Repository object saved successfully
+2019-06-06 16:41:04,822 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-06 16:41:04,827 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-06 16:41:04,827 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-06 16:41:05,045 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:41:05,050 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:41:05,051 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:41:05,051 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-06 16:41:05,289 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:05,289 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all schema names available
+2019-06-06 16:41:05,293 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Schema name 'main' added to the list
+2019-06-06 16:41:05,294 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning back list of schema names
+2019-06-06 16:41:05,534 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-06 16:41:05,535 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-06 16:41:05,537 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:05,538 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:05,538 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:05,539 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:05,545 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-06 16:41:05,546 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-06 16:41:05,550 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:05,551 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:05,552 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:05,552 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:05,552 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-06 16:41:05,553 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-06 16:41:05,554 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-06 16:41:05,556 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:05,556 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:05,557 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:05,557 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-06 16:41:05,557 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:05,558 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-06 16:41:05,558 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:05,559 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-06 16:41:05,560 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-06 16:41:05,560 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-06 16:41:05,560 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-06 16:41:05,561 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-06 16:41:05,800 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:05,801 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all table names available
+2019-06-06 16:41:05,806 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-06 16:41:05,806 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-06 16:41:05,807 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-06 16:41:05,807 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the list of table names available
+2019-06-06 16:41:05,813 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-06 16:41:05,814 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:41:05,820 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-06 16:41:05,831 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:41:05,831 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:41:05,838 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:05,847 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - RepositoryManager instance created
+2019-06-06 16:41:05,852 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-06 16:41:05,853 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:41:05,858 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-06 16:41:05,859 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connecting to database...
+2019-06-06 16:41:05,859 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connected to database successfully
+2019-06-06 16:41:06,066 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-06 16:41:06,068 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-06 16:41:06,289 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Repository object saved successfully
+2019-06-06 16:41:06,289 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-06 16:41:06,294 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-06 16:41:06,294 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-06 16:41:06,501 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:41:06,505 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:41:06,505 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:41:06,506 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-06 16:41:06,711 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:06,711 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all schema names available
+2019-06-06 16:41:06,715 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Schema name 'main' added to the list
+2019-06-06 16:41:06,716 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning back list of schema names
+2019-06-06 16:41:06,912 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-06 16:41:06,913 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-06 16:41:06,914 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:06,915 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:06,916 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:06,916 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-06 16:41:06,920 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-06 16:41:06,920 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-06 16:41:06,922 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:06,923 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:06,923 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:06,924 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-06 16:41:06,925 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-06 16:41:06,925 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-06 16:41:06,926 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-06 16:41:06,928 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:06,929 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-06 16:41:06,930 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:06,930 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-06 16:41:06,930 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:06,931 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-06 16:41:06,931 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-06 16:41:06,932 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-06 16:41:06,932 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-06 16:41:06,933 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-06 16:41:06,933 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-06 16:41:06,934 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-06 16:41:07,144 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:07,145 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all table names available
+2019-06-06 16:41:07,149 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-06 16:41:07,150 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-06 16:41:07,150 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-06 16:41:07,150 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the list of table names available
+2019-06-06 16:41:07,377 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-06 16:41:07,378 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,379 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-06 16:41:07,379 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-06 16:41:07,387 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'CUSTOMER_MASTER'
+2019-06-06 16:41:07,388 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'name'                          with datatype as 'VARCHAR(255)'
+2019-06-06 16:41:07,389 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' is a dim candidate
+2019-06-06 16:41:07,390 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been added to table 'CUSTOMER_MASTER'
+2019-06-06 16:41:07,391 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'address'                          with datatype as 'VARCHAR(1000)'
+2019-06-06 16:41:07,392 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' is a dim candidate
+2019-06-06 16:41:07,393 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been added to table 'CUSTOMER_MASTER'
+2019-06-06 16:41:07,393 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-06 16:41:07,394 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'name' from list to repository                          database
+2019-06-06 16:41:07,394 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'address' from list to repository                          database
+2019-06-06 16:41:07,600 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:07,605 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'PRODUCT_MASTER'
+2019-06-06 16:41:07,606 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,606 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-06 16:41:07,606 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-06 16:41:07,609 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:41:07,609 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_name'                          with datatype as 'VARCHAR(255)'
+2019-06-06 16:41:07,610 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' is a dim candidate
+2019-06-06 16:41:07,611 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:41:07,611 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'cost'                          with datatype as 'FLOAT'
+2019-06-06 16:41:07,612 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' is a fact candidate
+2019-06-06 16:41:07,613 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been added to table 'PRODUCT_MASTER'
+2019-06-06 16:41:07,613 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-06 16:41:07,614 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_name' from list to repository                          database
+2019-06-06 16:41:07,614 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'cost' from list to repository                          database
+2019-06-06 16:41:07,822 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:07,827 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'SALES_DETAILS'
+2019-06-06 16:41:07,828 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,828 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-06 16:41:07,828 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-06 16:41:07,831 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'SALES_DETAILS'
+2019-06-06 16:41:07,831 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'customer_id'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,832 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' is a fact candidate
+2019-06-06 16:41:07,833 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been added to table 'SALES_DETAILS'
+2019-06-06 16:41:07,833 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_id'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,834 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' is a fact candidate
+2019-06-06 16:41:07,835 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been added to table 'SALES_DETAILS'
+2019-06-06 16:41:07,835 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_qty'                          with datatype as 'INTEGER'
+2019-06-06 16:41:07,836 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' is a fact candidate
+2019-06-06 16:41:07,837 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been added to table 'SALES_DETAILS'
+2019-06-06 16:41:07,838 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-06 16:41:07,838 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'customer_id' from list to repository                          database
+2019-06-06 16:41:07,839 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_id' from list to repository                          database
+2019-06-06 16:41:07,839 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_qty' from list to repository                          database
+2019-06-06 16:41:08,056 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:08,061 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '1'
+2019-06-06 16:41:08,066 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-06 16:41:08,066 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'name' to the list
+2019-06-06 16:41:08,067 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'address' to the list
+2019-06-06 16:41:08,067 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '1'
+2019-06-06 16:41:08,070 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '2'
+2019-06-06 16:41:08,074 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-06 16:41:08,075 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_name' to the list
+2019-06-06 16:41:08,075 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'cost' to the list
+2019-06-06 16:41:08,076 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '2'
+2019-06-06 16:41:08,078 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '3'
+2019-06-06 16:41:08,083 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-06 16:41:08,083 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'customer_id' to the list
+2019-06-06 16:41:08,084 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_id' to the list
+2019-06-06 16:41:08,084 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_qty' to the list
+2019-06-06 16:41:08,085 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '3'
+2019-06-06 16:41:08,091 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-06 16:41:08,092 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-06 16:41:08,098 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-06 16:41:08,108 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-06 16:41:08,109 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-06 16:41:08,114 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-06 16:41:08,122 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - RepositoryManager instance created
+2019-06-06 16:41:08,128 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-06 16:41:08,128 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-06 16:41:08,133 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-06 16:41:08,134 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connecting to database...
+2019-06-06 16:41:08,135 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connected to database successfully
+2019-06-06 16:41:08,355 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseDatabase instance will be created: DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: User, Password: Pass
+2019-06-06 16:41:08,357 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object 'Warehouse 1' to repoistory database
+2019-06-06 16:41:08,589 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Repository object saved successfully
+2019-06-06 16:41:08,589 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-06 16:41:08,594 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-06 16:41:08,595 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-06 16:41:08,823 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation is in progress
+2019-06-06 16:41:08,828 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-06 16:41:08,828 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-06 16:41:08,828 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-06 16:41:09,033 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-06 16:41:09,034 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get all schema names available
+2019-06-06 16:41:09,038 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Schema name 'main' added to the list
+2019-06-06 16:41:09,038 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning back list of schema names
+2019-06-06 16:41:09,234 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-06 16:41:09,243 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-06 16:41:09,243 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
+2019-06-06 16:41:09,456 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
