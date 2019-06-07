@@ -82,10 +82,10 @@ class MetaGenerator(categories.SQLite):
     'SQLite MetaData Generator'
     >>> mg = bmg[0].plugin_object
 
-    >>> db = mg.generate_database_meta("SQLITE", URLS.TEST_DB, "user", "pass")
+    >>> db = mg.generate_database_meta("Warehouse 1", "SQLITE", URLS.TEST_DB, "user", "pass")
 
     >>> db
-    Warehouse [Name=None, Type=SQLITE]
+    Warehouse [Name=Warehouse 1, Type=SQLITE]
 
 	>>>
     """
@@ -105,18 +105,20 @@ class MetaGenerator(categories.SQLite):
         LOGGER.debug("SQLite Metadata generator instance created")
         categories.SQLite.__init__(self)
 
-    def generate_database_meta(self, db_type, conn_str, username, password):
+    def generate_database_meta(self, db_name, db_type, conn_str, username, password):
         """Generates an repository database object with the parameters passed
 
             Args:
+                db_name (string): Name of the new database that will be created
                 db_type (string): An type describing the database (SQLite, MySQL, etc)
                 conn_str (string): connection string or url to database
                 username (string): username to connect with DB
                 password (string): password to connect with DB
         """
-        LOGGER.debug("WarehouseDatabase instance will be created: DBTYPE: %s, ConnectionString: %s, \
-                     Username: %s, Password: %s" % (db_type, conn_str, username, password))
+        LOGGER.debug("WarehouseDatabase instance will be created: Name: %s, DBTYPE: %s, ConnectionString: %s, \
+                     Username: %s, Password: %s" % (db_name, db_type, conn_str, username, password))
         database = WarehouseDatabase()
+        database.name = db_name
         database.db_type = db_type
         database.connection_string = conn_str
         database.username = username

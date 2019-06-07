@@ -8,7 +8,7 @@ from bipy.core.constants import URLS, PATHS
 from bipy.core.db.categories import SQLite
 
 
-class RepositoryManagerTestCase(unittest.TestCase):
+class RepositoryRelationshipManagerTestCase(unittest.TestCase):
     """Testcase for Repository Maager
     """
     __plugin_mgr = None
@@ -57,110 +57,12 @@ class RepositoryManagerTestCase(unittest.TestCase):
         self.__conn_repo.connect(URLS.META_DB)
         self.__repo_mgr.connect(self.__conn_repo)
 
-    def test_save_and_get_db(self):
-        """ Test the repository managers functionality for saving and reading \
-        back the database meta properties
-        """
-        try:
-            self.__conn_repo.get_engine().execute("delete from repository_warehouse_databases")
-            self.__repo_db_meta = self.__meta_gen.generate_database_meta("SQLITE",\
-                                                                  URLS.TEST_DB, "User", "Pass")
-            self.__repo_db_meta.name = "Warehouse 1"
-            self.__repo_mgr.save(self.__repo_db_meta)
-        except Exception:
-            self.fail("Unable to create database meta")
-        db_names = self.__repo_mgr.get_database_names()
-        assert db_names.__len__() == 1
-        assert db_names[0] == "Warehouse 1"
-
-    def test_save_and_get_schema(self):
-        """ Test the repository managers functionality to save and read the schema \
-        metadata properties
-        """
-        try:
-            if self.__repo_db_meta is None:
-                self.test_save_and_get_db()
-            self.__conn_repo.get_engine().execute("delete from repository_warehouse_schemas")
-            schema_list = self.__browser.get_schemas()
-            self.__repo_schema_meta = self.__meta_gen\
-                    .generate_schemas_meta(schema_list, self.__repo_db_meta)
-            self.__repo_mgr.save_all(self.__repo_schema_meta)
-        except Exception:
-            self.fail("Unable to create schema meta information")
-        schema_names = self.__repo_mgr.get_all_schema_names()
-        assert schema_names.__len__() == 1
-        assert schema_names[0] == "main"
-
-    def test_save_and_get_table(self):
-        """ Test's the repository manager functionality to save and read the tables \
-        metadata properties
-        """
-        try:
-            if self.__repo_schema_meta is None:
-                self.test_save_and_get_schema()
-            self.__conn_repo.get_engine().execute("delete from repository_warehouse_tables")
-            table_list = self.__browser.get_tables()
-            #---- Will test with only first 3 tables
-            table_list = [table_list[0], table_list[1], table_list[2]]
-            self.__repo_table_meta = self.__meta_gen\
-                    .generate_tables_meta(table_list, self.__repo_schema_meta[0], self.__browser)
-            self.__repo_mgr.save_all(self.__repo_table_meta)
-        except Exception:
-            self.fail("Unable to create table meta information")
-        assert self.__repo_table_meta.__len__() == 3
-        table_names = self.__repo_mgr.get_all_table_names()
-        assert table_names.__len__() == 3
-        assert table_names == ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS']
-
-    def test_save_and_get_view(self):
-        """ Test's the repoaitory manager functionality to save and read the views \
-        metadata properties
-        """
-        try:
-            if self.__repo_schema_meta is None:
-                self.test_save_and_get_schema()
-            self.__conn_repo.get_engine().execute("delete from repository_warehouse_views")
-            view_list = self.__browser.get_views()
-            self.__repo_view_meta = self.__meta_gen\
-                .generate_views_meta(view_list, self.__repo_schema_meta[0], self.__browser)
-            self.__repo_mgr.save_all(self.__repo_view_meta)
-        except Exception:
-            self.fail("Unable to create view meta information")
-        assert self.__repo_view_meta.__len__() == 1
-
-    def test_save_and_get_column(self):
-        """ Test the functionality to save and read back the column meta properties \
-        of a given table
-        """
-        try:
-            if self.__repo_table_meta is None:
-                self.test_save_and_get_table()
-            self.__conn_repo.get_engine().execute("delete from repository_warehouse_columns")
-            for table in self.__repo_table_meta:
-                column_list = self.__browser.get_columns(table.name)
-                self.__repo_column_meta = self.__meta_gen\
-                        .generate_columns_meta(column_list, table, self.__browser)
-                self.__repo_mgr.save_all(self.__repo_column_meta)
-        except Exception:
-            self.fail("Unable to create column meta information")
-        assert self.__repo_table_meta.__len__() == 3
-        for table in self.__repo_table_meta:
-            column_names = self.__repo_mgr.get_all_column_names(table)
-            if table.name == "SALES_DETAILS":
-                assert column_names.__len__() == 4
-            else:
-                assert column_names.__len__() == 3
-
 
 def load_tests(loader, tests, pattern):
     """Function to create test suite for execution of test methods
     """
     suite = unittest.TestSuite()
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_db"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_schema"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_table"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_column"))
-    suite.addTest(RepositoryManagerTestCase("test_save_and_get_view"))
+    #suite.addTest(RepositoryRelationshipManagerTestCase("test_save_and_get_view"))
     return suite
 
 if __name__ == "__main__":

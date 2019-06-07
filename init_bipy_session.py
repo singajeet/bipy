@@ -38,3 +38,9 @@ conn_repo = repo_conns[0].plugin_object
 conn_repo.connect(URLS.META_DB)
 conn_repo
 repo_mgr.connect(conn_repo)
+#------ Load Repository Relationship Manager ---------------
+plugin_mgr.setPluginPlaces([PATHS.REPO_REL_MGR])
+plugin_mgr.locatePlugins()
+rel_mgrs = plugin_mgr.loadPlugins()
+rel_mgr = rel_mgrs[0].plugin_object
+rel_mgr.connect(conn_repo, repo_mgr)

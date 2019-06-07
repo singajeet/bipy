@@ -54,7 +54,8 @@ class RepositoryManager(categories.SQLite):
                 repo_obj(AbstractWarehouseObject): An instance of warehouse
                 object
         """
-        LOGGER.debug("Saving repository object '%s' to repoistory database" % repo_obj.name)
+        LOGGER.debug("Saving repository object '%s' to repository database" % \
+                     (repo_obj.name if repo_obj.name is not None else "Unknown"))
         self.__session.add(repo_obj)
         self.__session.commit()
         LOGGER.debug("Repository object saved successfully")
@@ -67,7 +68,7 @@ class RepositoryManager(categories.SQLite):
         """
         for obj in repo_objs:
             LOGGER.debug("Saving repository object instance '%s' from list to repository\
-                          database" % obj.name)
+                          database" % (obj.name if obj.name is not None else "Unknown"))
         self.__session.add_all(repo_objs)
         self.__session.commit()
         LOGGER.debug("All repository object instances have bee saved successfully")
@@ -89,9 +90,10 @@ class RepositoryManager(categories.SQLite):
             repo_obj.delete()
             self.__session.commit()
             LOGGER.debug("Repository object '%s' have been deleted from repository" \
-                         % repo_obj.name)
+                         % (repo_obj.name if repo_obj.name is not None else "Unknown"))
         except Exception:
-            LOGGER.error("Unable to delete repository object '%s'" % repo_obj.name)
+            LOGGER.error("Unable to delete repository object '%s'" % \
+                         (repo_obj.name if repo_obj.name is not None else "Unknown"))
             raise
 
     def get_database(self, param):
@@ -101,14 +103,16 @@ class RepositoryManager(categories.SQLite):
                 param (int/str): An id or name of the database
         """
         if isinstance(param, int):
-            LOGGER.debug("Get request for WarehouseDatabase instance with id: '%d'" % param)
+            LOGGER.debug("Get request for WarehouseDatabase instance with id: '%d'" \
+                         % param)
             return self.__session.query(WarehouseDatabase)\
                     .filter(WarehouseDatabase.id == param).first()
         elif isinstance(param, str):
-            LOGGER.debug("Get request for WarehouseDatabase instance with name: '%s'" % param)
+            LOGGER.debug("Get request for WarehouseDatabase instance with name: '%s'" \
+                         % param)
             return self.__session.query(WarehouseDatabase)\
                     .filter(WarehouseDatabase.name == param).first()
-        LOGGER.warn("Incorreect datatype of parameter provided. Only 'int' and 'str' are accepted")
+        LOGGER.warn("Incorrect datatype of parameter provided. Only 'int' and 'str' are accepted")
         return None
 
     def get_all_databases(self):
@@ -124,7 +128,8 @@ class RepositoryManager(categories.SQLite):
         LOGGER.debug("Request to get names of all WarehouseDatabase objects")
         dbs = self.__session.query(WarehouseDatabase).all()
         for _db in dbs:
-            LOGGER.debug("Adding '%s' database name to the list" % _db.name)
+            LOGGER.debug("Adding '%s' database name to the list" \
+                         % (_db.name if _db.name is not None else "Unknown"))
             _names.append(_db.name)
         LOGGER.debug("Returning the WarehouseDatabase names list")
         return _names
@@ -150,13 +155,15 @@ class RepositoryManager(categories.SQLite):
         else:
             if isinstance(param, int):
                 LOGGER.debug("Request to get WarehouseSchema object with id: '%d' and database id: '%d'"\
-                              % (param, database.id))
+                              % (param, \
+                                 database.id if database.id is not None else -1))
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.id == param \
                                 and WarehouseSchema.database_id == database.id).first()
             elif isinstance(param, str):
                 LOGGER.debug("Request to get WarehouseSchema object with name: '%s' and database id: '%d'"\
-                              % (param, database.id))
+                              % (param, \
+                                 database.id if database.id is not None else -1))
                 return self.__session.query(WarehouseSchema)\
                         .filter(WarehouseSchema.name == param \
                                and WarehouseSchema.database_id == database.id).first()
@@ -175,7 +182,7 @@ class RepositoryManager(categories.SQLite):
             return self.__session.query(WarehouseSchema).all()
 
         LOGGER.debug("Request to get all schemas available under database with id: '%d'"\
-                      % database.id)
+                      % database.id if database.id is not None else -1)
         return self.__session.query(WarehouseSchema)\
                     .filter(WarehouseSchema.database_id == database.id).all()
 
@@ -193,11 +200,12 @@ class RepositoryManager(categories.SQLite):
             _schemas = self.__session.query(WarehouseSchema).all()
         else:
             LOGGER.debug("Request to get all schema names available under database id: '%d'"\
-                          % database.id)
+                          % database.id if database.id is not None else -1)
             _schemas = self.__session.query(WarehouseSchema)\
                     .filter(WarehouseSchema.database_id == database.id).all()
         for sch in _schemas:
-            LOGGER.debug("Schema name '%s' added to the list" % sch.name)
+            LOGGER.debug("Schema name '%s' added to the list" % (sch.name \
+                         if sch.name is not None else "Unknown"))
             _names.append(sch.name)
         LOGGER.debug("Returning back list of schema names")
         return _names
@@ -223,14 +231,14 @@ class RepositoryManager(categories.SQLite):
         else:
             if isinstance(param, str):
                 LOGGER.debug("Request to get table with name: '%s' under schema id: '%d'"\
-                              % (param, schema.id))
+                              % (param, schema.id if schema.id is not None else -1))
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.name == param and\
                                 WarehouseTable.schema_id == schema.id)\
                         .first()
             elif isinstance(param, int):
                 LOGGER.debug("Request to get table with id: '%d' under schema id: '%d'"\
-                              % (param, schema.id))
+                              % (param, schema.id if schema.id is not None else -1))
                 return self.__session.query(WarehouseTable)\
                         .filter(WarehouseTable.id == param\
                                 and WarehouseTable.schema_id == schema.id)\
@@ -250,7 +258,8 @@ class RepositoryManager(categories.SQLite):
             LOGGER.debug("Request to get all tables available")
             return self.__session.query(WarehouseTable).all()
 
-        LOGGER.debug("Request to get all tables available under schema: '%d'" % schema.id)
+        LOGGER.debug("Request to get all tables available under schema: '%d'" \
+                     % schema.id if schema.id is not None else -1)
         return self.__session.query(WarehouseTable)\
                     .filter(WarehouseTable.schema_id == schema.id).all()
 
@@ -269,7 +278,7 @@ class RepositoryManager(categories.SQLite):
             _tables = self.__session.query(WarehouseTable).all()
         else:
             LOGGER.debug("Request to get all table names available under schema id: '%d'"\
-                          % schema.id)
+                          % schema.id if schema.id is not None else -1)
             _tables = self.__session.query(WarehouseTable)\
                     .filter(WarehouseTable.schema_id == schema.id).all()
         for tab in _tables:
@@ -289,14 +298,14 @@ class RepositoryManager(categories.SQLite):
         """
         if isinstance(column, str):
             LOGGER.debug("Request to get column with name: '%s' under table with id: '%d'"\
-                          % (column, table.id))
+                          % (column, table.id if table.id is not None else -1))
             return self.__session.query(WarehouseColumn)\
                 .filter(WarehouseColumn.table_id == table.id\
                         and WarehouseColumn.name == column)\
                 .first()
         elif isinstance(column, int):
             LOGGER.debug("Request to get column with id: '%d' under table with id: '%id'"\
-                          % (column, table.id))
+                          % (column, table.id if table.id is not None else -1))
             return self.__session.query(WarehouseColumn)\
                 .filter(WarehouseColumn.id == column and\
                         WarehouseColumn.table_id == table.id)\
@@ -312,7 +321,7 @@ class RepositoryManager(categories.SQLite):
                 table(WarehouseTable): An instance of table
         """
         LOGGER.debug("Request to get all columns available under table with id: '%d'"\
-                      % (table.id))
+                      % (table.id if table.id is not None else -1))
         return self.__session.query(WarehouseColumn)\
             .filter(WarehouseColumn.table_id == table.id)\
             .all()
@@ -326,15 +335,16 @@ class RepositoryManager(categories.SQLite):
         """
         _names = []
         LOGGER.debug("Request to get all column names available under table with id: '%d'"\
-                      % (table.id))
+                      % (table.id if table.id is not None else -1))
         _columns = self.__session.query(WarehouseColumn)\
             .filter(WarehouseColumn.table_id == table.id)\
             .all()
         for col in _columns:
-            LOGGER.debug("Adding column name '%s' to the list" % col.name)
+            LOGGER.debug("Adding column name '%s' to the list" % \
+                         (col.name if col.name is not None else "Unknown"))
             _names.append(col.name)
         LOGGER.debug("Returning all column names available under table with id: '%d'"\
-                      % table.id)
+                      % table.id if table.id is not None else -1)
         return _names
 
     def get_view(self, param, schema=None):
@@ -357,14 +367,14 @@ class RepositoryManager(categories.SQLite):
         else:
             if isinstance(param, str):
                 LOGGER.debug("Request to get view with name: '%s' under schema id: '%d'"\
-                              % (param, schema.id))
+                              % (param, schema.id if schema.id is not None else -1))
                 return self.__session.query(WarehouseView)\
                         .filter(WarehouseView.name == param\
                                 and WarehouseView.schema_id == schema.id)\
                         .first()
             elif isinstance(param, int):
                 LOGGER.debug("Request to get view with id: '%d' under schema id: '%d'"\
-                              % (param, schema.id))
+                              % (param, schema.id if schema.id is not None else -1))
                 return self.__session.query(WarehouseView)\
                         .filter(WarehouseView.id == param and\
                                 WarehouseView.schema_id == schema.id).first()
@@ -383,7 +393,8 @@ class RepositoryManager(categories.SQLite):
             LOGGER.debug("Request to get all views available in database")
             return self.__session.query(WarehouseView).all()
 
-        LOGGER.debug("Request to get all views available under schema id: '%d'" % schema.id)
+        LOGGER.debug("Request to get all views available under schema id: '%d'" % \
+                     schema.id if schema.id is not None else -1)
         return self.__session.query(WarehouseView)\
                 .filter(WarehouseView.schema_id == schema.id).all()
 
@@ -401,7 +412,7 @@ class RepositoryManager(categories.SQLite):
             _views = self.__session.query(WarehouseView).all()
         else:
             LOGGER.debug("Request to get all view names available under schema id: '%d'"\
-                          % schema.id)
+                          % schema.id if schema.id is not None else -1)
             _views = self.__session.query(WarehouseView)\
                     .filter(WarehouseView.schema_id == schema.id).all()
         for vw in _views:

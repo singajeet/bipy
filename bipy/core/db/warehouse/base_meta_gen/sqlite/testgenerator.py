@@ -33,8 +33,8 @@ class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
 
     def testMGDatabaseObject(self):
         self.mg = self.bmg[0].plugin_object
-        self.db = self.mg.generate_database_meta("SQLITE", URLS.TEST_DB, "user", "pass")
-        assert self.db.__repr__() == 'Warehouse [Name=None, Type=SQLITE]'
+        self.db = self.mg.generate_database_meta("Warehouse 1", "SQLITE", URLS.TEST_DB, "user", "pass")
+        assert self.db.__repr__() == 'Warehouse [Name=Warehouse 1, Type=SQLITE]'
 
     def testMGSchemaObject(self):
         if self.mg is None:

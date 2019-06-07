@@ -55,10 +55,14 @@ class RepositoryRelationshipManager(categories.SQLite):
                 schema(WarehouseSchema): An instance of schema
                 db(WarehouseDatabase): An instance of db
         """
-        db_exists = self.__repo_manager.get_database(db.name)\
-            .__len__() != 0
-        schema_exists = self.__repo_manager.get_schema(schema.name, db)\
-            .__len__() != 0
+        db_exists = False
+        db_obj = self.__repo_manager.get_database(db.name)
+        if db_obj != None and db_obj.__len__() != 0:
+            db_exists = True
+        schema_exists = False
+        schema_obj = self.__repo_manager.get_schema(schema.name, db)
+        if schema_obj != None and schema_obj.__len__() != 0:
+            schema_exists = True
         if not db_exists:
             self.__repo_manager.save(db)
         if not schema_exists:
