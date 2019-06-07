@@ -55,20 +55,33 @@ class RepositoryRelationshipManager(categories.SQLite):
                 schema(WarehouseSchema): An instance of schema
                 db(WarehouseDatabase): An instance of db
         """
+        LOGGER.debug("Adding schema '%s' to database '%s'"
+                     % (schema.name if schema.name is not None else "Unknown",
+                        db.name if db.name is not None else "Unknown"))
         db_exists = False
         db_obj = self.__repo_manager.get_database(db.name)
-        if db_obj != None and db_obj.__len__() != 0:
+        if db_obj is not None and db_obj.__len__() != 0:
             db_exists = True
+
         schema_exists = False
         schema_obj = self.__repo_manager.get_schema(schema.name, db)
-        if schema_obj != None and schema_obj.__len__() != 0:
+        if schema_obj is not None and schema_obj.__len__() != 0:
             schema_exists = True
+
         if not db_exists:
+            LOGGER.debug("DB '%s' do not exist, creating DB in repository"
+                         % (db.name if db.name is not None else "Unknown"))
             self.__repo_manager.save(db)
+
         if not schema_exists:
+            LOGGER.debug("Schema '%s' do not exist, \
+                         creating schema in repository"
+                         % (schema.name if schema.name is not None
+                            else "Unknown"))
             self.__repo_manager.save(schema)
         db.schemas.append(schema)
         self.__session.commit()
+        LOGGER.debug("Schema added to database successfully!")
 
     def add_schemas_to_db(self, schemas, db):
         """ Same as add_schema_to_db but this adds an list of
@@ -89,10 +102,14 @@ class RepositoryRelationshipManager(categories.SQLite):
                 table(WarehouseTable): An table object
                 schema(WarehouseSchema): An schema object
         """
-        schema_exists = self.__repo_manager.get_schema(schema.name)\
-            .__len__() != 0
-        table_exists = self.__repo_manager.get_table(table.name, schema)\
-            .__len__() != 0
+        schema_exists = False
+        schema_obj = self.__repo_manager.get_schema(schema.name)
+        if schema_obj != None and schema_obj.__len__() != 0:
+            schema_exists = True
+        table_exists = False
+        table_obj = self.__repo_manager.get_table(table.name, schema)
+        if table_obj != None and table_obj.__len__() != 0:
+            table_exists = True
         if not schema_exists:
             self.__repo_manager.save(schema)
         if not table_exists:
@@ -119,10 +136,14 @@ class RepositoryRelationshipManager(categories.SQLite):
                 column(WarehouseColumn): An instance of column
                 table(WarehouseTable): An instance of table
         """
-        table_exists = self.__repo_manager.get_table(table.name)\
-            .__len__() != 0
-        column_exists = self.__repo_manager.get_column(column.name, table)\
-            .__len__() != 0
+        table_exists = False
+        table_obj = self.__repo_manager.get_table(table.name)
+        if table_obj != None and table_obj.__len__() != 0:
+            table_exists = True
+        column_exists = False
+        column_obj = self.__repo_manager.get_column(column.name, table)
+        if column_obj != None and column_obj.__len__() != 0:
+            column_exists = True
         if not table_exists:
             self.__repo_manager.save(table)
         if not column_exists:
