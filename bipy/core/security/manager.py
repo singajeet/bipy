@@ -7,7 +7,8 @@
 
 """
 from datetime import datetime
-from bipy.core.security.objects import User, Role, Privilege
+import socket
+from bipy.core.security.objects import User, Role, Privilege, SecuritySession
 
 
 class SecurityManager:
@@ -41,6 +42,10 @@ class SecurityManager:
             self.ConnectedSession.add(role)
             self.ConnectedSession.commit()
 
+        def addSession(self, session):
+            self.ConnectedSession.add(session)
+            self.ConnectedSession.commit()
+
         def add_privilege(self, privilege):
             self.ConnectedSession.add(privilege)
             self.ConnectedSession.commit()
@@ -67,6 +72,12 @@ class SecurityManager:
                                             updated_privilege)
             self.ConnectedSession.commit()
 
+        def update_session(self, updated_session):
+            existing_session = self.ConnectedSession.query(SecuritySession)\
+                    .filter(SecuritySession.id == updated_session.id).first()
+            self._update_generic_properties(existing_session, updated_session)
+            self.ConnectedSession.commit()
+
         def delete_user(self, user):
             existing_user = self.ConnectedSession.query(User)\
                 .filter(User.id == user.id).first()
@@ -85,6 +96,12 @@ class SecurityManager:
             existing_privilege.delete()
             self.ConnectedSession.commit()
 
+        def delete_session(self, session):
+            existing_session = self.ConnectedSession.query(SecuritySession)\
+                    .filter(SecuritySession.id == session.id).first()
+            existing_session.delete()
+            self.ConnectedSession.commit()
+
         def apply_role_on_user(self, role, user):
             user.roles.extend([role])
             self.ConnectedSession.commit()
@@ -101,6 +118,28 @@ class SecurityManager:
             role.privileges.remove(privilege)
             self.ConnectedSession.commit()
 
+        def get_user(self, param):
+            if isinstance(param, int):
+                return self.ConnectedSession.query(User)\
+                        .filter(User.id == param)
+            elif isinstance(param, str):
+                return self.ConnectedSession.query(User)\
+                        .filter(User.name == param)
+            return None
+
+        def get_role(self, param):
+            if isinstance(param, int):
+                return self.ConnectedSession.query(Role)\
+                        .filter(Role.id == param)
+            elif isinstance(param, str):
+                return self.ConnectedSession.query(Role)\
+                        .filter(Role.name == param)
+            return None
+
+        def get_privilege(self, param):
+            if isinstance(param, int):
+                return self.ConnectedSession.query
+
         def get_roles_for_user(self, user):
             return user.roles
 
@@ -113,17 +152,31 @@ class SecurityManager:
                     return True
             return False
 
-        def authorize(self, user, req_privilege):
+        def authorize(self, req_privilege):
             # logic to check user is authenticated
+            user = self.get_current_user()
             user_roles = self.get_roles_for_user(user)
             auth = False
             for role in user_roles:
-                privileges = self.get_priviliges_for_role(role)
+                privileges = self.get_privileges_for_role(role)
                 auth = self.required_privilege_exists(req_privilege,
                                                       privileges)
                 if(auth):
                     return True
-            return False
+                return False
 
         def get_current_user(self):
-            pass
+            session = self.ConnectedSession.query(SecuritySession)\
+                    .filter(SecuritySession.host_name == hostname
+                            and SecuritySession.ip_address == ip
+                            and SecuritySession.is_valid == True
+                            and SecuritySession.session_key is not None).first()
+            if session is not None:
+                user_id = session.user_id
+                user = self.get_user(user_id)
+                if user is not None:
+                    if user.is_active and user.is_loggedin and session.is_valid\
+                       and session.session_key is not None and \
+                       session.session_key == user.session_key:
+                        return True
+            return False
