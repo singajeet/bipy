@@ -8,7 +8,8 @@ from enum import Enum, unique
 
 class AutoNumber(Enum):
     """
-        Class to generate numbers automatically and assign the unique value to each ENUM defined
+        Class to generate numbers automatically and
+        assign the unique value to each ENUM defined
     """
 
     def __new__(cls):
@@ -23,6 +24,7 @@ class AutoNumber(Enum):
         obj._value_ = value
         return obj
 
+
 @unique
 class Privileges(AutoNumber):
     """
@@ -36,3 +38,4 @@ class Privileges(AutoNumber):
     QUERY_METAMODEL_FUNCTIONS = ()
     QUERY_METAMODEL_SCHEMA = ()
     CONNECT_METADATA = ()
+    CONNECT_DB = ()
