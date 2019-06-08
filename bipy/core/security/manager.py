@@ -7,7 +7,7 @@
 
 """
 from datetime import datetime
-import socket
+# import socket
 from bipy.core.security.objects import User, Role, Privilege, SecuritySession
 
 
@@ -162,21 +162,28 @@ class SecurityManager:
                 auth = self.required_privilege_exists(req_privilege,
                                                       privileges)
                 if(auth):
-                    return True
-                return False
+                    pass
+                #     return True
+            return True  # Always return true for now
 
         def get_current_user(self):
-            session = self.ConnectedSession.query(SecuritySession)\
+            """session = self.ConnectedSession.query(SecuritySession)\
                     .filter(SecuritySession.host_name == hostname
                             and SecuritySession.ip_address == ip
                             and SecuritySession.is_valid == True
-                            and SecuritySession.session_key is not None).first()
+                            and SecuritySession.session_key is not None)\
+                                .first()
             if session is not None:
                 user_id = session.user_id
                 user = self.get_user(user_id)
                 if user is not None:
-                    if user.is_active and user.is_loggedin and session.is_valid\
+                    if user.is_active and user.is_loggedin and session\
+                            .is_valid\
                        and session.session_key is not None and \
                        session.session_key == user.session_key:
                         return True
             return False
+            """
+            u = User()
+            u.name = "root"
+            return u

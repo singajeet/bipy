@@ -26,8 +26,7 @@ def authorize(privilege):
             cm = cms[0].plugin_object
             cm.connect(URLS.META_DB)
             sm = SecurityManager(cm)
-            curr_user = sm.get_current_user()
-            result = sm.authorize(curr_user, privilege)
+            result = sm.authorize(privilege)
             if result:
                 func(*args, **kwargs)
             # else throw exception

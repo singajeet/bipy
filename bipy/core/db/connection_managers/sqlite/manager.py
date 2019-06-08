@@ -6,8 +6,9 @@
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 import bipy.core.db.categories as categories
-from bipy.core.constants import URLS
 from bipy.logging import logger
+from bipy.core.security.privileges import Privileges
+from bipy.core.decorators.security import authorize
 
 #init logs---------------------------------
 LOGGER = logger.get_logger(__name__)
@@ -71,7 +72,7 @@ class ConnectionManager(categories.SQLite):
         categories.SQLite.__init__(self)
         LOGGER.debug("Init Connection Manager")
 
-
+    authorize(Privileges.CONNECT_DB)
     def connect(self, conn_string):
         """Setups the connection using the connection string passed as param
 
