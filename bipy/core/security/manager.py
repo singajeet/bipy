@@ -102,13 +102,16 @@ class SecurityManager:
             self.ConnectedSession.commit()
 
         def get_roles_for_user(self, user):
-            pass
+            return user.roles
 
         def get_privileges_for_role(self, role):
-            pass
+            return role.privileges
 
         def required_privilege_exists(self, req_prv, prv_list):
-            pass
+            for prv in prv_list:
+                if prv.id == req_prv.id:
+                    return True
+            return False
 
         def authorize(self, user, req_privilege):
             # logic to check user is authenticated

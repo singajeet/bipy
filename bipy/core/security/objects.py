@@ -5,6 +5,7 @@
 """
 from datetime import datetime
 from sqlalchemy import Column, String, Integer, Sequence, DateTime, ForeignKey
+from sqlalchemy import Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base, AbstractConcreteBase
 
@@ -41,7 +42,11 @@ class User(AbstractSecurityObject):
     password = Column(String(255))
     email = Column(String(255))
     phone = Column(String(255))
-    roles = relationship("Role", secondary='warehouse_users_roles', backref='warehouse_users')
+    roles = relationship("Role", secondary='warehouse_users_roles',
+                         backref='warehouse_users')
+    session_key = Column(String(255))
+    is_active = Column(Boolean)
+    is_loggedin = Column(Boolean)
 
     def __repr__(self):
         """ String representation
@@ -85,3 +90,9 @@ class Privilege(AbstractSecurityObject):
         """ String representation
         """
         return "Privilege [Name=%s, Description=%s]" % (self.name, self.description)
+
+
+class SecuritySession(AbstractSecurityObject):
+    session_key = Column(String(255))
+    user_id = Column(Integer, ForeignKey('User.id'), primary_key=True)
+    is_valid = Column(Boolean)
