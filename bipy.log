@@ -24396,3 +24396,12 @@ ImportError: cannot import name 'WarehouseDatabase'
 2019-06-09 09:53:38,826 - yapsy_loaded_plugin_SQLite_Connection_Manager_14 - DEBUG - Init Connection Manager
 2019-06-09 09:53:38,839 - yapsy_loaded_plugin_SQLite_Metadata_Browser_14 - DEBUG - Init SQLite Browser instance
 2019-06-09 09:53:38,846 - yapsy_loaded_plugin_SQLite_MetaData_Generator_14 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 16:28:54,689 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 16:28:54,704 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 16:28:54,705 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-09 16:28:54,775 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 16:28:54,776 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 16:28:54,776 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 16:28:54,777 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 16:28:54,808 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 16:28:54,810 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: user, Password: pass

@@ -11,6 +11,8 @@ class PATHS:
     ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
     ROOT_PARENT = os.path.abspath(os.path.join(ROOT, "../"))
     CORE = os.path.abspath(os.path.join(ROOT, "core"))
+    DATA = os.path.abspath(os.path.join(ROOT, "data"))
+    CONFIG = os.path.abspath(os.path.join(ROOT, "config"))
     DB = os.path.abspath(os.path.join(CORE, "db"))
     WAREHOUSE = os.path.abspath(os.path.join(DB, "warehouse"))
     BROWSERS = os.path.abspath(os.path.join(WAREHOUSE, "browsers"))
@@ -20,11 +22,11 @@ class PATHS:
     ANALYTIC = os.path.abspath(os.path.join(DB, "analytic"))
     REPO_MGR = os.path.abspath(os.path.join(REPOSITORY, "objects"))
     REPO_REL_MGR = os.path.abspath(os.path.join(REPOSITORY, "relationship"))
-    LOG_CONFIG_PATH = os.path.abspath(os.path.join(ROOT_PARENT, "log_config.json"))
+    LOG_CONFIG_PATH = os.path.abspath(os.path.join(CONFIG, "log_config.json"))
 
 
 class URLS:
     """ Various URLs used application wise
     """
-    TEST_DB = "sqlite:///" + PATHS.ROOT_PARENT + "/test.db"
-    META_DB = "sqlite:///" + PATHS.ROOT_PARENT + "/meta.db"
+    TEST_DB = "sqlite:///" + PATHS.DATA + "/test.db"
+    META_DB = "sqlite:///" + PATHS.DATA + "/meta.db"

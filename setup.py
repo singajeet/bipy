@@ -17,5 +17,5 @@ setup(
     license="LICENSE.txt",
     description="Python based BusinessIntelligence application",
     long_description=open('README.txt').read(),
-    install_requires=["yapsy", "sqlalchemy"]
+    install_requires=["yapsy", "sqlalchemy", "Config", "logging", "json", "os"]
 )
