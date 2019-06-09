@@ -23868,3 +23868,531 @@ ImportError: cannot import name 'WarehouseDatabase'
 2019-06-07 00:05:15,921 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
 2019-06-07 00:05:15,926 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'main' to repository database
 2019-06-07 00:05:15,930 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
+2019-06-08 22:46:00,220 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 22:46:00,238 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 22:46:00,312 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:02:50,375 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:02:50,376 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:02:50,399 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:02:50,408 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:02:50,413 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-08 23:23:38,883 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:23:38,884 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:23:38,934 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:23:38,940 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:23:38,946 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-08 23:23:46,874 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:23:46,875 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:23:46,900 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:31:19,571 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:31:19,620 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:31:19,622 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:31:19,648 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:31:19,649 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:31:19,650 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:31:19,650 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:33:14,760 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:33:14,776 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:14,778 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:33:14,805 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:33:14,805 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:33:14,806 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:33:14,806 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:33:39,916 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:33:39,927 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:39,928 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:33:39,953 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:33:39,954 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:33:39,954 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:33:39,955 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:33:39,963 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:33:39,975 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:39,976 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:33:39,983 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-08 23:33:39,983 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-08 23:33:39,984 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:33:39,984 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:33:39,992 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,007 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:40,008 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:33:40,014 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-08 23:33:40,014 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-08 23:33:40,015 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:33:40,015 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:33:40,022 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,034 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:40,040 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,054 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:40,060 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,070 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:40,071 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:33:40,078 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-08 23:33:40,084 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,097 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:33:40,104 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-08 23:33:40,115 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:37,706 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:39:37,719 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:37,720 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:39:37,746 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:39:37,747 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:39:37,747 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:39:37,748 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:39:37,806 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:37,808 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,028 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,038 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,170 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,170 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:39:55,195 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:39:55,195 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:39:55,196 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:39:55,196 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:39:55,204 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,217 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,223 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,223 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:39:55,228 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-08 23:39:55,229 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-08 23:39:55,229 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:39:55,230 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:39:55,238 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,249 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,254 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,255 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:39:55,262 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-08 23:39:55,262 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-08 23:39:55,262 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:39:55,263 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:39:55,269 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,282 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,288 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,294 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,311 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,317 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,323 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,339 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,345 - yapsy_loaded_plugin_SQLite_MetaData_Generator_5 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,345 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:39:55,350 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-08 23:39:55,358 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,368 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,374 - yapsy_loaded_plugin_SQLite_MetaData_Generator_6 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,382 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,393 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,400 - yapsy_loaded_plugin_SQLite_MetaData_Generator_7 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,406 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,417 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,425 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,425 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,466 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,479 - yapsy_loaded_plugin_SQLite_Metadata_Browser_9 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,485 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,485 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,494 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,505 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,512 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,513 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,523 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,534 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,541 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,542 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,552 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,567 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,573 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,574 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:39:55,582 - yapsy_loaded_plugin_SQLite_Connection_Manager_13 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,611 - yapsy_loaded_plugin_SQLite_Metadata_Browser_13 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,617 - yapsy_loaded_plugin_SQLite_MetaData_Generator_13 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:39:55,622 - yapsy_loaded_plugin_SQLite_Connection_Manager_14 - DEBUG - Init Connection Manager
+2019-06-08 23:39:55,635 - yapsy_loaded_plugin_SQLite_Metadata_Browser_14 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:39:55,641 - yapsy_loaded_plugin_SQLite_MetaData_Generator_14 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,206 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,216 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,331 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,332 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:45:40,356 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:45:40,356 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:45:40,357 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:45:40,357 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:45:40,366 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,378 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,384 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,384 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:45:40,389 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-08 23:45:40,390 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-08 23:45:40,390 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:45:40,391 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:45:40,401 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,412 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,418 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,418 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:45:40,426 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-08 23:45:40,426 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-08 23:45:40,427 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:45:40,427 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:45:40,434 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,447 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,454 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,461 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,475 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,480 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,487 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,503 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,509 - yapsy_loaded_plugin_SQLite_MetaData_Generator_5 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,509 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:45:40,514 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-08 23:45:40,522 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,532 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,538 - yapsy_loaded_plugin_SQLite_MetaData_Generator_6 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,546 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,558 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_7 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,571 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,582 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,589 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,590 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:45:40,607 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,620 - yapsy_loaded_plugin_SQLite_Metadata_Browser_9 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,626 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,627 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:45:40,635 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,647 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,653 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,654 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:45:40,663 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,675 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,681 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,682 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:45:40,690 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,704 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,710 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,711 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-08 23:45:40,719 - yapsy_loaded_plugin_SQLite_Connection_Manager_13 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,731 - yapsy_loaded_plugin_SQLite_Metadata_Browser_13 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,737 - yapsy_loaded_plugin_SQLite_MetaData_Generator_13 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:45:40,743 - yapsy_loaded_plugin_SQLite_Connection_Manager_14 - DEBUG - Init Connection Manager
+2019-06-08 23:45:40,755 - yapsy_loaded_plugin_SQLite_Metadata_Browser_14 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:45:40,761 - yapsy_loaded_plugin_SQLite_MetaData_Generator_14 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:48:05,501 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-08 23:48:05,502 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-08 23:48:05,523 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:48:05,535 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-08 23:48:05,536 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-08 23:48:05,536 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-08 23:48:05,537 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-08 23:48:05,650 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-08 23:48:05,683 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-08 23:48:05,690 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-08 23:48:05,690 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-08 23:48:05,713 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-08 23:48:05,714 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-08 23:48:05,714 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-08 23:48:05,715 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:48:05,789 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-08 23:48:05,790 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connecting to database...
+2019-06-08 23:48:05,790 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-08 23:48:05,791 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connected to database successfully
+2019-06-08 23:48:34,186 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:48:34,186 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:48:34,187 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:48:34,187 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:48:34,188 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:48:34,189 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:48:34,272 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/__init__.py
+2019-06-08 23:48:34,298 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/__init__.py
+2019-06-08 23:48:44,506 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:48:44,506 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:48:44,507 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:48:44,507 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:48:44,508 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:48:44,509 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:48:44,541 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/security/__init__.py
+2019-06-08 23:48:59,046 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:48:59,047 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:48:59,047 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:48:59,048 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:48:59,050 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:48:59,051 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:49:15,173 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:49:15,178 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:49:15,180 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:49:15,181 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:49:15,182 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:49:15,182 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:49:56,487 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:49:56,496 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:49:56,497 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:49:56,497 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:49:56,499 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:49:56,499 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:50:08,463 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:50:08,471 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:50:08,472 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:50:08,472 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:50:08,473 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:50:08,474 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:50:18,022 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:50:18,030 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:50:18,031 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:50:18,032 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:50:18,034 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:50:18,034 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:50:18,085 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/db/__init__.py
+2019-06-08 23:50:18,089 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/db/categories.py
+2019-06-08 23:50:18,122 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/yapsy/__init__.py
+2019-06-08 23:50:18,156 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/yapsy/IPlugin.py
+2019-06-08 23:50:18,180 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/sqlalchemy/__init__.py
+2019-06-08 23:50:18,206 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/sqlalchemy/engine/__init__.py
+2019-06-08 23:50:26,456 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:50:26,465 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:50:26,466 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:50:26,467 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:50:26,468 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:50:26,469 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:50:32,762 - parso.python.diff - DEBUG - diff parser start
+2019-06-08 23:50:32,771 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-08 23:50:32,772 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-08 23:50:32,773 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-08 23:50:32,775 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-08 23:50:32,775 - parso.python.diff - DEBUG - diff parser end
+2019-06-08 23:53:07,600 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-08 23:54:45,377 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-08 23:55:39,962 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-09 09:16:43,924 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:16:43,967 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:16:44,026 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:16:44,071 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:16:44,071 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 09:16:44,072 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:16:44,072 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:16:44,234 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:16:44,278 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-09 09:16:44,284 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-09 09:16:44,284 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/meta.db
+2019-06-09 09:16:44,304 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-09 09:16:44,305 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-09 09:16:44,305 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 09:16:44,306 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:16:44,334 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-09 09:16:44,335 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connecting to database...
+2019-06-09 09:16:44,335 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 09:16:44,335 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:24:54,177 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/sqlalchemy/ext/declarative/api.py
+2019-06-09 09:26:11,324 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-09 09:31:58,527 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-09 09:34:46,327 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-09 09:50:28,288 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:50:28,289 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:50:28,313 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:50:28,340 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-09 09:50:28,346 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-09 09:51:23,991 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:51:24,003 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:24,005 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:51:24,037 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:51:24,038 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 09:51:24,039 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:51:24,039 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:51:33,889 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:51:33,901 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:33,901 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:51:33,926 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:51:33,927 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 09:51:33,927 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:51:33,927 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:51:33,935 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-09 09:51:33,946 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:33,947 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:51:33,954 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-09 09:51:33,954 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 09:51:33,955 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:51:33,955 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:51:33,963 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-09 09:51:33,978 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:33,979 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:51:33,985 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-09 09:51:33,985 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-09 09:51:33,986 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:51:33,986 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:51:33,993 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-09 09:51:34,004 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:34,010 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-09 09:51:34,023 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:34,029 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-09 09:51:34,039 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:34,040 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:51:34,046 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-09 09:51:34,052 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-09 09:51:34,064 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:51:34,070 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-09 09:51:34,082 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:52:54,962 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:52:54,976 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:52:54,977 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:52:55,001 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:52:55,002 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 09:52:55,003 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:52:55,003 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:52:55,013 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:52:55,014 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:37,979 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 09:53:37,989 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,102 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,103 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,128 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,128 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,129 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,129 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,137 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,149 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,155 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,156 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,160 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,161 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,161 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,162 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,170 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,181 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,186 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,187 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,194 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,194 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,194 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,195 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,201 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,214 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,221 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,227 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,241 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,246 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,252 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,267 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,273 - yapsy_loaded_plugin_SQLite_MetaData_Generator_5 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,274 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,279 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,286 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,296 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,302 - yapsy_loaded_plugin_SQLite_MetaData_Generator_6 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,327 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,338 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,344 - yapsy_loaded_plugin_SQLite_MetaData_Generator_7 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,350 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,363 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,371 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,371 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:38,538 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,543 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,543 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,544 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,544 - yapsy_loaded_plugin_SQLite_Metadata_Browser_8 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,546 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Schemas metadata creation is in progress
+2019-06-09 09:53:38,547 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-09 09:53:38,547 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-09 09:53:38,549 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-09 09:53:38,550 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-09 09:53:38,553 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,554 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,554 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,555 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,555 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-09 09:53:38,556 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-09 09:53:38,558 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,558 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,559 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,559 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,560 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-09 09:53:38,560 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-09 09:53:38,561 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-09 09:53:38,562 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,563 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,564 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,564 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-09 09:53:38,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-09 09:53:38,565 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,566 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-09 09:53:38,567 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-09 09:53:38,569 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - ERROR - Preparing to create columns meta for table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,570 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-09 09:53:38,570 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' is a primary key
+2019-06-09 09:53:38,571 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' is a fact candidate
+2019-06-09 09:53:38,572 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'id' has been added to table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,572 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'product_name'                          with datatype as 'VARCHAR(255)'
+2019-06-09 09:53:38,573 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' is a dim candidate
+2019-06-09 09:53:38,574 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'product_name' has been added to table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,574 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - WarehouseColumn instance created for column 'cost'                          with datatype as 'FLOAT'
+2019-06-09 09:53:38,575 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' is a fact candidate
+2019-06-09 09:53:38,576 - yapsy_loaded_plugin_SQLite_MetaData_Generator_8 - DEBUG - Column 'cost' has been added to table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,582 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,592 - yapsy_loaded_plugin_SQLite_Metadata_Browser_9 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,598 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,599 - yapsy_loaded_plugin_SQLite_MetaData_Generator_9 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:38,607 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,619 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,625 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,626 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:38,628 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,633 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,634 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,634 - yapsy_loaded_plugin_SQLite_Connection_Manager_10 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,634 - yapsy_loaded_plugin_SQLite_Metadata_Browser_10 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,636 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - Schemas metadata creation is in progress
+2019-06-09 09:53:38,637 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-09 09:53:38,637 - yapsy_loaded_plugin_SQLite_MetaData_Generator_10 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-09 09:53:38,643 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,658 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,663 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,664 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:38,666 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,707 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,708 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,708 - yapsy_loaded_plugin_SQLite_Connection_Manager_11 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,709 - yapsy_loaded_plugin_SQLite_Metadata_Browser_11 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,710 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Schemas metadata creation is in progress
+2019-06-09 09:53:38,711 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-09 09:53:38,711 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-09 09:53:38,713 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-09 09:53:38,714 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-09 09:53:38,716 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,717 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,718 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,718 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-09 09:53:38,719 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-09 09:53:38,720 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-09 09:53:38,722 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,723 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,723 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,724 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-09 09:53:38,725 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-09 09:53:38,725 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-09 09:53:38,726 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-09 09:53:38,728 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,728 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-09 09:53:38,729 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,729 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-09 09:53:38,729 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,730 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-09 09:53:38,730 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-09 09:53:38,731 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-09 09:53:38,731 - yapsy_loaded_plugin_SQLite_MetaData_Generator_11 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-09 09:53:38,737 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,749 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,755 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,756 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/test.db,                      Username: user, Password: pass
+2019-06-09 09:53:38,758 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/test.db
+2019-06-09 09:53:38,787 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Connected to database successfully
+2019-06-09 09:53:38,788 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Returning the connected session to database
+2019-06-09 09:53:38,788 - yapsy_loaded_plugin_SQLite_Connection_Manager_12 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 09:53:38,789 - yapsy_loaded_plugin_SQLite_Metadata_Browser_12 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 09:53:38,790 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Schemas metadata creation is in progress
+2019-06-09 09:53:38,791 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-09 09:53:38,792 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-09 09:53:38,793 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-09 09:53:38,796 - yapsy_loaded_plugin_SQLite_MetaData_Generator_12 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-09 09:53:38,802 - yapsy_loaded_plugin_SQLite_Connection_Manager_13 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,814 - yapsy_loaded_plugin_SQLite_Metadata_Browser_13 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,820 - yapsy_loaded_plugin_SQLite_MetaData_Generator_13 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 09:53:38,826 - yapsy_loaded_plugin_SQLite_Connection_Manager_14 - DEBUG - Init Connection Manager
+2019-06-09 09:53:38,839 - yapsy_loaded_plugin_SQLite_Metadata_Browser_14 - DEBUG - Init SQLite Browser instance
+2019-06-09 09:53:38,846 - yapsy_loaded_plugin_SQLite_MetaData_Generator_14 - DEBUG - SQLite Metadata generator instance created

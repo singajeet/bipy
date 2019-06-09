@@ -72,7 +72,7 @@ class ConnectionManager(categories.SQLite):
         categories.SQLite.__init__(self)
         LOGGER.debug("Init Connection Manager")
 
-    authorize(Privileges.CONNECT_DB)
+    authorize(Privileges.CONNECT_CREATE)
     def connect(self, conn_string):
         """Setups the connection using the connection string passed as param
 
@@ -89,28 +89,38 @@ class ConnectionManager(categories.SQLite):
         self.inspector = inspect(self.engine)
         LOGGER.debug("Connected to database successfully")
 
+    authorize(Privileges.CONNECT_READ)
     def get_connection_string(self):
         """Returns the connection string used in this for mmaking
             connections to the database
         """
+        LOGGER.debug("Returning the connection string used by connection")
         return self.connection_string
 
+    authorize(Privileges.CONNECT_EXECUTE)
     def get_engine(self):
         """Returns the database engine for SQLite database
         """
+        LOGGER.debug("Returning the connection engine")
         return self.engine
 
+    authorize(Privileges.CONNECT_EXECUTE)
     def get_session(self):
         """Returns an connected session to the database
         """
+        LOGGER.debug("Returning the connected session to database")
         return self.ConnectedSession
 
+    authorize(Privileges.CONNECT_EXECUTE)
     def get_inspector(self):
         """Returns an instance of inspector that can be utilized to
             browse through the metadata of the SQLite database
         """
+        LOGGER.debug("Returning an instance of 'Inspector'\
+                    to browse metadata of DB")
         return self.inspector
 
+    authorize(Privileges.CONNECT_REMOVE)
     def disconnect(self):
         """Closes the connection made with the SQLite database
         """

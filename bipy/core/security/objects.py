@@ -95,8 +95,10 @@ class Privilege(AbstractSecurityObject):
 class SecuritySession(AbstractSecurityObject):
     """ An security session object that will be created when a user logs in
     """
+    __tablename__ = 'warehouse_security_sessions'
+
     session_key = Column(String(255))
     host_name = Column(String(255))
     ip_address = Column(String(255))
-    user_id = Column(Integer, ForeignKey('User.id'), primary_key=True)
+    user_id = Column(Integer, ForeignKey('warehouse_users.id'), primary_key=True)
     is_valid = Column(Boolean)
