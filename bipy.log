@@ -24405,3 +24405,59 @@ ImportError: cannot import name 'WarehouseDatabase'
 2019-06-09 16:28:54,777 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
 2019-06-09 16:28:54,808 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
 2019-06-09 16:28:54,810 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: user, Password: pass
+2019-06-09 23:08:56,455 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-09 23:08:56,456 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-09 23:08:56,477 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 23:08:56,489 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-09 23:08:56,489 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-09 23:08:56,490 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-09 23:08:56,490 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-09 23:08:56,604 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-09 23:08:56,648 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-09 23:08:56,653 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-09 23:08:56,654 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-09 23:08:56,660 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-09 23:08:56,660 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-09 23:08:56,661 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 23:08:56,661 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 23:08:56,692 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-09 23:08:56,693 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connecting to database...
+2019-06-09 23:08:56,694 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-09 23:08:56,694 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - Connected to database successfully
+2019-06-09 23:09:57,631 - parso.cache - DEBUG - pickle loaded: /home/armin/.local/lib/python3.5/site-packages/yapsy/PluginManager.py
+2019-06-09 23:10:05,320 - parso.python.diff - DEBUG - diff parser start
+2019-06-09 23:10:05,328 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-09 23:10:05,329 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-09 23:10:05,330 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-09 23:10:05,331 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-09 23:10:05,332 - parso.python.diff - DEBUG - diff parser end
+2019-06-10 22:26:28,168 - parso.python.diff - DEBUG - diff parser start
+2019-06-10 22:26:28,207 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-10 22:26:28,207 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-10 22:26:28,207 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-10 22:26:28,209 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-10 22:26:28,209 - parso.python.diff - DEBUG - diff parser end
+2019-06-10 22:27:12,107 - parso.python.diff - DEBUG - diff parser start
+2019-06-10 22:27:12,108 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-10 22:27:12,109 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-10 22:27:12,109 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-10 22:27:12,110 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-10 22:27:12,111 - parso.python.diff - DEBUG - diff parser end
+2019-06-10 22:27:12,137 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/__init__.py
+2019-06-10 22:27:12,142 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/__init__.py
+2019-06-10 22:27:12,155 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/config/__init__.py
+2019-06-10 22:27:12,208 - parso.cache - DEBUG - pickle loaded: /home/armin/projects/python/bipy/bipy/core/constants.py
+2019-06-10 22:27:38,953 - bipy.core.config.manager - DEBUG - ConfigManaqer instance created
+2019-06-10 22:29:52,795 - bipy.core.config.manager - DEBUG - ConfigManaqer instance created
+2019-06-10 22:31:29,911 - bipy.core.config.manager - DEBUG - ConfigManaqer instance created
+2019-06-10 22:31:41,771 - bipy.core.config.manager - DEBUG - ConfigManaqer instance created
+2019-06-10 22:33:00,428 - bipy.core.config.manager - DEBUG - ConfigManaqer instance created
+2019-06-10 22:33:00,433 - bipy.core.config.manager - DEBUG - Config file opened available at '/home/armin/projects/python/bipy/bipy/config/default.cfg'
+2019-06-10 22:34:05,831 - parso.python.diff - DEBUG - diff parser start
+2019-06-10 22:34:05,833 - parso.python.diff - DEBUG - diff parser calculated
+2019-06-10 22:34:05,838 - parso.python.diff - DEBUG - diff: line_lengths old: 1, new: 1
+2019-06-10 22:34:05,838 - parso.python.diff - DEBUG - diff replace old[1:1] new[1:1]
+2019-06-10 22:34:05,840 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-10 22:34:05,841 - parso.python.diff - DEBUG - diff parser end
+2019-06-10 22:37:03,686 - yapsy_loaded_plugin_BIPY_Configuration_Manager_1 - DEBUG - ConfigManaqer instance created
+2019-06-10 22:37:03,691 - yapsy_loaded_plugin_BIPY_Configuration_Manager_1 - DEBUG - Config file opened available at '/home/armin/projects/python/bipy/bipy/config/default.cfg'

@@ -8,11 +8,12 @@ import os
 from bipy.core.constants import PATHS
 from bipy.logging import logger
 from bipy.core import constants
+from bipy.core.db import categories
 
 LOGGER = logger.get_logger(__name__)
 
 
-class ConfigManager:
+class ConfigManager(categories.AbstractCategory):
     """ Singleton class to work with comfiguration
     by whole system
     """
@@ -33,7 +34,7 @@ class ConfigManager:
     def __init__(self):
         """ Default conatructor """
         LOGGER.debug("ConfigManaqer instance created")
-        self.__config_dir = PATHS.CONFIG
+        self.__config_dir = PATHS.CONFIG_FILES
         self.__config_file = os.path.abspath(
             os.path.join(self.__config_dir, "default.cfg"))
         _cf = open(self.__config_file)
