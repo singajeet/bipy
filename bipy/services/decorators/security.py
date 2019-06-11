@@ -6,9 +6,9 @@
 
 """
 from yapsy.PluginManager import PluginManager
-from bipy.core.security.manager import SecurityManager
-from bipy.core.db import categories
-from bipy.core.constants import PATHS, URLS
+from bipy.services.security.manager import SecurityManager
+from bipy.services.db import categories
+from bipy.services.constants import PATHS, URLS
 
 
 def authorize(privilege):
@@ -25,13 +25,18 @@ def authorize(privilege):
                 and executes the logic to check whether function call is allowed
                 or not
             """
+            _pm = PluginManager()
+            _pm.setPluginPlaces([PATHS.CONFIG_MGR])
+            _pm.locatePlugins()
+            configs = _pm.loadPlugins()
+            conf = configs[0].plugin_object
             _pm = PluginManager(
                 categories_filter={"SQLITE": categories.SQLite})
-            _pm.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
+            _pm.setPluginPlaces([conf.PATH_CONNECTION_MANAGERS])
             _pm.locatePlugins()
             cms = _pm.loadPlugins()
             _cm = cms[0].plugin_object
-            _cm.connect(URLS.META_DB)
+            _cm.connect(conf.URL_META_DB)
             _sm = SecurityManager(_cm)
             result = _sm.authorize(privilege)
             if result:

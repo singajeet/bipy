@@ -8,7 +8,7 @@
 """
 from datetime import datetime
 # import socket
-from bipy.core.security.objects import User, Role, Privilege, SecuritySession
+from bipy.services.security.objects import User, Role, Privilege, SecuritySession
 
 
 class SecurityManager:

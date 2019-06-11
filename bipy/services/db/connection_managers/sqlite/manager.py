@@ -5,10 +5,10 @@
 """
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
-import bipy.core.db.categories as categories
+import bipy.services.db.categories as categories
 from bipy.logging import logger
-from bipy.core.security.privileges import Privileges
-from bipy.core.decorators.security import authorize
+from bipy.services.security.privileges import Privileges
+from bipy.services.decorators.security import authorize
 
 #init logs---------------------------------
 LOGGER = logger.get_logger(__name__)
@@ -18,15 +18,19 @@ class ConnectionManager(categories.SQLite):
     """ A SQLite connection manager which is a singleton and should return same
         instance always
 
-        >>> from bipy.core.db.categories import SQLite
+        >>> from bipy.services.db.categories import SQLite
 
         >>> from yapsy.PluginManager import PluginManager
 
-        >>> from bipy.core.constants import PATHS, URLS
+        >>> from bipy.services.utils import Utility
+
+        >>> util = Utility()
+
+        >>> conf = util.CONFIG
 
         >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
 
-        >>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
+        >>> manager.setPluginPlaces([conf.PATH_CONNECTION_MANAGERS])
 
         >>> manager.locatePlugins()
 
@@ -36,7 +40,7 @@ class ConnectionManager(categories.SQLite):
         1
         >>> connections[0].name
         'SQLite Connection Manager'
-        >>> connections[0].plugin_object.connect(URLS.TEST_DB)
+        >>> connections[0].plugin_object.connect(conf.URL_TEST_DB)
 
         >>>
 
