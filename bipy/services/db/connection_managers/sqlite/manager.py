@@ -28,13 +28,7 @@ class ConnectionManager(categories.SQLite):
 
         >>> conf = util.CONFIG
 
-        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
-
-        >>> manager.setPluginPlaces([conf.PATH_CONNECTION_MANAGERS])
-
-        >>> manager.locatePlugins()
-
-        >>> connections = manager.loadPlugins()
+        >>> connections = util.get_all_plugins(conf.PATH_CONNECTION_MANAGERS, {'SQLITE': SQLite})
 
         >>> connections.__len__()
         1
@@ -129,7 +123,16 @@ class ConnectionManager(categories.SQLite):
         """Closes the connection made with the SQLite database
         """
         LOGGER.debug("Closing the open connection to database")
-        self.ConnectedSession.close_all()
+        if self.ConnectedSession is not None:
+            self.ConnectedSession.close_all()
+
+    def __del__(self):
+        """ Desctructor of the current class"""
+        LOGGER.debug("Closing and disconnecting the connected session to Database")
+        self.disconnect()
+        if self.ConnectedSession is not None:
+            del self.ConnectedSession
+
 
 
 if __name__ == "__main__":

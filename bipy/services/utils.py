@@ -16,9 +16,32 @@ class Utility:
     def __new__(cls):
         if Utility.__INSTANCE is None:
             Utility.__INSTANCE = object.__new__(cls)
-            pm = PluginManager()
-            pm.setPluginPlaces([PATHS.CONFIG_MGR])
-            pm.locatePlugins()
-            configs = pm.loadPlugins()
+            _pm = PluginManager()
+            _pm.setPluginPlaces([PATHS.CONFIG_MGR])
+            _pm.locatePlugins()
+            configs = _pm.loadPlugins()
             Utility.CONFIG = configs[0].plugin_object.CONFIG
         return Utility.__INSTANCE
+
+    def get_plugin(self, path, p_categories_filter=None):
+        """ Returns a plugins available at specified path and of category
+            provided as argument
+        """
+        _pm = PluginManager(categories_filter=p_categories_filter)
+        _pm.setPluginPlaces([path])
+        _pm.locatePlugins()
+        plugins = _pm.loadPlugins()
+        plugin = plugins[0].plugin_object
+        _pm = None
+        plugins = None
+        return plugin
+
+    def get_all_plugins(self, path, p_categories_filter=None):
+        """ Returns all plugin objects as array available at the specified
+            path provided as argument
+        """
+        _pm = PluginManager(categories_filter=p_categories_filter)
+        _pm.setPluginPlaces([path])
+        _pm.locatePlugins()
+        plugins = _pm.loadPlugins()
+        return plugins
