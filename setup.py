@@ -7,11 +7,11 @@ setup(
     version="0.1.0",
     author="Ajeet Singh",
     author_email="singajeet@gmail.com",
-    packages=["bipy", "bipy.core", "bipy.core.db", "bipy.core.db.analytic",
-              "bipy.core.db.connection_managers", "bipy.core.db.repository",
-              "bipy.core.db.warehouse", "bipy.core.db.warehouse.browsers",
-              "bipy.core.db.warehouse.base_meta_gen", "bipy.core.decorators",
-              "bipy.core.security"
+    packages=["bipy", "bipy.services", "bipy.services.db", "bipy.services.db.analytic",
+              "bipy.services.db.connection_managers", "bipy.services.db.repository",
+              "bipy.services.db.warehouse", "bipy.services.db.warehouse.browsers",
+              "bipy.services.db.warehouse.base_meta_gen", "bipy.services.decorators",
+              "bipy.services.security"
              ],
     url="https://github.com/singajeet/bipy",
     license="LICENSE.txt",

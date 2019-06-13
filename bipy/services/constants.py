@@ -8,21 +8,13 @@ import os
 class PATHS:
     """ Various paths to available modules in the application
     """
+    # ############# DO NOT DELETE BELOW LINE #############################
     ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+    # ############# DO NOT DELETE THE ABOVE LINE #########################
     ROOT_PARENT = os.path.abspath(os.path.join(ROOT, "../"))
     SERVICES = os.path.abspath(os.path.join(ROOT, "services"))
     DATA_FILES = os.path.abspath(os.path.join(ROOT, "data"))
-    CONFIG_FILE = os.path.abspath(os.path.join(ROOT, "config/Default.cfg"))
-    # DB = os.path.abspath(os.path.join(SERVICES, "db"))
-    # WAREHOUSE = os.path.abspath(os.path.join(DB, "warehouse"))
-    # BROWSERS = os.path.abspath(os.path.join(WAREHOUSE, "browsers"))
-    # BASE_META_GEN = os.path.abspath(os.path.join(WAREHOUSE, "base_meta_gen"))
-    # CONNECTION_MANAGERS = os.path.abspath(os.path.join(DB, "connection_managers"))
-    # REPOSITORY = os.path.abspath(os.path.join(DB, "repository"))
-    # ANALYTIC = os.path.abspath(os.path.join(DB, "analytic"))
-    # REPO_MGR = os.path.abspath(os.path.join(REPOSITORY, "objects"))
-    # REPO_REL_MGR = os.path.abspath(os.path.join(REPOSITORY, "relationship"))
-    # LOG_CONFIG_PATH = os.path.abspath(os.path.join(CONFIG_FILES, "log_config.json"))
+    CONFIG_FILE = os.path.abspath(os.path.join(ROOT, "config/default.cfg"))
     CONFIG_MGR = os.path.abspath(os.path.join(SERVICES, "config"))
 
 

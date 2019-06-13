@@ -58,15 +58,14 @@ class Browser(categories.SQLite):
 
         >>> from bipy.services.db.categories import SQLite
 
-        >>> from yapsy.PluginManager import PluginManager
-
         >>> from bipy.services.utils import Utility
 
         >>> utils = Utility()
 
         >>> conf = utils.CONFIG
 
-        >>> connections = utils.get_all_plugins(conf.PATH_CONNECTION_MANAGERS)
+        >>> connections = utils.get_all_plugins(conf.PATH_CONNECTION_MANAGERS,\
+                                                {'SQLITE': SQLite})
 
         >>> connections.__len__()
         1
@@ -75,7 +74,8 @@ class Browser(categories.SQLite):
 
         >>> conn = connections[0].plugin_object
 
-        >>> browsers = utils.get_all_plugins(conf.PATH_BROWSER)
+        >>> browsers = utils.get_all_plugins(conf.PATH_BROWSER,\
+                                             {'SQLITE': SQLite})
 
         >>> browsers.__len__()
         1

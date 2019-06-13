@@ -32,8 +32,8 @@ class Utility:
         _pm.locatePlugins()
         plugins = _pm.loadPlugins()
         plugin = plugins[0].plugin_object
-        _pm = None
-        plugins = None
+        del _pm
+        del plugins
         return plugin
 
     def get_all_plugins(self, path, p_categories_filter=None):
@@ -44,4 +44,5 @@ class Utility:
         _pm.setPluginPlaces([path])
         _pm.locatePlugins()
         plugins = _pm.loadPlugins()
+        del _pm
         return plugins

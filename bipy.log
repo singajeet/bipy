@@ -1615,3 +1615,231 @@
 2019-06-13 23:05:34,588 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
 2019-06-13 23:05:34,591 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Closing and disconnecting the connected session to Database
 2019-06-13 23:05:34,592 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Closing the open connection to database
+2019-06-13 23:39:24,337 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,373 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,374 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,376 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-13 23:39:24,377 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,390 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,392 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,402 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:39:24,404 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,__builtins__,os')>
+2019-06-13 23:39:24,404 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:39:24,482 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-13 23:39:24,483 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-13 23:39:24,483 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:39:24,484 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:39:24,488 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:39:24,489 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,695 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,696 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,700 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,701 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,708 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,709 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,709 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:40:25,736 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-13 23:40:25,737 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-13 23:40:25,737 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:40:25,738 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:40:25,740 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,745 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,746 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,749 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,750 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,754 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,755 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,768 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,769 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,769 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:40:25,774 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-13 23:40:25,775 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-13 23:40:25,775 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:40:25,776 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:40:25,778 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,784 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,785 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,787 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,788 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,793 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,795 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,801 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,802 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,803 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:40:25,808 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-13 23:40:25,809 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-13 23:40:25,809 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:40:25,809 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:40:25,810 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,814 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:25,815 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,826 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,827 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,829 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,830 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,834 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,835 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,842 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,843 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,847 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,848 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,851 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,851 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,880 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,881 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,889 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,890 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,894 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,895 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,897 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,898 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,901 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:25,902 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,904 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,905 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,913 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,914 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,915 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:40:25,920 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-13 23:40:25,922 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,926 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:25,926 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,928 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,929 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,931 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,932 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,936 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,937 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,944 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,945 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,950 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,951 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,953 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-13 23:40:25,953 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,960 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,961 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:40:25,968 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:40:25,996 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:25,997 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,998 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:25,999 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:25,999 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:26,000 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:26,000 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:26,001 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Closing the open connection to database
+2019-06-13 23:40:26,001 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:40:26,003 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Closing the open connection to database
+2019-06-13 23:52:46,066 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,070 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,071 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,073 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-13 23:52:46,074 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,082 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,083 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,090 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:52:46,092 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-13 23:52:46,093 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:52:46,119 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-13 23:52:46,120 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-13 23:52:46,121 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:52:46,121 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:52:46,126 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:52:46,126 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,667 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,668 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,672 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,673 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,680 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,681 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,681 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:53:54,707 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-13 23:53:54,708 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-13 23:53:54,708 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:53:54,709 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:53:54,711 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,716 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,717 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,719 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,720 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,725 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,725 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,738 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,739 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,740 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:53:54,745 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-13 23:53:54,746 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-13 23:53:54,746 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:53:54,746 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:53:54,749 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,753 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,754 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,756 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,757 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,762 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,764 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,771 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,772 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,772 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:53:54,777 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-13 23:53:54,778 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-13 23:53:54,778 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-13 23:53:54,779 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-13 23:53:54,780 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,784 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,785 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,786 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,787 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,789 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,790 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,796 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,797 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,804 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,805 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,809 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,810 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,812 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,813 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,819 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,820 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,828 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,829 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,833 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,835 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,837 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,838 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,842 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,842 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,844 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,845 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,852 - yapsy_loaded_plugin_SQLite_Metadata_Browser_5 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,853 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,854 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-13 23:53:54,860 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-13 23:53:54,861 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,865 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,865 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,867 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,869 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,871 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,872 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,877 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,878 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,885 - yapsy_loaded_plugin_SQLite_Metadata_Browser_6 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,886 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,891 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,892 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,894 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-13 23:53:54,895 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,901 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,902 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-13 23:53:54,908 - yapsy_loaded_plugin_SQLite_Metadata_Browser_7 - DEBUG - Init SQLite Browser instance
+2019-06-13 23:53:54,935 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,936 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,936 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,937 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,938 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,938 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,939 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,939 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Closing the open connection to database
+2019-06-13 23:53:54,939 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Closing and disconnecting the connected session to Database
+2019-06-13 23:53:54,940 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Closing the open connection to database
