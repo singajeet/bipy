@@ -1,14 +1,15 @@
 """
- Database sspecific meta models classes and will be used in the database meta browser objects
+ Database sspecific meta models classes and will be used in the database
+ meta browser objects
  Author: Ajeet Singh
  Date: 05/08/2019
 """
 from sqlalchemy import Column, String
 from sqlalchemy.ext.declarative import declarative_base
-from bipy.core.db import categories
+from bipy.services.db import categories
 from bipy.logging import logger
-from bipy.core.security.privileges import Privileges
-from bipy.core.decorators.security import authorize
+from bipy.services.security.privileges import Privileges
+from bipy.services.decorators.security import authorize
 
 
 LOGGER = logger.get_logger(__name__)
@@ -17,7 +18,8 @@ Base = declarative_base()
 
 class MetaModel(Base):
     """
-        An metadata table mapped to SQLite's sqlite_master tabele to browse for DB objects
+        An metadata table mapped to SQLite's sqlite_master
+        tabele to browse for DB objects
     """
     __tablename__ = 'sqlite_master'
 
@@ -39,32 +41,32 @@ class MetaModel(Base):
 
 class Browser(categories.SQLite):
     """
-        An SQLite Metadata browser class implemented using sqlite_master table and
-        SQLAlchemy's inspector function. It helps to browse through Tables, Views,
-        etc available in an given database
+        An SQLite Metadata browser class implemented using
+        sqlite_master table and SQLAlchemy's inspector function.
+        It helps to browse through Tables, Views, etc available
+        in an given database
 
         Args:
-            connection (ConnectionManager): An instance of the ConnectionManager class
-            pointing to the SQLite database
+            connection (ConnectionManager): An instance of the
+            ConnectionManager class pointing to the SQLite database
 
         Attributes:
-            ConnectedSession (get_session): Stores the connected session to the database
+            ConnectedSession (get_session): Stores the connected
+                                            session to the database
             inspector (get_inspector): stores the inspector instance available
                                         though get_inspector function
 
-	>>> from bipy.core.db.categories import SQLite
+        >>> from bipy.services.db.categories import SQLite
 
         >>> from yapsy.PluginManager import PluginManager
 
-        >>> from bipy.core.constants import PATHS, URLS
+        >>> from bipy.services.utils import Utility
 
-        >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+        >>> utils = Utility()
 
-        >>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
+        >>> conf = utils.CONFIG
 
-        >>> manager.locatePlugins()
-
-        >>> connections = manager.loadPlugins()
+        >>> connections = utils.get_all_plugins(conf.PATH_CONNECTION_MANAGERS)
 
         >>> connections.__len__()
         1
@@ -73,11 +75,7 @@ class Browser(categories.SQLite):
 
         >>> conn = connections[0].plugin_object
 
-        >>> manager.setPluginPlaces([PATHS.BROWSERS])
-
-        >>> manager.locatePlugins()
-
-        >>> browsers = manager.loadPlugins()
+        >>> browsers = utils.get_all_plugins(conf.PATH_BROWSER)
 
         >>> browsers.__len__()
         1
@@ -85,7 +83,7 @@ class Browser(categories.SQLite):
         'SQLite Metadata Browser'
         >>> browser = browsers[0].plugin_object
 
-        >>> conn.connect(URLS.TEST_DB)
+        >>> conn.connect(conf.URL_TEST_DB)
 
         >>> browser.connect(conn)
 
@@ -115,11 +113,14 @@ class Browser(categories.SQLite):
         categories.SQLite.__init__(self)
 
     authorize(Privileges.CONNECT_CREATE)
+
     def connect(self, connection):
-        """Connects the browser to an database using connection passed as param
+        """Connects the browser to an database using connection
+            passed as param
 
             Args:
-                connection (ConnectionManager): An connection object to SQLite DB
+                connection (ConnectionManager): An connection object
+                to SQLite DB
         """
         self.ConnectedSession = connection.get_session()
         self.inspector = connection.get_inspector()
@@ -131,30 +132,35 @@ class Browser(categories.SQLite):
         return "SQLite browser instance"
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_schemas(self):
         """Returns list of schemas
         """
         return self.inspector.get_schema_names()
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_tables(self, schema=None):
         """Returns list of tables
         """
         return self.inspector.get_table_names(schema)
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_views(self, schema=None):
         """Returns list of views
         """
         return self.inspector.get_view_names(schema)
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_view_definition(self, schema=None):
         """Returns the SQL query used to create view
         """
         return self.inspector.get_view_definition(schema)
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_columns(self, table_name):
         """
             Returns list of columns available as dict object of a given table
@@ -165,6 +171,7 @@ class Browser(categories.SQLite):
         return self.inspector.get_columns(table_name)
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_column_names(self, table_name):
         """
             Return list of column names
@@ -172,7 +179,8 @@ class Browser(categories.SQLite):
             Args:
                 table_name (string): name of the table
         """
-        LOGGER.debug("Preparing to get column names for table: %s" % (table_name))
+        LOGGER.debug("Preparing to get column names for table: %s"
+                     % (table_name))
         column_names = []
         for col in self.inspector.get_columns(table_name):
             column_names.append(col['name'])
@@ -181,6 +189,7 @@ class Browser(categories.SQLite):
         return column_names
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_column_type(self, table_name, column_name):
         """
             Returns the type of column, passed as arg of specific table
@@ -190,27 +199,31 @@ class Browser(categories.SQLite):
                 table_name (string): name of the table
                 column_name (string): name of the column
         """
-        LOGGER.debug("Preparing to get datatype of column '%s' in table '%s'"\
-                      % (column_name, table_name))
+        LOGGER.debug("Preparing to get datatype of column '%s' in table '%s'"
+                     % (column_name, table_name))
         for col in self.inspector.get_columns(table_name):
             if col['name'] == column_name:
-                LOGGER.debug("Column '%s' found in the respective table"\
-                              % (column_name))
+                LOGGER.debug("Column '%s' found in the respective table"
+                             % (column_name))
                 col_str = str(col['type'])
                 if col_str.find("(", 0) >= 0:
                     index = col_str.index("(", 0)
-                    LOGGER.debug("'%s' will be returned as datatype for column '%s'"\
-                                  % (col_str[0:index], column_name))
+                    LOGGER.debug("'%s' will be returned as datatype for\
+                                 column '%s'"
+                                 % (col_str[0:index], column_name))
                     return col_str[0:index]
-                LOGGER.debug("'%s' will be returned as datatype for column '%s'"\
-                              % (col_str, column_name))
+                LOGGER.debug("'%s' will be returned as datatype\
+                             for column '%s'"
+                             % (col_str, column_name))
                 return col_str
         return None
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_primary_key_columns(self, table_name):
         """
-            Returns all columns available as primary key of the table passed as arg
+            Returns all columns available as primary key of the table
+            passed as arg
 
             Args:
                 table_name (string): name of the table
@@ -219,6 +232,7 @@ class Browser(categories.SQLite):
         return pk_const['constrained_columns']
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_primary_key_name(self, table_name):
         """
             Returns the name of the primary key (i.e., name of PK constraint)
@@ -230,6 +244,7 @@ class Browser(categories.SQLite):
         return pk_const['name']
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_table_options(self, table_name):
         """
             Returns options of a given table
@@ -240,6 +255,7 @@ class Browser(categories.SQLite):
         return self.inspector.get_table_options(table_name)
 
     authorize(Privileges.METAMODEL_READ)
+
     def get_foreign_keys(self, table_name):
         """
             Returns list of foreign keys as dict objects of a given table
@@ -250,6 +266,7 @@ class Browser(categories.SQLite):
         return self.inspector.get_foreign_keys(table_name)
 
     authorize(Privileges.CONNECT_REMOVE)
+
     def close(self):
         """
             Closes the connected session with the database

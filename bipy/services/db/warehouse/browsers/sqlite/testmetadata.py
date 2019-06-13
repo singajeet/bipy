@@ -4,9 +4,9 @@
     Date: 05/27/2019
 """
 import unittest
-from yapsy.PluginManager import PluginManager
-from bipy.core.db.categories import SQLite
-from bipy.core.constants import PATHS, URLS
+from bipy.services.db.categories import SQLite
+from bipy.services.utils import Utility
+
 
 class BrowserTestCase(unittest.TestCase):
     """Test case for Browser class and its methods
@@ -16,15 +16,16 @@ class BrowserTestCase(unittest.TestCase):
     manager = None
     browser = None
     browsers = None
+    conf = None
 
     def setUp(self):
-        self.manager = PluginManager(categories_filter={'SQLITE': SQLite})
-        self.manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
-        self.manager.locatePlugins()
-        self.connections = self.manager.loadPlugins()
-        self.manager.setPluginPlaces([PATHS.BROWSERS])
-        self.manager.locatePlugins()
-        self.browsers = self.manager.loadPlugins()
+        util = Utility()
+        self.conf = util.CONFIG
+        self.connections = util.get_all_plugins(
+            self.conf.PATH_CONNECTION_MANAGERS,
+            {'SQLITE': SQLite})
+        self.browsers = util.get_all_plugins(self.conf.PATH_BROWSER,
+                                             {'SQLITE': SQLite})
 
     def testConnectionPluginCount(self):
         assert self.connections.__len__() == 1
@@ -41,7 +42,7 @@ class BrowserTestCase(unittest.TestCase):
     def testConnection(self):
         try:
             self.connection = self.connections[0].plugin_object
-            self.connection.connect(URLS.TEST_DB)
+            self.connection.connect(self.conf.URL_TEST_DB)
         except Exception:
             self.fail("Exception thrown while connecting to DB")
 
@@ -76,6 +77,7 @@ def suite():
     suite.addTest(BrowserTestCase("testBrowseSchemas"))
     suite.addTest(BrowserTestCase("testBrowseTables"))
     return suite
+
 
 if __name__ == "__main__":
     unittest.main()
