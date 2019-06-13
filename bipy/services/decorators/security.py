@@ -5,10 +5,8 @@
  Date: 5/15/2019
 
 """
-from yapsy.PluginManager import PluginManager
 from bipy.services.security.manager import SecurityManager
-from bipy.services.db import categories
-from bipy.services.constants import PATHS, URLS
+from bipy.services.utils import Utility
 
 
 def authorize(privilege):
@@ -22,19 +20,12 @@ def authorize(privilege):
         """
         def wrapper(*args, **kwargs):
             """ Authorization logic that will init the SecurityManager class
-                and executes the logic to check whether function call is allowed
-                or not
+                and executes the logic to check whether function call
+                is allowed or not
             """
-            _pm = PluginManager()
-            _pm.setPluginPlaces([PATHS.CONFIG_MGR])
-            _pm.locatePlugins()
-            configs = _pm.loadPlugins()
-            conf = configs[0].plugin_object
-            _pm = PluginManager(
-                categories_filter={"SQLITE": categories.SQLite})
-            _pm.setPluginPlaces([conf.PATH_CONNECTION_MANAGERS])
-            _pm.locatePlugins()
-            cms = _pm.loadPlugins()
+            util = Utility()
+            conf = util.CONFIG
+            cms = util.get_all_plugins(conf.PATH_CONNECTION_MANAGERS)
             _cm = cms[0].plugin_object
             _cm.connect(conf.URL_META_DB)
             _sm = SecurityManager(_cm)

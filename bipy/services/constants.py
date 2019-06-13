@@ -12,7 +12,7 @@ class PATHS:
     ROOT_PARENT = os.path.abspath(os.path.join(ROOT, "../"))
     SERVICES = os.path.abspath(os.path.join(ROOT, "services"))
     DATA_FILES = os.path.abspath(os.path.join(ROOT, "data"))
-    CONFIG_FILES = os.path.abspath(os.path.join(ROOT, "config"))
+    CONFIG_FILE = os.path.abspath(os.path.join(ROOT, "config/Default.cfg"))
     # DB = os.path.abspath(os.path.join(SERVICES, "db"))
     # WAREHOUSE = os.path.abspath(os.path.join(DB, "warehouse"))
     # BROWSERS = os.path.abspath(os.path.join(WAREHOUSE, "browsers"))
