@@ -8,14 +8,14 @@
     Author: Ajeet Singh
     Date: 05/21/2019
 """
-from bipy.core.db.repository.meta_objects import WarehouseDatabase, WarehouseSchema
-from bipy.core.db.repository.meta_objects import WarehouseTable, WarehouseColumn
-from bipy.core.db.repository.meta_objects import WarehouseView
-from bipy.core.db import categories
-from bipy.core.db.repository.types import DataTypes
+from bipy.services.db.repository.meta_objects import WarehouseDatabase, WarehouseSchema
+from bipy.services.db.repository.meta_objects import WarehouseTable, WarehouseColumn
+from bipy.services.db.repository.meta_objects import WarehouseView
+from bipy.services.db import categories
+from bipy.services.db.repository.types import DataTypes
 from bipy.logging import logger
-from bipy.core.security.privileges import Privileges
-from bipy.core.decorators.security import authorize
+from bipy.services.security.privileges import Privileges
+from bipy.services.decorators.security import authorize
 
 
 LOGGER = logger.get_logger(__name__)
@@ -31,19 +31,15 @@ class MetaGenerator(categories.SQLite):
         DB Browsing, Meta generation and saving objects in repository loosely coupled.
         This class will be an singleton class.
 
-	>>> from bipy.core.db.categories import SQLite
+	>>> from bipy.services.db.categories import SQLite
 
-	>>> from bipy.core.constants import PATHS, URLS
+    >>> from bipy.services.utils import Utility
 
-	>>> from yapsy.PluginManager import PluginManager
+    >>> util = Utility()
 
-    >>> manager = PluginManager(categories_filter={'SQLITE': SQLite})
+    >>> conf = util.CONFIG
 
-	>>> manager.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
-
-    >>> manager.locatePlugins()
-
-    >>> connections = manager.loadPlugins()
+    >>> connections = util.get_all_plugins(conf.PATH_CONNECTION_MANAGERS)
 
     >>> connections.__len__()
     1
@@ -52,11 +48,7 @@ class MetaGenerator(categories.SQLite):
 
 	>>> conn = connections[0].plugin_object
 
-    >>> manager.setPluginPlaces([PATHS.BROWSERS])
-
-    >>> manager.locatePlugins()
-
-    >>> browsers = manager.loadPlugins()
+    >>> browsers = util.get_all_plugins(conf.PATH_BROWSER)
 
     >>> browsers.__len__()
     1
@@ -64,7 +56,7 @@ class MetaGenerator(categories.SQLite):
     'SQLite Metadata Browser'
     >>> browser = browsers[0].plugin_object
 
-    >>> conn.connect(URLS.TEST_DB)
+    >>> conn.connect(conf.URL_TEST_DB)
 
     >>> browser.connect(conn)
 
@@ -72,11 +64,7 @@ class MetaGenerator(categories.SQLite):
     ['main']
     >>> browser.get_tables()
     ['CUSTOMER_MASTER', 'PRODUCT_MASTER', 'SALES_DETAILS', 'android_metadata', 'sqlite_sequence']
-    >>> manager.setPluginPlaces([PATHS.BASE_META_GEN])
-
-	>>> manager.locatePlugins()
-
-    >>> bmg = manager.loadPlugins()
+    >>> bmg = util.get_all_plugins(conf.PATH_BASE_META_GEN)
 
     >>> bmg.__len__()
     1
@@ -84,7 +72,7 @@ class MetaGenerator(categories.SQLite):
     'SQLite MetaData Generator'
     >>> mg = bmg[0].plugin_object
 
-    >>> db = mg.generate_database_meta("Warehouse 1", "SQLITE", URLS.TEST_DB, "user", "pass")
+    >>> db = mg.generate_database_meta("Warehouse 1", "SQLITE", conf.URL_TEST_DB, "user", "pass")
 
     >>> db
     Warehouse [Name=Warehouse 1, Type=SQLITE]

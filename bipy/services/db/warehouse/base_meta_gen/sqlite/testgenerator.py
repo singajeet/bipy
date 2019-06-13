@@ -4,9 +4,8 @@
     Date: 05/28/2019
 """
 import unittest
-from bipy.core.constants import PATHS, URLS
-from bipy.core.db.warehouse.browsers.sqlite import testmetadata
-
+from bipy.services.db.warehouse.browsers.sqlite import testmetadata
+from bipy.services.utils import Utility
 
 class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
     """Yest case for MetaGenerator class
@@ -18,12 +17,13 @@ class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
     tables = None
     views = None
     columns = None
+    conf = None
 
     def setUp(self):
         testmetadata.BrowserTestCase.setUp(self)
-        self.manager.setPluginPlaces([PATHS.BASE_META_GEN])
-        self.manager.locatePlugins()
-        self.bmg = self.manager.loadPlugins()
+        util = Utility()
+        self.conf = util.CONFIG
+        self.bmg = util.get_all_plugins(self.conf.PATH_BASE_META_GEN)
 
     def testMetaGeneratorPluginCount(self):
         assert self.bmg.__len__() == 1
@@ -33,7 +33,9 @@ class MetaGeneratorTestCase(testmetadata.BrowserTestCase):
 
     def testMGDatabaseObject(self):
         self.mg = self.bmg[0].plugin_object
-        self.db = self.mg.generate_database_meta("Warehouse 1", "SQLITE", URLS.TEST_DB, "user", "pass")
+        self.db = self.mg.generate_database_meta("Warehouse 1", "SQLITE",
+                                                 self.conf.URL_TEST_DB,
+                                                 "user", "pass")
         assert self.db.__repr__() == 'Warehouse [Name=Warehouse 1, Type=SQLITE]'
 
     def testMGSchemaObject(self):

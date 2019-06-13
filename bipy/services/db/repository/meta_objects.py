@@ -8,7 +8,7 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, String, Sequence, Boolean, ForeignKey, DateTime
 from sqlalchemy.ext.declarative import declarative_base, AbstractConcreteBase
 from sqlalchemy.orm import relationship
-from bipy.core.db.repository.types import DataTypes, ViewTypes
+from bipy.services.db.repository.types import DataTypes, ViewTypes
 
 
 
