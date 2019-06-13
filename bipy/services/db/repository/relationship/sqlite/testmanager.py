@@ -4,8 +4,9 @@
 """
 import unittest
 from yapsy.PluginManager import PluginManager
-from bipy.core.constants import URLS, PATHS
-from bipy.core.db.categories import SQLite
+from bipy.services.constants import URLS, PATHS
+from bipy.services.db.categories import SQLite
+from bipy.services.utils import Utility
 
 
 class RepositoryRelationshipManagerTestCase(unittest.TestCase):
@@ -21,40 +22,31 @@ class RepositoryRelationshipManagerTestCase(unittest.TestCase):
     __repo_schema_meta = None
     __repo_table_meta = None
     __repo_column_meta = None
+    conf = None
 
     def setUp(self):
         """ Setups the test case for testing the repo mgr class
         """
-        self.__plugin_mgr = PluginManager(categories_filter={"SQLITE": SQLite})
+        util = Utility()
+        self.conf = util.CONFIG
         #---------- Load Connection Mgr plugin for Warehouse ------------
-        self.__plugin_mgr.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
-        self.__plugin_mgr.locatePlugins()
-        conns = self.__plugin_mgr.loadPlugins()
+        conns = util.get_all_plugins(self.conf.PATH_CONNECTED_SESSION)
         self.__conn_wh = conns[0].plugin_object
-        self.__conn_wh.connect(URLS.TEST_DB)
+        self.__conn_wh.connect(self.conf.URL_TEST_DB)
         #---------- Load Warehouse Browser plugin -----------------------
-        self.__plugin_mgr.setPluginPlaces([PATHS.BROWSERS])
-        self.__plugin_mgr.locatePlugins()
-        browsers = self.__plugin_mgr.loadPlugins()
+        browsers = util.get_all_plugins(self.conf.PATH_BROWSER)
         self.__browser = browsers[0].plugin_object
         self.__browser.connect(self.__conn_wh)
         #--------- Load Base Meta Generator plugin ----------------------
-        self.__plugin_mgr.setPluginPlaces([PATHS.BASE_META_GEN])
-        self.__plugin_mgr.locatePlugins()
-        base_meta_gen = self.__plugin_mgr.loadPlugins()
+        base_meta_gen = util.get_all_plugins(self.conf.PATH_BASE_META_GEN)
         self.__meta_gen = base_meta_gen[0].plugin_object
         #--------- Load Repository Manager plugin -----------------------
-        self.__plugin_mgr.setPluginPlaces([PATHS.REPO_MGR])
-        self.__plugin_mgr.locatePlugins()
-        repo_mgrs = self.__plugin_mgr.loadPlugins()
+        repo_mgrs = util.get_all_plugins(self.conf.PATH_REPO_MGR)
         self.__repo_mgr = repo_mgrs[0].plugin_object
         #----- Load Connection Mgr plugin for repository / meta db ------
-        self.__plugin_mgr = PluginManager(categories_filter={"SQLITE": SQLite})
-        self.__plugin_mgr.setPluginPlaces([PATHS.CONNECTION_MANAGERS])
-        self.__plugin_mgr.locatePlugins()
-        repo_conns = self.__plugin_mgr.loadPlugins()
+        repo_conns = util.get_all_plugins(self.conf.PATH_CONNECTION_MANAGERS)
         self.__conn_repo = repo_conns[0].plugin_object
-        self.__conn_repo.connect(URLS.META_DB)
+        self.__conn_repo.connect(self.conf.URL_META_DB)
         self.__repo_mgr.connect(self.__conn_repo)
 
 

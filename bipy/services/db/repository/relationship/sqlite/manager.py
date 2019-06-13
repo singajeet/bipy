@@ -3,7 +3,7 @@
     Author: Ajeet Singh
     Date: 05/31/2019
 """
-from bipy.core.db import categories
+from bipy.services.db import categories
 from bipy.logging import logger
 
 
