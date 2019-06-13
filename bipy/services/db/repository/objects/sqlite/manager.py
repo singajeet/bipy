@@ -3,10 +3,10 @@
     Author: Ajeet Singh
     Date: 05/31/2019
 """
-from bipy.core.db import categories
-from bipy.core.db.repository.meta_objects import WarehouseDatabase, WarehouseSchema
-from bipy.core.db.repository.meta_objects import WarehouseTable, WarehouseColumn
-from bipy.core.db.repository.meta_objects import WarehouseView
+from bipy.services.db import categories
+from bipy.services.db.repository.meta_objects import WarehouseDatabase, WarehouseSchema
+from bipy.services.db.repository.meta_objects import WarehouseTable, WarehouseColumn
+from bipy.services.db.repository.meta_objects import WarehouseView
 from bipy.logging import logger
 
 
