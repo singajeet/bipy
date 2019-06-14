@@ -1921,3 +1921,16 @@
 2019-06-14 15:04:53,676 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connection engine
 2019-06-14 19:41:13,593 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
 2019-06-14 19:41:13,594 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-14 21:09:07,219 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-14 21:09:07,398 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-14 21:09:07,406 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-14 21:09:07,423 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-14 21:09:36,088 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-14 21:09:36,093 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////storage/emulated/0/Projects/python/bipy/bipy/data/meta.db
+2019-06-14 21:09:36,171 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-14 21:09:49,905 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connection engine
+2019-06-14 21:19:52,205 - parso.python.diff - DEBUG - diff parser start
+2019-06-14 21:19:52,207 - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+2019-06-14 21:19:52,209 - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+2019-06-14 21:19:52,212 - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+2019-06-14 21:19:52,215 - parso.python.diff - DEBUG - diff parser end

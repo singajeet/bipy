@@ -31,11 +31,13 @@ class Project(BaseProjectObject):
     """ An class representing a project"""
     __tablename__ = 'project_projects'
 
+    analysis_project_id = Column(Integer)
     project_type = Column(String(255))
     items = relationship('ProjectItem',
                          backref='project_projects')
     folders = relationship('ProjectFolder', backref='project_projects')
     files = relationship('ProjectFile', backref='project_projects')
+    properties = relationship('Property', backref='project_projects')
 
 
 class ProjectItem(BaseProjectObject):
@@ -46,6 +48,7 @@ class ProjectItem(BaseProjectObject):
 
     project_id = Column(Integer, ForeignKey('project_projects.id'))
     item_type = Column(String(255))
+    properties = relationship('Property', backref='project_items')
 
 
 class ProjectFolder(BaseProjectObject):
@@ -58,6 +61,8 @@ class ProjectFolder(BaseProjectObject):
     files = relationship('ProjectFile', backref='project_folders')
     folders = relationship('ProjectFolder')
     parent_folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    datasets = relationship('ProjectDataSet', backref='project_folders')
+    properties = relationship('Property', backref='project_folders')
 
 
 class ProjectFile(BaseProjectObject):
@@ -69,5 +74,26 @@ class ProjectFile(BaseProjectObject):
     file_path = Column(String(1000))
     file_icon = Column(String(1000))
     folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    properties = relationship('Property', backref='project_files')
 
 
+class ProjectDataSet(BaseProjectObject):
+    """ Represents an dataset in the project """
+    __tablename__ = 'project_datasets'
+
+    folder_id = Column(Integer, ForeignKey("project_folders.id"))
+    analysis_dataset_id = Column(Integer)
+    properties = relationship('Property', backref='project_datasets')
+
+
+class Property(BaseProjectObject):
+    """ An property class for project & items
+    """
+    __tablename__ = 'properties'
+
+    value = Column(String(1000))
+    project_id = Column(Integer, ForeignKey('project_projects.id'))
+    item_id = Column(Integer, ForeignKey('project_items.id'))
+    file_id = Column(Integer, ForeignKey('project_files.id'))
+    folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    dataset_id = Column(Integer, ForeignKey('project_datasets.id'))
