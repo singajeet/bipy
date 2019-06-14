@@ -63,6 +63,9 @@ class ProjectFolder(BaseProjectObject):
     parent_folder_id = Column(Integer, ForeignKey('project_folders.id'))
     datasets = relationship('ProjectDataSet', backref='project_folders')
     properties = relationship('Property', backref='project_folders')
+    facts = relationship('ProjectFact', backref='project_folders')
+    dimensions = relationship('ProjectDimension', backref='project_folders')
+    metrices = relationship('ProjectMetric', backref='project_folders')
 
 
 class ProjectFile(BaseProjectObject):
@@ -84,6 +87,42 @@ class ProjectDataSet(BaseProjectObject):
     folder_id = Column(Integer, ForeignKey("project_folders.id"))
     analysis_dataset_id = Column(Integer)
     properties = relationship('Property', backref='project_datasets')
+    facts = relationship('ProjectFact', backref='project_datasets')
+    dimensions = relationship('ProjectDimension', backref='project_datasets')
+    metrices = relationship('ProjectMetric', backref='project_datasets')
+
+
+class ProjectFact(BaseProjectObject):
+    """ Represents an Fact in the project hierrarchy
+    """
+    __tablename__ = 'project_facts'
+
+    folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    dataset_id = Column(Integer, ForeignKey('project_datasets.id'))
+    analysis_fact_id = Column(Integer)
+    properties = relationship('Property', backref='project_facts')
+
+
+class ProjectDimension(BaseProjectObject):
+    """ Represents an dimension in the project hierrarchy
+    """
+    __tablename__ = 'project_dimensions'
+
+    folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    dataset_id = Column(Integer, ForeignKey('project_datasets.id'))
+    analysis_dimension_id = Column(Integer)
+    properties = relationship('Property', backref='project_dimensions')
+
+
+class ProjectMetric(BaseProjectObject):
+    """ Represents an metric in the project hierrarchy
+    """
+    __tablename__ = 'project_metrices'
+
+    folder_id = Column(Integer, ForeignKey('project_folders.id'))
+    dataset_id = Column(Integer, ForeignKey('project_datasets.id'))
+    analysis_metric_id = Column(Integer)
+    properties = relationship('Property', backref='project_metrices')
 
 
 class Property(BaseProjectObject):
@@ -97,3 +136,6 @@ class Property(BaseProjectObject):
     file_id = Column(Integer, ForeignKey('project_files.id'))
     folder_id = Column(Integer, ForeignKey('project_folders.id'))
     dataset_id = Column(Integer, ForeignKey('project_datasets.id'))
+    fact_id = Column(Integer, ForeignKey('project_facts.id'))
+    dimension_id = Column(Integer, ForeignKey('project_dimensions.id'))
+    metric_id = Column(Integer, ForeignKey('project_metrices.id'))
