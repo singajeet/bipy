@@ -20,7 +20,7 @@ class BaseProjectObject(AbstractConcreteBase, Base):
 
     id = Column(Integer, Sequence('project_seq_id'), primary_key=True)
     name = Column(String(255))
-    deascription = Column(String(255))
+    description = Column(String(255))
     created_on = Column(DateTime, default=datetime.utcnow)
     modified_on = Column(DateTime)
     created_by = Column(String(255))
@@ -31,6 +31,7 @@ class Project(BaseProjectObject):
     """ An class representing a project"""
     __tablename__ = 'project_projects'
 
+    path = Column(String(1000))
     analysis_project_id = Column(Integer)
     project_type = Column(String(255))
     items = relationship('ProjectItem',
@@ -46,6 +47,7 @@ class ProjectItem(BaseProjectObject):
     """
     __tablename__ = 'project_items'
 
+    analysis_item_id = Column(Integer)
     project_id = Column(Integer, ForeignKey('project_projects.id'))
     item_type = Column(String(255))
     properties = relationship('Property', backref='project_items')
