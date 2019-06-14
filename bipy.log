@@ -1919,3 +1919,5 @@
 2019-06-14 15:04:47,705 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////storage/emulated/0/Projects/python/bipy/bipy/data/meta.db
 2019-06-14 15:04:47,799 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
 2019-06-14 15:04:53,676 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connection engine
+2019-06-14 19:41:13,593 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-14 19:41:13,594 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>

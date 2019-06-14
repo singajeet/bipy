@@ -29,30 +29,45 @@ class BaseProjectObject(AbstractConcreteBase, Base):
 
 class Project(BaseProjectObject):
     """ An class representing a project"""
-    __tablename__ = 'project_project'
+    __tablename__ = 'project_projects'
 
     project_type = Column(String(255))
     items = relationship('ProjectItem',
-                         backref='project_project',
-                         enable_typechecks=False)
+                         backref='project_projects')
+    folders = relationship('ProjectFolder', backref='project_projects')
+    files = relationship('ProjectFile', backref='project_projects')
 
 
 class ProjectItem(BaseProjectObject):
     """ An standard object which can be saves under an object
         Use this object of type of project item is not known
     """
-    __tablename__ = 'project_item'
+    __tablename__ = 'project_items'
 
-    project_id = Column(Integer, ForeignKey('project_project.id'))
+    project_id = Column(Integer, ForeignKey('project_projects.id'))
     item_type = Column(String(255))
-    items = relationship('ProjectItem', enable_typechecks=False)
-    parent_id = Column(Integer, ForeignKey('project_item.id'))
 
 
-class ProjectFile(ProjectItem):
+class ProjectFolder(BaseProjectObject):
+    """ Represents an folder in a project """
+    __tablename__ = 'project_folders'
+
+    project_id = Column(Integer, ForeignKey('project_projects.id'))
+    folder_path = Column(String(1000))
+    folder_icon = Column(String(1000))
+    files = relationship('ProjectFile', backref='project_folders')
+    folders = relationship('ProjectFolder')
+    parent_folder_id = Column(Integer, ForeignKey('project_folders.id'))
+
+
+class ProjectFile(BaseProjectObject):
     """ Represents an file under an project"""
+    __tablename__ = 'project_files'
 
-    # item_type = Column(String(255), default='FILE')
+    project_id = Column(Integer, ForeignKey('project_projects.id'))
     file_type = Column(String(255))
     file_path = Column(String(1000))
     file_icon = Column(String(1000))
+    folder_id = Column(Integer, ForeignKey('project_folders.id'))
+
+
