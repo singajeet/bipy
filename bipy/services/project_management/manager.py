@@ -66,17 +66,20 @@ class ProjectManager(AbstractCategory):
             Returns:
                 project (Project): Returns an project object
         """
-        LOGGER.debug("Creating new project: %s" % (name))
-        project = Project()
-        project.name = name
-        project.description = desc
-        project.analysis_project_id = id
-        project.project_type = proj_type
-        project.path = path
-        self.__SESSION.add(project)
-        self.__SESSION.commit()
-        LOGGER.debug("Projected created successfully!")
-        return project
+        if name is not None:
+            LOGGER.debug("Creating new project: %s" % (name))
+            project = Project()
+            project.name = name
+            project.description = desc
+            project.analysis_project_id = id
+            project.project_type = proj_type
+            project.path = path
+            self.__SESSION.add(project)
+            self.__SESSION.commit()
+            LOGGER.debug("Projected created successfully!")
+            return project
+        else:
+            raise ValueError("Value of parameter can't be None")
 
     def create_item(self, id, name, desc=None):
         """Creates an item in the project and assign the corresponding
@@ -90,15 +93,18 @@ class ProjectManager(AbstractCategory):
             Returns:
                 item (ProjectItem): Returns an item object
         """
-        LOGGER.debug("Creating new item: %s" % (name))
-        item = ProjectItem()
-        item.name = name
-        item.description = desc
-        item.analysis_item_id = id
-        self.__SESSION.add(item)
-        self.__SESSION.commit()
-        LOGGER.debug("Item created successfully!")
-        return item
+        if name is not None:
+            LOGGER.debug("Creating new item: %s" % (name))
+            item = ProjectItem()
+            item.name = name
+            item.description = desc
+            item.analysis_item_id = id
+            self.__SESSION.add(item)
+            self.__SESSION.commit()
+            LOGGER.debug("Item created successfully!")
+            return item
+        else:
+            raise ValueError("Value of parameter name can't be None")
 
     def create_file(self, name, path, desc=None, icon=None):
         """Creates a file object within a project
@@ -112,17 +118,20 @@ class ProjectManager(AbstractCategory):
             Returns:
                 file (ProjectFile): Returns an file item
         """
-        LOGGER.debug("Creating new file: %s" % (name))
-        file = ProjectFile()
-        file.name = name
-        file.file_path = path
-        file.description = desc
-        file.file_type = os.path.splitext(name)
-        file.file_icon = icon
-        self.__SESSION.add(file)
-        self.__SESSION.commit()
-        LOGGER.debug("File created successfully!")
-        return file
+        if name is not None:
+            LOGGER.debug("Creating new file: %s" % (name))
+            file = ProjectFile()
+            file.name = name
+            file.file_path = path
+            file.description = desc
+            file.file_type = os.path.splitext(name)
+            file.file_icon = icon
+            self.__SESSION.add(file)
+            self.__SESSION.commit()
+            LOGGER.debug("File created successfully!")
+            return file
+        else:
+            raise ValueError("Value of parameter name can't be None")
 
     def create_folder(self, name, path, desc=None, icon=None):
         """Creates a new folder object within a project
@@ -376,3 +385,56 @@ class ProjectManager(AbstractCategory):
             LOGGER.debug("Property has been added to folder successfully!")
         else:
             raise ValueError("Value of folder parameter can't be None")
+
+    def add_dataset_to_folder(self, dataset, folder):
+        """Adds an dataset used in project to the folder
+            passed as argument
+
+            Args:
+                dataset (ProjectDataSet): DataSet that needs to be added
+                to project
+                folder (ProjectFolder): Folder under which dataset wiill
+                be added
+        """
+        LOGGER.debug("Adding dataset '%s' to folder '%s'" % (dataset.name,
+                                                             folder.name))
+        if folder is not None:
+            folder.datasets.append(dataset)
+            self.__SESSION.commit()
+            LOGGER.debug("DataSet has been added to project successfully!")
+        else:
+            raise ValueError("Value of parameter folder can't be None")
+
+    def add_fact_to_folder(self, fact, folder):
+        """Adds an fact to folder passed as parameter
+
+            Args:
+                fact (ProjectFact): Fact that needs to be added
+                folder (ProjectFolder): Folder under which fact will be
+                added
+        """
+        LOGGER.debug("Adding fact '%s' to folder '%s'" % (fact.name,
+                                                          folder.name))
+        if folder is not None:
+            folder.facts.append(fact)
+            self.__SESSION.commit()
+            LOGGER.debug("Fact has been added to folder successfully")
+        else:
+            raise ValueError("The value of parameter folder can't be None")
+
+    def add_dimension_to_folder(self, dim, folder):
+        """Adds an dimension to a folder passed as param
+
+            Args:
+                dim (ProjectDimension): Dimension that needs to be added
+                folder (ProjectFolder): Folder under which dim needs to be
+                added
+        """
+        LOGGER.debug("Adding dimension '%s' to folder '%s'" % (dim.name,
+                                                               folder.name))
+        if folder is not None:
+            folder.dimensions.append(dim)
+            self.__SESSION.commit()
+            LOGGER.debug("Dimension has been added to folder successfully!")
+        else:
+            raise ValueError("The value of folder parameter can't be None")
