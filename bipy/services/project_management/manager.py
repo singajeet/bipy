@@ -4,6 +4,7 @@
     Date: 6/14/2019
 """
 import os
+from deprecated import deprecated
 from bipy.services.project_management.objects import Project, ProjectItem,\
     ProjectFile
 from bipy.services.project_management.objects import ProjectFolder,\
@@ -66,7 +67,7 @@ class ProjectManager(AbstractCategory):
             Returns:
                 project (Project): Returns an project object
         """
-        if name is not None:
+        if name is not None and id is not None:
             LOGGER.debug("Creating new project: %s" % (name))
             project = Project()
             project.name = name
@@ -79,7 +80,7 @@ class ProjectManager(AbstractCategory):
             LOGGER.debug("Projected created successfully!")
             return project
         else:
-            raise ValueError("Value of parameter can't be None")
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_item(self, id, name, desc=None):
         """Creates an item in the project and assign the corresponding
@@ -93,7 +94,7 @@ class ProjectManager(AbstractCategory):
             Returns:
                 item (ProjectItem): Returns an item object
         """
-        if name is not None:
+        if name is not None and id is not None:
             LOGGER.debug("Creating new item: %s" % (name))
             item = ProjectItem()
             item.name = name
@@ -104,7 +105,7 @@ class ProjectManager(AbstractCategory):
             LOGGER.debug("Item created successfully!")
             return item
         else:
-            raise ValueError("Value of parameter name can't be None")
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_file(self, name, path, desc=None, icon=None):
         """Creates a file object within a project
@@ -118,7 +119,7 @@ class ProjectManager(AbstractCategory):
             Returns:
                 file (ProjectFile): Returns an file item
         """
-        if name is not None:
+        if name is not None and id is not None:
             LOGGER.debug("Creating new file: %s" % (name))
             file = ProjectFile()
             file.name = name
@@ -131,7 +132,7 @@ class ProjectManager(AbstractCategory):
             LOGGER.debug("File created successfully!")
             return file
         else:
-            raise ValueError("Value of parameter name can't be None")
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_folder(self, name, path, desc=None, icon=None):
         """Creates a new folder object within a project
@@ -146,16 +147,19 @@ class ProjectManager(AbstractCategory):
             Return:
                 folder (ProjectFolder): Returns an folder item
         """
-        LOGGER.debug("Creating a new folder: %s" % (name))
-        folder = ProjectFolder()
-        folder.name = name
-        folder.folder_path = path
-        folder.description = desc
-        folder.folder_icon = icon
-        self.__SESSION.add(folder)
-        self.__SESSION.commit()
-        LOGGER.debug("Folder created successfully!")
-        return folder
+        if name is not None and id is not None:
+            LOGGER.debug("Creating a new folder: %s" % (name))
+            folder = ProjectFolder()
+            folder.name = name
+            folder.folder_path = path
+            folder.description = desc
+            folder.folder_icon = icon
+            self.__SESSION.add(folder)
+            self.__SESSION.commit()
+            LOGGER.debug("Folder created successfully!")
+            return folder
+        else:
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_dataset(self, id, name, desc=None):
         """Creates a dataset representation in the project to be show in GUI
@@ -169,15 +173,18 @@ class ProjectManager(AbstractCategory):
             Returns:
                 dataaet (ProjectDataSet): An dataset object
         """
-        LOGGER.debug("Creating new dataset: %s" % (name))
-        ds = ProjectDataSet()
-        ds.name = name
-        ds.analysis_dataset_id = id
-        ds.description = desc
-        self.__SESSION.add(ds)
-        self.__SESSION.commit()
-        LOGGER.debug("Dataset created successfully!")
-        return ds
+        if name is not None and id is not None:
+            LOGGER.debug("Creating new dataset: %s" % (name))
+            ds = ProjectDataSet()
+            ds.name = name
+            ds.analysis_dataset_id = id
+            ds.description = desc
+            self.__SESSION.add(ds)
+            self.__SESSION.commit()
+            LOGGER.debug("Dataset created successfully!")
+            return ds
+        else:
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_fact(self, id, name, desc=None):
         """Creates a representation of dataset to be shown in project
@@ -190,15 +197,18 @@ class ProjectManager(AbstractCategory):
             Return:
                 fact (ProjectFact): A fact object
         """
-        LOGGER.debug("Creating new Fact: %s" % (name))
-        fact = ProjectFact()
-        fact.analysis_fact_id = id
-        fact.name = name
-        fact.description = desc
-        self.__SESSION.add(fact)
-        self.__SESSION.commit()
-        LOGGER.debug("Fact created successfully!")
-        return fact
+        if name is not None and id is not None:
+            LOGGER.debug("Creating new Fact: %s" % (name))
+            fact = ProjectFact()
+            fact.analysis_fact_id = id
+            fact.name = name
+            fact.description = desc
+            self.__SESSION.add(fact)
+            self.__SESSION.commit()
+            LOGGER.debug("Fact created successfully!")
+            return fact
+        else:
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_dimension(self, id, name, desc=None):
         """Creates a new dimension to be shown under an project
@@ -211,15 +221,18 @@ class ProjectManager(AbstractCategory):
             Returns:
                 dim (ProjectDimension): Returns an dim object
         """
-        LOGGER.debug("Creating a new dimension: %s" % (name))
-        dim = ProjectDimension()
-        dim.analysis_dimension_id = id
-        dim.name = name
-        dim.description = desc
-        self.__SESSION.add(dim)
-        self.__SESSION.commit()
-        LOGGER.debug("Dimension created successfully!")
-        return dim
+        if name is not None and id is not None:
+            LOGGER.debug("Creating a new dimension: %s" % (name))
+            dim = ProjectDimension()
+            dim.analysis_dimension_id = id
+            dim.name = name
+            dim.description = desc
+            self.__SESSION.add(dim)
+            self.__SESSION.commit()
+            LOGGER.debug("Dimension created successfully!")
+            return dim
+        else:
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_metric(self, id, name, desc=None):
         """Creates a new metric to be shown under a project
@@ -232,15 +245,18 @@ class ProjectManager(AbstractCategory):
             Returns:
                 metric (ProjectMetric): Returns an metric object
         """
-        LOGGER.debug("Creating a new metric: %s" % (name))
-        metric = ProjectMetric()
-        metric.analysis_metric_id = id
-        metric.name = name
-        metric.description = desc
-        self.__SESSION.add(metric)
-        self.__SESSION.commit()
-        LOGGER.debug("Metric created successfully!")
-        return metric
+        if name is not None and id is not None:
+            LOGGER.debug("Creating a new metric: %s" % (name))
+            metric = ProjectMetric()
+            metric.analysis_metric_id = id
+            metric.name = name
+            metric.description = desc
+            self.__SESSION.add(metric)
+            self.__SESSION.commit()
+            LOGGER.debug("Metric created successfully!")
+            return metric
+        else:
+            raise ValueError("Value of parameter 'name' and 'id' can't be None")
 
     def create_property(self, name, value, desc=None):
         """Creates an property object and returns same,
@@ -256,15 +272,20 @@ class ProjectManager(AbstractCategory):
             Rrturns:
                 property (Property): Returns an object of property
         """
-        LOGGER.debug("Creating an property: '%s'" % (name))
-        prop = Property()
-        prop.name = name
-        prop.value = value
-        prop.description = desc
-        self.__SESSION.add(prop)
-        self.__SESSION.commit()
-        LOGGER.debug("Property created successfully!")
+        if name is not None:
+            LOGGER.debug("Creating an property: '%s'" % (name))
+            prop = Property()
+            prop.name = name
+            prop.value = value
+            prop.description = desc
+            self.__SESSION.add(prop)
+            self.__SESSION.commit()
+            LOGGER.debug("Property created successfully!")
+            return prop
+        else:
+            raise ValueError("Value of parameter 'name' can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_item_to_project(self, item, project):
         """Adds an passed item to the list of items in a project
 
@@ -272,16 +293,17 @@ class ProjectManager(AbstractCategory):
                 item (ProjectItem): Item that needs to be added to project
                 project(Project): A project under which item will be added
         """
-        LOGGER.debug("Adding item '%s' to project '%s'" % (item.name,
-                                                           project.name))
-        if project is not None:
+        if project is not None and item is not None:
+            LOGGER.debug("Adding item '%s' to project '%s'" % (item.name,
+                                                               project.name))
             project.items.append(item)
             self.__SESSION.commit()
             LOGGER.debug("Item added to project successfully!")
         else:
-            raise ValueError("Value of project parameter can't\
-                             be None")
+            raise ValueError("Value of parameter 'item' and 'project'\
+                             can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_file_to_project(self, file, project):
         """Adds an project fie to project's file list
 
@@ -289,15 +311,17 @@ class ProjectManager(AbstractCategory):
                 file (ProjectFile): File that needs to be added to project
                 project (Project): Project under which file will be added
         """
-        LOGGER.debug("Adding item '%s' to project '%s'" % (file.name,
-                                                           project.name))
-        if project is not None:
+        if project is not None and file is not None:
+            LOGGER.debug("Adding item '%s' to project '%s'" % (file.name,
+                                                               project.name))
             project.files.append(file)
             self.__SESSION.commit()
             LOGGER.debug("File has been added to project successfully!")
         else:
-            raise ValueError("Value of project parameter can't be None")
+            raise ValueError("Value of parameter 'file' and 'project'\
+                             can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_folder_to_project(self, folder, project):
         """Adds an project folder to project's folder list
 
@@ -306,15 +330,17 @@ class ProjectManager(AbstractCategory):
                 project
                 project (Project): Project under which folder will be added
         """
-        LOGGER.debug("Adding item '%s' to project '%s'" % (folder.name,
-                                                           project.name))
-        if project is not None:
+        if project is not None and folder is not None:
+            LOGGER.debug("Adding item '%s' to project '%s'" % (folder.name,
+                                                               project.name))
             project.folders.append(folder)
             self.__SESSION.commit()
             LOGGER.debug("Folder has been added to project successfully!")
         else:
-            raise ValueError("Value of project parameter can't be None")
+            raise ValueError("Value of parameter 'folder' and 'project'\
+                             can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_property_to_project(self, property, project):
         """Adds an project property to project's properties list
 
@@ -323,15 +349,17 @@ class ProjectManager(AbstractCategory):
                 project
                 project (Project): Project under which property will be added
         """
-        LOGGER.debug("Adding property '%s' to project '%s'" % (property.name,
-                                                               project.name))
-        if project is not None:
+        if project is not None and property is not None:
+            LOGGER.debug("Adding property '%s' to project '%s'" % (property.name,
+                                                                   project.name))
             project.properties.append(property)
             self.__SESSION.commit()
             LOGGER.debug("Property has been added to project successfully!")
         else:
-            raise ValueError("Value of project parameter can't be None")
+            raise ValueError("Value of parameter 'property' and 'project'\
+                             can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_file_to_folder(self, file, folder):
         """Adds an project fie to a folder
 
@@ -340,15 +368,16 @@ class ProjectManager(AbstractCategory):
                 project (ProjectFolder): ProjectFolder under which file
                                         will be added
         """
-        LOGGER.debug("Adding item '%s' to folder '%s'" % (file.name,
-                                                          folder.name))
-        if folder is not None:
+        if folder is not None and file is not None:
+            LOGGER.debug("Adding item '%s' to folder '%s'" % (file.name,
+                                                              folder.name))
             folder.files.append(file)
             self.__SESSION.commit()
             LOGGER.debug("File has been added to folder successfully!")
         else:
-            raise ValueError("Value of folder parameter can't be None")
+            raise ValueError("Value of 'folder' and 'file' parameters can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_folder_to_folder(self, s_folder, t_folder):
         """Adds a project folder to an another folder's list
 
@@ -358,16 +387,18 @@ class ProjectManager(AbstractCategory):
                 t_folder (ProjectFolder): Target Folder under which
                                         source folder will be added
         """
-        LOGGER.debug("Adding folder '%s' to folder '%s'" % (s_folder.name,
-                                                            t_folder.name))
-        if t_folder is not None:
+        if t_folder is not None and s_folder is not None:
+            LOGGER.debug("Adding folder '%s' to folder '%s'" % (s_folder.name,
+                                                                t_folder.name))
             t_folder.folders.append(s_folder)
             self.__SESSION.commit()
             LOGGER.debug("Folder has been added to another folder\
                          successfully!")
         else:
-            raise ValueError("Value of target folder parameter can't be None")
+            raise ValueError("Value of 'target' and 'source' folder\
+                             parameters can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_property_to_folder(self, property, folder):
         """Adds an property to folder's properties list
 
@@ -377,15 +408,16 @@ class ProjectManager(AbstractCategory):
                 folder (ProjectFolder): Folder under which property
                                         will be added
         """
-        LOGGER.debug("Adding property '%s' to folder '%s'" % (property.name,
-                                                              folder.name))
-        if folder is not None:
+        if folder is not None and property is not None:
+            LOGGER.debug("Adding property '%s' to folder '%s'" % (property.name,
+                                                                  folder.name))
             folder.properties.append(property)
             self.__SESSION.commit()
             LOGGER.debug("Property has been added to folder successfully!")
         else:
-            raise ValueError("Value of folder parameter can't be None")
+            raise ValueError("Value of 'folder' and 'property' parameter can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_dataset_to_folder(self, dataset, folder):
         """Adds an dataset used in project to the folder
             passed as argument
@@ -396,15 +428,16 @@ class ProjectManager(AbstractCategory):
                 folder (ProjectFolder): Folder under which dataset wiill
                 be added
         """
-        LOGGER.debug("Adding dataset '%s' to folder '%s'" % (dataset.name,
-                                                             folder.name))
-        if folder is not None:
+        if folder is not None and dataset is not None:
+            LOGGER.debug("Adding dataset '%s' to folder '%s'" % (dataset.name,
+                                                                 folder.name))
             folder.datasets.append(dataset)
             self.__SESSION.commit()
             LOGGER.debug("DataSet has been added to project successfully!")
         else:
-            raise ValueError("Value of parameter folder can't be None")
+            raise ValueError("Value of parameter 'folder' and 'dataset' can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_fact_to_folder(self, fact, folder):
         """Adds an fact to folder passed as parameter
 
@@ -413,15 +446,16 @@ class ProjectManager(AbstractCategory):
                 folder (ProjectFolder): Folder under which fact will be
                 added
         """
-        LOGGER.debug("Adding fact '%s' to folder '%s'" % (fact.name,
-                                                          folder.name))
-        if folder is not None:
+        if folder is not None and fact is not None:
+            LOGGER.debug("Adding fact '%s' to folder '%s'" % (fact.name,
+                                                              folder.name))
             folder.facts.append(fact)
             self.__SESSION.commit()
             LOGGER.debug("Fact has been added to folder successfully")
         else:
-            raise ValueError("The value of parameter folder can't be None")
+            raise ValueError("The value of parameter 'folder' and 'fact' can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_dimension_to_folder(self, dim, folder):
         """Adds an dimension to a folder passed as param
 
@@ -430,15 +464,16 @@ class ProjectManager(AbstractCategory):
                 folder (ProjectFolder): Folder under which dim needs to be
                 added
         """
-        LOGGER.debug("Adding dimension '%s' to folder '%s'" % (dim.name,
-                                                               folder.name))
-        if folder is not None:
+        if folder is not None and dim is not None:
+            LOGGER.debug("Adding dimension '%s' to folder '%s'" % (dim.name,
+                                                                   folder.name))
             folder.dimensions.append(dim)
             self.__SESSION.commit()
             LOGGER.debug("Dimension has been added to folder successfully!")
         else:
-            raise ValueError("The value of folder parameter can't be None")
+            raise ValueError("The value of 'folder' and 'dim' parameter can't be None")
 
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
     def add_metric_to_folder(self, metric, folder):
         """Adds an metric to a folder passed as
             param
@@ -448,12 +483,169 @@ class ProjectManager(AbstractCategory):
                 folder (ProjectFolder): Folder under which metric needs to be
                                         added
         """
-        LOGGER.debug("Adding metric '%s' to folder '%s'" % (metric.name,
-                                                            folder.name))
-        if folder is not None:
+        if folder is not None and metric is not None:
+            LOGGER.debug("Adding metric '%s' to folder '%s'" % (metric.name,
+                                                                folder.name))
             folder.metrices.append(metric)
             self.__SESSION.commit()
             LOGGER.debug("Metric has been added successfully!")
         else:
-            raise ValueError("The value of folder parameter\
+            raise ValueError("The value of 'folder' and 'metric' parameters\
                              shouldn't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_item(self, property, item):
+        """Adds an property to item object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                item (ProjectItem): An item object to which property will be added
+        """
+        if property is not None and item is not None:
+            LOGGER.debug("Adding property '%s' to item '%s'" % (property.name,
+                                                               item.name))
+            item.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to item successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'item' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_file(self, property, file):
+        """Adds an property to file object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                file (ProjectFile): An file object to which property will be added
+        """
+        if property is not None and file is not None:
+            LOGGER.debug("Adding property '%s' to file '%s'" % (property.name,
+                                                               file.name))
+            file.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to file successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'file' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_fact_to_dataset(self, fact, dataset):
+        """Adds an fact to datset passed as parameter
+
+            Args:
+                fact (ProjectFact): Fact that needs to be added
+                dataset (ProjectDataSet): DataSet under which fact will be
+                added
+        """
+        if dataset is not None and fact is not None:
+            LOGGER.debug("Adding fact '%s' to dataset '%s'" % (fact.name,
+                                                              dataset.name))
+            dataset.facts.append(fact)
+            self.__SESSION.commit()
+            LOGGER.debug("Fact has been added to dataset successfully")
+        else:
+            raise ValueError("The value of parameter 'dataset' and 'fact' can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_dimension_to_dataset(self, dim, dataset):
+        """Adds an dimension to a dataset passed as param
+
+            Args:
+                dim (ProjectDimension): Dimension that needs to be added
+                dataset (ProjectDataSet): DataSet under which dim needs to be
+                added
+        """
+        if dataset is not None and dim is not None:
+            LOGGER.debug("Adding dimension '%s' to dataset '%s'" % (dim.name,
+                                                                    dataset.name))
+            dataset.dimensions.append(dim)
+            self.__SESSION.commit()
+            LOGGER.debug("Dimension has been added to dataset successfully!")
+        else:
+            raise ValueError("The value of 'dataset' and 'dim' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_metric_to_dataset(self, metric, dataset):
+        """Adds an metric to a dataset passed as param
+
+            Args:
+                metric (ProjectMetric): Metric that needs to be added
+                dataset (ProjectDataSet): DataSet under which metric needs to be
+                                        added
+        """
+        if dataset is not None and metric is not None:
+            LOGGER.debug("Adding metric '%s' to dataset '%s'" % (metric.name,
+                                                                 dataset.name))
+            dataset.metrices.append(metric)
+            self.__SESSION.commit()
+            LOGGER.debug("Metric has been added successfully!")
+        else:
+            raise ValueError("The value of 'dataset' and 'metric' parameters\
+                             shouldn't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_dataset(self, property, dataset):
+        """Adds an property to dataset object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                dataset (ProjectDataSet): An dataset object to which property will be added
+        """
+        if property is not None and dataset is not None:
+            LOGGER.debug("Adding property '%s' to dataset '%s'" % (property.name,
+                                                                   dataset.name))
+            dataset.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to dataset successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'dataset' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_fact(self, property, fact):
+        """Adds an property to fact object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                fact (ProjectFact): An fact object to which property will be added
+        """
+        if property is not None and fact is not None:
+            LOGGER.debug("Adding property '%s' to fact '%s'" % (property.name,
+                                                                fact.name))
+            fact.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to fact successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'fact' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_dimension(self, property, dim):
+        """Adds an property to dim object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                dim (ProjectDimension): An dim object to which property will be added
+        """
+        if property is not None and dim is not None:
+            LOGGER.debug("Adding property '%s' to dim '%s'" % (property.name,
+                                                                dim.name))
+            dim.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to Dimension successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'dim' parameter can't be None")
+
+    @deprecated(reason="Please use 'add_attributes_to_object' function instead")
+    def add_property_to_metric(self, property, metric):
+        """Adds an property to metric object passed as param
+
+            Args:
+                property (Prepoerty): An property to be added
+                metric (ProjectMetric): An metric object to which property will be added
+        """
+        if property is not None and metric is not None:
+            LOGGER.debug("Adding property '%s' to metric '%s'" % (property.name,
+                                                                metric.name))
+            metric.properties.append(property)
+            self.__SESSION.commit()
+            LOGGER.debug("Property has been added to metric successfully!")
+        else:
+            raise ValueError("Value of 'property' and 'metric' parameter can't be None")
