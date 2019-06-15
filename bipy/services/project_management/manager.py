@@ -438,3 +438,22 @@ class ProjectManager(AbstractCategory):
             LOGGER.debug("Dimension has been added to folder successfully!")
         else:
             raise ValueError("The value of folder parameter can't be None")
+
+    def add_metric_to_folder(self, metric, folder):
+        """Adds an metric to a folder passed as
+            param
+
+            Args:
+                metric (ProjectMetric): Metric that needs to be added
+                folder (ProjectFolder): Folder under which metric needs to be
+                                        added
+        """
+        LOGGER.debug("Adding metric '%s' to folder '%s'" % (metric.name,
+                                                            folder.name))
+        if folder is not None:
+            folder.metrices.append(metric)
+            self.__SESSION.commit()
+            LOGGER.debug("Metric has been added successfully!")
+        else:
+            raise ValueError("The value of folder parameter\
+                             shouldn't be None")
