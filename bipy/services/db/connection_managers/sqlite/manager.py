@@ -10,7 +10,7 @@ from bipy.logging import logger
 from bipy.services.security.privileges import Privileges
 from bipy.services.decorators.security import authorize
 
-#init logs---------------------------------
+# ----------init logs---------------------------------
 LOGGER = logger.get_logger(__name__)
 
 
@@ -62,7 +62,6 @@ class ConnectionManager(categories.SQLite):
         return ConnectionManager.__instance
     """
 
-
     def __init__(self):
         """
             Default constructor of the Connection Manager class
@@ -70,7 +69,6 @@ class ConnectionManager(categories.SQLite):
         categories.SQLite.__init__(self)
         LOGGER.debug("Init Connection Manager")
 
-    authorize(Privileges.CONNECT_CREATE)
     def connect(self, conn_string):
         """Setups the connection using the connection string passed as param
 
@@ -78,7 +76,8 @@ class ConnectionManager(categories.SQLite):
                 conn_string (string): The connection string to connect with the
                                         database
         """
-        LOGGER.debug("Connecting to target database server using URL: {0}".format(conn_string))
+        LOGGER.debug("Connecting to target database server using URL: {0}"
+                     .format(conn_string))
         self.connection_string = conn_string
         self.engine = create_engine(conn_string)
         self.Session = sessionmaker()
@@ -87,7 +86,6 @@ class ConnectionManager(categories.SQLite):
         self.inspector = inspect(self.engine)
         LOGGER.debug("Connected to database successfully")
 
-    authorize(Privileges.CONNECT_READ)
     def get_connection_string(self):
         """Returns the connection string used in this for mmaking
             connections to the database
@@ -95,21 +93,18 @@ class ConnectionManager(categories.SQLite):
         LOGGER.debug("Returning the connection string used by connection")
         return self.connection_string
 
-    authorize(Privileges.CONNECT_EXECUTE)
     def get_engine(self):
         """Returns the database engine for SQLite database
         """
         LOGGER.debug("Returning the connection engine")
         return self.engine
 
-    authorize(Privileges.CONNECT_EXECUTE)
     def get_session(self):
         """Returns an connected session to the database
         """
         LOGGER.debug("Returning the connected session to database")
         return self.ConnectedSession
 
-    authorize(Privileges.CONNECT_EXECUTE)
     def get_inspector(self):
         """Returns an instance of inspector that can be utilized to
             browse through the metadata of the SQLite database
@@ -118,21 +113,18 @@ class ConnectionManager(categories.SQLite):
                     to browse metadata of DB")
         return self.inspector
 
-    authorize(Privileges.CONNECT_REMOVE)
     def disconnect(self):
         """Closes the connection made with the SQLite database
         """
         LOGGER.debug("Closing the open connection to database")
         if self.ConnectedSession is not None:
             self.ConnectedSession.close_all()
+            del self.ConnectedSession
 
     def __del__(self):
         """ Desctructor of the current class"""
-        LOGGER.debug("Closing and disconnecting the connected session to Database")
-        self.disconnect()
         if self.ConnectedSession is not None:
             del self.ConnectedSession
-
 
 
 if __name__ == "__main__":
