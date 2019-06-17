@@ -35,3 +35,28 @@ def schemas(conn):
     br = _browser()
     br.connect(conn)
     return br.get_schemas()
+
+
+def tables(conn, schema=None):
+    """Returns instance of tables in warehouse
+
+        Args:
+            conn (ConnectionManager): connection to warehouse db
+            schema (String): Schema name from where tables needs to be listed
+    """
+    br = _browser()
+    br.connect(conn)
+    return br.get_tables(schema)
+
+
+def views(conn, schema=None):
+    """Returns instance of views in warehouse
+
+        Args:
+            conn (ConnectionManager): connection to warehouse db
+            schema (String): Schema name from where views needs to be listed
+    """
+    br = _browser()
+    br.connect(conn)
+    return br.get_views(schema)
+

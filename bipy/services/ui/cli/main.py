@@ -9,6 +9,7 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.formatted_text import HTML
 from bipy.services.utils import Utility
 from bipy.services.ui.cli import browser
+from bipy.services.ui.cli import help
 
 
 class BipyCli:
@@ -26,11 +27,11 @@ class BipyCli:
     __SESSION = None
 
     __MAIN_CMD_COMPLETER_LIST = [
-        'BROWSE'
+        'BROWSE', 'HELP'
     ]
     __SUB_CMD_COMPLETER_LIST = [
         'CONNECT', 'SCHEMA', 'DATABASE', 'TABLE', 'VIEW',
-        'MAT-VIEW', 'PROC', 'FUNC', 'PACKAGE', 'OVER'
+        'MAT-VIEW', 'PROC', 'FUNC', 'PACKAGE', 'OVER', 'HELP'
     ]
 
     __MAIN_CMD_COMPLETER = WordCompleter(__MAIN_CMD_COMPLETER_LIST)
@@ -48,8 +49,8 @@ class BipyCli:
 
     __PROMPT_MODE = [
         ('class:mode', '.'),
-        ('class:at', '>'),
-        ('class:submode', '.'),
+        ('class:at', '#'),
+       # ('class:submode', '.'),
         ('class:cmdend', '>>>')
     ]
 
@@ -73,61 +74,36 @@ class BipyCli:
         """
         while self.__CMD is not None:
             if self.__CMD == ".":
-                self.__CMD = self.__SESSION.prompt(self.__PROMPT_MODE,
-                                                   auto_suggest=AutoSuggestFromHistory(),
-                                                   style=self.__STYLE,
-                                                   completer=self.__MAIN_CMD_COMPLETER,
+                self.__CMD = self.__SESSION.prompt(self.__PROMPT_MODE, auto_suggest=AutoSuggestFromHistory(),
+                                                   style=self.__STYLE, completer=self.__MAIN_CMD_COMPLETER,
                                                    bottom_toolbar=self.bottom_toolbar)
-                if str(self.__CMD).lower() == "exit" or\
-                        str(self.__CMD).lower() == "quit":
+                if str(self.__CMD).upper() == "EXIT" or str(self.__CMD).upper() == "QUIT":
                     self.__CMD = None
                 else:
                     self._parse_cmd(self.__CMD)
             else:
-                self.__SUB_CMD = self.__SESSION\
-                    .prompt(self.__PROMPT_MODE,
-                            auto_suggest=AutoSuggestFromHistory(),
-                            style=self.__STYLE,
-                            completer=self.__SUB_CMD_COMPLETER,
-                            bottom_toolbar=self.bottom_toolbar)
-                if str(self.__SUB_CMD).lower() == "over":
+                self.__SUB_CMD = self.__SESSION.prompt(self.__PROMPT_MODE, auto_suggest=AutoSuggestFromHistory(),
+                                                       style=self.__STYLE,
+                                                       completer=self.__SUB_CMD_COMPLETER,
+                                                       bottom_toolbar=self.bottom_toolbar)
+                if str(self.__SUB_CMD).upper() == "OVER":
                     self.set_prompt_mode(".")
                     self.set_sub_prompt_mode(".")
-                elif str(self.__SUB_CMD).lower() == "exit" or\
-                        str(self.__SUB_CMD).lower() == "quit":
+                elif str(self.__SUB_CMD).upper() == "EXIT" or str(self.__SUB_CMD).upper() == "QUIT":
                     self.__CMD = None
                 else:
                     self._parse_sub_cmd(self.__SUB_CMD)
 
-    def _parse_sub_cmd(self, raw_sub_cmd):
-        """Parse sub cmd and act accordimgly
-        """
-        sub_cmds = str(raw_sub_cmd).split(' ')
-        sub_cmd = sub_cmds[0]
-        sub_cmds.remove(sub_cmd)
-        sub_params = sub_cmds
-        del sub_cmds
-        if str(sub_cmd).upper() in self.__SUB_CMD_COMPLETER_LIST:
-            self.set_sub_prompt_mode(sub_cmd)
-            if self.__CMD == "BROWSE":
-                if str(sub_cmd).upper() == "CONNECT":
-                    self._connect(sub_params)
-                elif str(sub_cmd).upper() == "SCHEMA":
-                    self._list_schemas()
-                elif str(sub_cmd).upper() == "HELP":
-                    self._print_sub_cmd_help()
-        elif sub_cmd != "":
-            print("Invalid commamd provided!\
-                  Please type HELP to get more information")
-        else:
-            self.set_prompt_mode(".")
-
     def _parse_cmd(self, raw_cmd):
-        """ Parse the main command and act accordingly
+        """ Parse the main command and act accordingly. It splits the whole string to array based on space
+            character and treats the first element of array as command and rest as parameters
+
+            Args:
+                raw_cmd (String): The whole command string passed to this method
         """
         cmds = str(raw_cmd).split(' ')
-        cmd = cmds[0]
-        cmds.remove(cmd)
+        cmd = cmds[0] # first element is command itself
+        cmds.remove(cmd) # rest are the parameters
         params = cmds
         del cmds
         if str(cmd).upper() in self.__MAIN_CMD_COMPLETER_LIST:
@@ -136,51 +112,149 @@ class BipyCli:
                 # Do nothing, wait for sub commands
                 pass
             elif str(cmd).upper() == "HELP":
-                self._print_cmd_help()
+                help.print_main_cmd_help(self.__MAIN_CMD_COMPLETER_LIST)
         elif cmd != "":
-            print("Invalid command provided!\
-                  Please type HELP to get more information")
+            print("Invalid command provided! Please type HELP to get more information")
         else:
             self.set_prompt_mode(".")
 
-    def _print_cmd_help(self):
-        """Print help for main commands"""
-        print("Below commands are available...")
-        for cmd in self.__MAIN_CMD_COMPLETER_LIST:
-            print(cmd)
-        print("")
-        print("To get more info on a particular command, please type...")
-        print("<Main Cmd> --help")
+    def _parse_sub_cmd(self, raw_sub_cmd):
+        """Parse sub cmd and act accordimgly. It splits the whole string to array based on space
+            character and treats the first element of array as command and rest as parameters
 
-    def _print_sub_cmd_help(self):
-        """Print help for sub commands"""
-        print("To get more information for an sub command, please type...")
-        print("<Main Cmd> HELP")
-        print("")
-        print("For further informatiom type...")
-        print("<Main Cmd> {Sub Cmd} --help")
+            Args:
+                raw_sub_cmd (String): The whole command string passed to this method
+        """
+        sub_cmds = str(raw_sub_cmd).split(' ')
+        sub_cmd = sub_cmds[0] # first element is command itself
+        sub_cmds.remove(sub_cmd) # rest are the parameters
+        sub_params = sub_cmds
+        del sub_cmds
+        if str(sub_cmd).upper() in self.__SUB_CMD_COMPLETER_LIST:
+            self.set_sub_prompt_mode(sub_cmd)
+            if self.__CMD == "BROWSE":
+                if str(sub_cmd).upper() == "CONNECT":
+                    self._connect(sub_params)
+                elif str(sub_cmd).upper() == "SCHEMA":
+                    self._list_schemas(sub_params)
+                elif str(sub_cmd).upper() == "TABLE":
+                    self._list_tables(sub_params)
+                elif str(sub_cmd).upper() == "VIEW":
+                    self._list_views(sub_params)
+                elif str(sub_cmd).upper() == "HELP":
+                    help.print_browse_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
+        elif sub_cmd != "":
+            print("Invalid sub commamd provided! Please type <Main Cmd> HELP to get more information")
+        else:
+            self.set_prompt_mode(".")
 
-    def _list_schemas(self):
-        schemas = browser.schemas(self._warehouse_conn)
-        for schema in schemas:
-            print(schema)
+    def _list_views(self, sub_params):
+        """List all available views under an schema in configured warehouse
+
+            Args:
+                sub_params (Array): An of string parameters. Can have name of schema as params
+        """
+        if sub_params.__len__() == 0:
+            print("========================== VIEWS ==============================")
+            views = browser.views(self._warehouse_conn)
+            for vw in views:
+                print("==>%s" % (vw))
+            print("================================================================")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            print("========================== VIEWS ==============================")
+            schema = sub_params[0]
+            views = browser.views(self._warehouse_conn, schema)
+            for vw in views:
+                print("==>%s" % (vw))
+            print("================================================================")
+        elif sub_params[0] == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("VIEW sub command can be used with or without parameter")
+            print("The parameter passed should be an name of schema which should exist in warehouse")
+            print("USAGE: VIEW <schema name>")
+            print("NOTE: If no schema is provided, views from all schemas will be listed")
+            print("")
+        else:
+            print("========================== VIEWS ==============================")
+            views = browser.views(self._warehouse_conn)
+            for vw in views:
+                print("==>%s" % (vw))
+            print("================================================================")
+
+    def _list_tables(self, sub_params):
+        """List all available tables available under an schema in configured warehouse
+
+            Args:
+                sub_params (Array): An array of string parameters. Can have name of schema as params
+        """
+        if sub_params.__len__() == 0:
+            print("========================== TABLES ==============================")
+            tables = browser.tables(self._warehouse_conn)
+            for tbl in tables:
+                print("==>%s" % (tbl))
+            print("================================================================")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            print("========================== TABLES ==============================")
+            schema = sub_params[0]
+            tables = browser.tables(self._warehouse_conn, schema)
+            for tbl in tables:
+                print("==>%s" % (tbl))
+            print("================================================================")
+        elif sub_params[0] == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("TABLE sub command can be used with or without parameter")
+            print("The parameter passed should be an name of schema which should exist in warehouse")
+            print("USAGE: TABLE <schema name>")
+            print("NOTE: If no schema is provided, tables from all schemas will be listed")
+            print("")
+        else:
+            print("========================== TABLES ==============================")
+            tables = browser.tables(self._warehouse_conn)
+            for tbl in tables:
+                print("==>%s" % (tbl))
+            print("================================================================")
+
+    def _list_schemas(self, sub_params):
+        """List all available schemas  in the configured warehouse database
+
+            Args:
+                sub_params (Array): An array of string parameters
+        """
+        if sub_params.__len__() == 0:
+            print("====================== SCHEMAS ==========================")
+            schemas = browser.schemas(self._warehouse_conn)
+            for schema in schemas:
+                print("==>%s" % (schema))
+            print("=========================================================")
+        elif str(sub_params[0]).lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("List all available schemas in the configured warehouse database")
+            print("No parameters are required to run this command")
+            print("")
+        else:
+            print("ERROR: Command executed with invalid arguments. Please --help to get more information")
 
     def _connect(self, params):
         """Connects to either warehouse or repo based on params passed
 
             Args:
-                params (String): The value should be WAREHOUSE OR REPO
+                params (Array): An array of string parameters
         """
         if params.__len__() == 0:
             self._warehouse_conn = browser.connect()
         elif str(params[0]).lower() == "--help":
-            print("CONNECT command usage:")
-            print("CONNECT WAREHOUSE|REPO")
-            print("WAREHOUSE or REPO are the only valid parameters for this command")
-        else:
-            print("Unknown parameter passed to CONNECT command.\
-                  Type CONNECT --help to get more info")
-        # self.set_prompt_mode(".")
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Connects to an Warehouse database configured in the system")
+            print("No parameters are required to run this command")
+            print("")
 
     def bottom_toolbar(self):
         val = ("<left><b>Warehouse DB:</b>%s</left>\
@@ -204,7 +278,7 @@ class BipyCli:
         """Sets the prompt's sub cmd with value of current sub cmd mode
         """
         self.__SUB_CMD = "."
-        self.__PROMPT_MODE[2] = ('class:submode', sub_cmd)
+        # self.__PROMPT_MODE[2] = ('class:submode', sub_cmd)
 
 
 if __name__ == "__main__":
