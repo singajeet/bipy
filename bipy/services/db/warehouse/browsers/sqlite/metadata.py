@@ -8,8 +8,6 @@ from sqlalchemy import Column, String
 from sqlalchemy.ext.declarative import declarative_base
 from bipy.services.db import categories
 from bipy.logging import logger
-from bipy.services.security.privileges import Privileges
-from bipy.services.decorators.security import authorize
 
 
 LOGGER = logger.get_logger(__name__)
@@ -112,8 +110,6 @@ class Browser(categories.SQLite):
         LOGGER.debug("Init SQLite Browser instance")
         categories.SQLite.__init__(self)
 
-    authorize(Privileges.CONNECT_CREATE)
-
     def connect(self, connection):
         """Connects the browser to an database using connection
             passed as param
@@ -131,35 +127,25 @@ class Browser(categories.SQLite):
         """
         return "SQLite browser instance"
 
-    authorize(Privileges.METAMODEL_READ)
-
     def get_schemas(self):
         """Returns list of schemas
         """
         return self.inspector.get_schema_names()
-
-    authorize(Privileges.METAMODEL_READ)
 
     def get_tables(self, schema=None):
         """Returns list of tables
         """
         return self.inspector.get_table_names(schema)
 
-    authorize(Privileges.METAMODEL_READ)
-
     def get_views(self, schema=None):
         """Returns list of views
         """
         return self.inspector.get_view_names(schema)
 
-    authorize(Privileges.METAMODEL_READ)
-
-    def get_view_definition(self, schema=None):
+    def get_view_definition(self, view, schema=None):
         """Returns the SQL query used to create view
         """
-        return self.inspector.get_view_definition(schema)
-
-    authorize(Privileges.METAMODEL_READ)
+        return self.inspector.get_view_definition(view, schema)
 
     def get_columns(self, table_name):
         """
@@ -169,8 +155,6 @@ class Browser(categories.SQLite):
                 table_name (string): name of the table
         """
         return self.inspector.get_columns(table_name)
-
-    authorize(Privileges.METAMODEL_READ)
 
     def get_column_names(self, table_name):
         """
@@ -187,8 +171,6 @@ class Browser(categories.SQLite):
             LOGGER.debug("Column '%s' added to columns list" % (col['name']))
         LOGGER.debug("Columns list compiled and will be returned now")
         return column_names
-
-    authorize(Privileges.METAMODEL_READ)
 
     def get_column_type(self, table_name, column_name):
         """
@@ -218,8 +200,6 @@ class Browser(categories.SQLite):
                 return col_str
         return None
 
-    authorize(Privileges.METAMODEL_READ)
-
     def get_primary_key_columns(self, table_name):
         """
             Returns all columns available as primary key of the table
@@ -231,8 +211,6 @@ class Browser(categories.SQLite):
         pk_const = self.inspector.get_pk_constraint(table_name)
         return pk_const['constrained_columns']
 
-    authorize(Privileges.METAMODEL_READ)
-
     def get_primary_key_name(self, table_name):
         """
             Returns the name of the primary key (i.e., name of PK constraint)
@@ -243,8 +221,6 @@ class Browser(categories.SQLite):
         pk_const = self.inspector.get_pk_constraint(table_name)
         return pk_const['name']
 
-    authorize(Privileges.METAMODEL_READ)
-
     def get_table_options(self, table_name):
         """
             Returns options of a given table
@@ -253,8 +229,6 @@ class Browser(categories.SQLite):
                 table_name (string): name of the table
         """
         return self.inspector.get_table_options(table_name)
-
-    authorize(Privileges.METAMODEL_READ)
 
     def get_foreign_keys(self, table_name):
         """
@@ -265,14 +239,16 @@ class Browser(categories.SQLite):
         """
         return self.inspector.get_foreign_keys(table_name)
 
-    authorize(Privileges.CONNECT_REMOVE)
-
     def close(self):
         """
             Closes the connected session with the database
         """
         self.ConnectedSession.close()
         LOGGER.debug("SQLite browser session has been closed")
+        del self.ConnectedSession
+
+    def __del__(self):
+        del self.ConnectedSession
 
 
 if __name__ == "__main__":

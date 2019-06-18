@@ -8,7 +8,7 @@ from prompt_toolkit.styles import Style
 from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.formatted_text import HTML
 from bipy.services.utils import Utility
-from bipy.services.ui.cli import browser
+from bipy.services.integration import browser
 from bipy.services.ui.cli import help
 
 
@@ -27,15 +27,16 @@ class BipyCli:
     __SESSION = None
 
     __MAIN_CMD_COMPLETER_LIST = [
-        'BROWSE', 'HELP'
+        'BROWSE', 'HELP', 'EXIT', 'QUIT'
     ]
     __SUB_CMD_COMPLETER_LIST = [
-        'CONNECT', 'SCHEMA', 'DATABASE', 'TABLE', 'VIEW',
-        'MAT-VIEW', 'PROC', 'FUNC', 'PACKAGE', 'OVER', 'HELP'
+        'CONNECT', 'SCHEMAS', 'DATABASES', 'TABLES', 'VIEWS',
+        'MAT-VIEWS', 'PROCS', 'FUNCS', 'PACKAGES', 'DONE', 'HELP',
+        'EXIT', 'QUIT', 'VIEW-DEF', 'COLUMNS'
     ]
 
-    __MAIN_CMD_COMPLETER = WordCompleter(__MAIN_CMD_COMPLETER_LIST)
-    __SUB_CMD_COMPLETER = WordCompleter(__SUB_CMD_COMPLETER_LIST)
+    __MAIN_CMD_COMPLETER = WordCompleter(__MAIN_CMD_COMPLETER_LIST, ignore_case=True)
+    __SUB_CMD_COMPLETER = WordCompleter(__SUB_CMD_COMPLETER_LIST, ignore_case=True)
     __STYLE = Style.from_dict({
         # User input (default text).
         '':          '#ff0066',
@@ -50,7 +51,6 @@ class BipyCli:
     __PROMPT_MODE = [
         ('class:mode', '.'),
         ('class:at', '#'),
-       # ('class:submode', '.'),
         ('class:cmdend', '>>>')
     ]
 
@@ -86,7 +86,7 @@ class BipyCli:
                                                        style=self.__STYLE,
                                                        completer=self.__SUB_CMD_COMPLETER,
                                                        bottom_toolbar=self.bottom_toolbar)
-                if str(self.__SUB_CMD).upper() == "OVER":
+                if str(self.__SUB_CMD).upper() == "DONE":
                     self.set_prompt_mode(".")
                     self.set_sub_prompt_mode(".")
                 elif str(self.__SUB_CMD).upper() == "EXIT" or str(self.__SUB_CMD).upper() == "QUIT":
@@ -102,9 +102,9 @@ class BipyCli:
                 raw_cmd (String): The whole command string passed to this method
         """
         cmds = str(raw_cmd).split(' ')
-        cmd = cmds[0] # first element is command itself
-        cmds.remove(cmd) # rest are the parameters
-        params = cmds
+        cmd = cmds[0]  # first element is command itself
+        cmds.remove(cmd)  # rest are the parameters
+        # params = cmds
         del cmds
         if str(cmd).upper() in self.__MAIN_CMD_COMPLETER_LIST:
             self.set_prompt_mode(cmd)
@@ -126,8 +126,8 @@ class BipyCli:
                 raw_sub_cmd (String): The whole command string passed to this method
         """
         sub_cmds = str(raw_sub_cmd).split(' ')
-        sub_cmd = sub_cmds[0] # first element is command itself
-        sub_cmds.remove(sub_cmd) # rest are the parameters
+        sub_cmd = sub_cmds[0]  # first element is command itself
+        sub_cmds.remove(sub_cmd)  # rest are the parameters
         sub_params = sub_cmds
         del sub_cmds
         if str(sub_cmd).upper() in self.__SUB_CMD_COMPLETER_LIST:
@@ -135,18 +135,73 @@ class BipyCli:
             if self.__CMD == "BROWSE":
                 if str(sub_cmd).upper() == "CONNECT":
                     self._connect(sub_params)
-                elif str(sub_cmd).upper() == "SCHEMA":
+                elif str(sub_cmd).upper() == "SCHEMAS":
                     self._list_schemas(sub_params)
-                elif str(sub_cmd).upper() == "TABLE":
+                elif str(sub_cmd).upper() == "TABLES":
                     self._list_tables(sub_params)
-                elif str(sub_cmd).upper() == "VIEW":
+                elif str(sub_cmd).upper() == "VIEWS":
                     self._list_views(sub_params)
+                elif str(sub_cmd).upper() == "VIEW-DEF":
+                    self._print_view_def(sub_params)
+                elif str(sub_cmd).upper() == "COLUMNS":
+                    self._list_columns(sub_params)
                 elif str(sub_cmd).upper() == "HELP":
                     help.print_browse_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
         elif sub_cmd != "":
             print("Invalid sub commamd provided! Please type <Main Cmd> HELP to get more information")
         else:
             self.set_prompt_mode(".")
+
+    def _list_columns(self, sub_params):
+        """Print details of all columns that exists under a given table
+
+            Args:
+                sub_params (Array): An array of string params. It should
+                                    have a table name as one of param
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            print("============================== COLUMNS ============================")
+            table = sub_params[0]
+            columns = browser.columns(table)
+            for col in columns:
+                print("==>%s" % (col))
+            print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("List all columns with details under an provided table")
+            print("USAGE: COLUMNS <table-name>")
+            print("NOTE: parameter <table-name> is mandatory")
+            print("")
+
+    def _print_view_def(self, sub_params):
+        """Print the definition of view passed as argument
+
+            Args:
+                sub_params (Array): An array of string params. Should
+                                    have name of view as one of param
+        """
+        if sub_params.__len__() == 0:
+            print("Missing View name paramete. Please type --help to get more information")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            view = sub_params[0]
+            schema = None
+            if sub_params.__len__() == 2:
+                schema = sub_params[1]
+            print("========================= VIEW DEF =============================")
+            print(browser.view_definition(view, schema))
+            print("================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("VIEW-DEF command displays the SQL definition of an view")
+            print("USAGE: VIEW-DEF <view-name> [schema-name]")
+            print("NOTE: The <view-name> is a mandatory parameter & [schema-name] is optional")
+            print("")
 
     def _list_views(self, sub_params):
         """List all available views under an schema in configured warehouse
