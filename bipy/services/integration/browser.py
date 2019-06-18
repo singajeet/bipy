@@ -108,3 +108,37 @@ def columns(table, conn=None):
     br = _browser()
     br.connect(conn)
     return br.get_columns(table)
+
+
+@hug.cli()
+@hug.get()
+def column_names(table, conn=None):
+    """Returns a list of column names under an provided table.
+
+        Args:
+            table (String): Name of the table
+            conn (ConnectionManager): ConnectionManager instance
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_column_names(table)
+
+
+@hug.cli()
+@hug.get()
+def column_type(table, column, conn=None):
+    """Returns an database type of an column available under provided
+        table
+
+        Args:
+            table (String): Name of the table
+            column (String): Name of the column
+            conn (ConnectionManager): An instance of ConnectionManager
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_column_type(table, column)

@@ -32,7 +32,8 @@ class BipyCli:
     __SUB_CMD_COMPLETER_LIST = [
         'CONNECT', 'SCHEMAS', 'DATABASES', 'TABLES', 'VIEWS',
         'MAT-VIEWS', 'PROCS', 'FUNCS', 'PACKAGES', 'DONE', 'HELP',
-        'EXIT', 'QUIT', 'VIEW-DEF', 'COLUMNS'
+        'EXIT', 'QUIT', 'VIEW-DEF', 'COLUMNS', 'COLUMN-NAMES',
+        'COLUMN-TYPE'
     ]
 
     __MAIN_CMD_COMPLETER = WordCompleter(__MAIN_CMD_COMPLETER_LIST, ignore_case=True)
@@ -145,12 +146,69 @@ class BipyCli:
                     self._print_view_def(sub_params)
                 elif str(sub_cmd).upper() == "COLUMNS":
                     self._list_columns(sub_params)
+                elif str(sub_cmd).upper() == "COLUMN-NAMES":
+                    self._list_column_names(sub_params)
+                elif str(sub_cmd).upper() == 'COLUMN-TYPE':
+                    self._print_column_type(sub_params)
                 elif str(sub_cmd).upper() == "HELP":
                     help.print_browse_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
         elif sub_cmd != "":
             print("Invalid sub commamd provided! Please type <Main Cmd> HELP to get more information")
         else:
             self.set_prompt_mode(".")
+
+    def _print_column_type(self, sub_params):
+        """Print details of column type that exists under a given table
+
+            Args:
+                sub_params (Array): An array of string params. It should
+                                    have a table & column name as of params
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table & column name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            if sub_params.__len__() == 2:
+                print("============================== COLUMN TYPE ============================")
+                table = sub_params[0]
+                column = sub_params[1]
+                column_type = browser.column_type(table, column)
+                print("==>Table: %s, Column: %s, Type: %s" % (table, column, column_type))
+                print("===================================================================")
+            else:
+                print("Missing column name param. Please use --help to get more info")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Print column type details of an column under an provided table")
+            print("USAGE: COLUMN-TYPE <table-name> <column-name>")
+            print("NOTE: both parameters are mandatory")
+            print("")
+
+    def _list_column_names(self, sub_params):
+        """Print details of all column names that exists under a given table
+
+            Args:
+                sub_params (Array): An array of string params. It should
+                                    have a table name as one of param
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            print("============================== COLUMNS NAMES ============================")
+            table = sub_params[0]
+            columns = browser.column_names(table)
+            for col in columns:
+                print("==>%s" % (col))
+            print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("List all columns with details under an provided table")
+            print("USAGE: COLUMN-NAMES <table-name>")
+            print("NOTE: parameter <table-name> is mandatory")
+            print("")
 
     def _list_columns(self, sub_params):
         """Print details of all columns that exists under a given table
