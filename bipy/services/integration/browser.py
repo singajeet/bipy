@@ -142,3 +142,82 @@ def column_type(table, column, conn=None):
     br = _browser()
     br.connect(conn)
     return br.get_column_type(table, column)
+
+
+@hug.cli()
+@hug.get()
+def pk_columns(table, conn=None):
+    """Return column names which makes a primary key in the table
+
+        Args:
+            table (String): Name of the table
+            conn (ConnectionString): An instance of ConnectionManager
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_primary_key_columns(table)
+
+
+@hug.cli()
+@hug.get()
+def pk_name(table, conn=None):
+    """Returns the name of primary key in the provided table
+
+        Args:
+            table (String): Name of the table
+            conn (ConnectionString): An instance of ConnectionManager
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_primary_key_name(table)
+
+
+@hug.cli()
+@hug.get()
+def table_options(table, conn=None):
+    """Returns the options available for the provided table
+
+        Args:
+            table (String): Name of the table
+            conn (ConnectionString): An instance of ConnectionManager
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_table_options(table)
+
+
+@hug.cli()
+@hug.get()
+def fk_columns(table, conn=None):
+    """Return column names which makes a foreign keys in the table
+
+        Args:
+            table (String): Name of the table
+            conn (ConnectionString): An instance of ConnectionManager
+    """
+    if conn is None:
+        conn = connect()
+    br = _browser()
+    br.connect(conn)
+    return br.get_foreign_keys(table)
+
+
+@hug.cli()
+@hug.get()
+def close(conn=None):
+    try:
+        if conn is None:
+            conn = connect()
+        br = _browser()
+        br.connect(conn)
+        br.close()
+        del br
+        return True
+    except Exception:
+        return False
