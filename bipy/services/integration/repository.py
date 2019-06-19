@@ -58,3 +58,32 @@ def create_database(db_name, db_type, db_url, user, password, conn=None):
         return ("Database Meta Object: '%s' has been created successfully!" % (db_obj))
     except Exception as err:
         return "Database Meta Object creation failed => %s" % (err)
+
+
+@hug.cli()
+@hug.get()
+def create_schema(schema_list, database, conn=None):
+    """Creates schema objects and save it to the repoaitory
+
+        Args:
+            schema_list (String): A list of schema names seperated by ',' character
+                                    without any space inbetween. eg,
+                                    schema1,schema2,schema3
+            database (String): Name of database underwhich these schemas needs to
+                                be created
+    """
+    try:
+        if conn is None:
+            conn = _connect()
+        bmg = _base_meta_gen()
+        rm = _repo_manager(conn)
+        db = rm.get_database(database)
+        if db is not None:
+            schema_arr = str(schema_list).split(',')
+            schemas = bmg.generate_schemas_meta(schema_arr, db)
+            rm.save_all(schemas)
+            return "Schema objects '%s' created successfully!" % (schemas)
+        else:
+            return "Schema meta objects creation failed=> No such database found: %s" % (database)
+    except Exception as err:
+        return "Schema meta objects creation failed=> %s" % (err)
