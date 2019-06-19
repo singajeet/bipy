@@ -3884,3 +3884,26 @@
 2019-06-19 19:57:16,166 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: PBDM, DBTYPE: ORACLE, ConnectionString: jdbc:odbc:driver,                      Username: ajeet, Password: singh
 2019-06-19 19:57:16,326 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'PBDM' to repository database
 2019-06-19 19:57:16,539 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
+2019-06-19 21:26:24,599 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 21:26:24,601 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:24,604 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-19 21:26:24,701 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 21:26:24,704 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:24,999 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:25,005 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:25,014 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 21:26:25,016 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:25,042 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:25,047 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 21:26:25,057 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 21:26:25,059 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-19 21:26:25,061 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-19 21:26:25,063 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 21:26:25,065 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Get request for WarehouseDatabase instance with name: 'PBDM'
+2019-06-19 21:26:25,419 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Schemas metadata creation is in progress
+2019-06-19 21:26:25,435 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseSchema instance created for schema 'IMPL' and added to list
+2019-06-19 21:26:25,439 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseSchema instance created for schema 'EIS' and added to list
+2019-06-19 21:26:25,442 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-19 21:26:25,444 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'IMPL' from list to repository                          database
+2019-06-19 21:26:25,446 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'EIS' from list to repository                          database
+2019-06-19 21:26:25,492 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully

@@ -18,6 +18,14 @@ def _connect():
     return conn
 
 
+def _browser():
+    """Returns instance of database browser"""
+    util = Utility()
+    config = util.CONFIG
+    br = util.get_plugin(config.PATH_BROWSER)
+    return br
+
+
 def _base_meta_gen():
     """Returns an instance of base meta generator"""
     util = Utility()
@@ -62,7 +70,7 @@ def create_database(db_name, db_type, db_url, user, password, conn=None):
 
 @hug.cli()
 @hug.get()
-def create_schema(schema_list, database, conn=None):
+def create_schemas(schema_list, database, conn=None):
     """Creates schema objects and save it to the repoaitory
 
         Args:
@@ -87,3 +95,32 @@ def create_schema(schema_list, database, conn=None):
             return "Schema meta objects creation failed=> No such database found: %s" % (database)
     except Exception as err:
         return "Schema meta objects creation failed=> %s" % (err)
+
+
+@hug.cli()
+@hug.get()
+def create_tables(table_list, schema, conn=None):
+    """Create tables objects and save it in the repository
+
+        Args:
+            table_list (String): List of table names seperated with ',' character
+                                    with no space in between, eg.,
+                                    table1,table2,table3
+            schema (String): Name of schema under which tables needs to be created
+    """
+    try:
+        if conn is None:
+            conn = _connect()
+        bmg = _base_meta_gen()
+        br = _browser()
+        rm = _repo_manager(conn)
+        sch = rm.get_schema(schema)
+        if sch is not None:
+            table_arr = str(table_list).split(',')
+            tables = bmg.generate_tables_meta(table_arr, sch, br)
+            rm.save_all(tables)
+            return "Tables objects created successfully: %s" % (tables)
+        else:
+            return "Tables meta objects creation failed=> No such schema found: %s" % (schema)
+    except Exception as err:
+        return "Tables meta objects creation failed=> %s" % (err)
