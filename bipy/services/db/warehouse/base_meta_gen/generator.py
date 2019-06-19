@@ -95,7 +95,6 @@ class MetaGenerator(categories.SQLite):
         LOGGER.debug("SQLite Metadata generator instance created")
         categories.SQLite.__init__(self)
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_database_meta(self, db_name, db_type, conn_str, username, password):
         """Generates an repository database object with the parameters passed
 
@@ -116,7 +115,6 @@ class MetaGenerator(categories.SQLite):
         database.password = password
         return database
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_schemas_meta(self, schema_list, database):
         """Generates an list of repository schema object and fill in the
             required info
@@ -141,7 +139,6 @@ class MetaGenerator(categories.SQLite):
         LOGGER.debug("Schemas metadata creation completed and will be returned now")
         return schemas
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_tables_meta(self, table_list, schema, browser):
         """Generates an list of tables as repository objects
 
@@ -180,7 +177,6 @@ class MetaGenerator(categories.SQLite):
         return tables
 
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_views_meta(self, view_list, schema, browser):
         """Generates an list of views as repository objects
 
@@ -206,7 +202,6 @@ class MetaGenerator(categories.SQLite):
             views.append(view_obj)
         return views
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_mviews_meta(self, mview_list, schema, browser):
         """Generates an list of Materialized View as repo objects
             **WARNING**: Materialized Views are not supported in SQLite
@@ -220,7 +215,6 @@ class MetaGenerator(categories.SQLite):
         raise \
             NotImplementedError("Materialized Views are not supported by SQLite")
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_procedures_meta(self, proc_list, schema, browser):
         """Generates an list of Procedures as repo objects
             **WARNING**: Procedures are not supported in SQLite
@@ -233,7 +227,6 @@ class MetaGenerator(categories.SQLite):
         LOGGER.error("Procedures are not supported by SQLite")
         raise NotImplementedError("Procedures are not supported by SQLite")
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_functions_meta(self, func_list, schema, browser):
         """Generates an list of Functions as repo objects
             **WARNING**: Functions are not supported in SQLite
@@ -246,7 +239,6 @@ class MetaGenerator(categories.SQLite):
         LOGGER.error("Functions are not suppoeted by SQLite")
         raise NotImplementedError("Functions are not supported by SQLite")
 
-    authorize(Privileges.METAMODEL_CREATE)
     def generate_columns_meta(self, column_list, table, browser):
         """Generates an list of columns as repo objects
 
