@@ -3432,3 +3432,455 @@
 2019-06-19 16:20:21,165 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - View 'revenue_details' has been created under schema 'main'
 2019-06-19 16:20:21,167 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
 2019-06-19 16:20:21,206 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:37:00,903 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:37:00,904 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:00,905 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:37:01,026 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:37:01,027 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,189 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,190 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,192 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:37:01,193 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,205 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,206 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,208 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-19 19:37:01,219 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,220 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:37:01,222 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:37:01,223 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: PBDM, DBTYPE: ORACLE, ConnectionString: jdbc:odbc:driver,                      Username: ajeet, Password: singh
+2019-06-19 19:44:07,587 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:44:07,588 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,588 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:44:07,614 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:44:07,614 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,733 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,734 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,736 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:44:07,738 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,744 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,745 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,748 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-19 19:44:07,750 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,751 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:44:07,753 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:47:39,695 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:47:39,696 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,697 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:47:39,722 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:47:39,723 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,839 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,840 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,842 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:47:39,843 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,850 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,851 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,853 - yapsy_loaded_plugin_SQLite_Repository_Relationship_Manager_0 - DEBUG - RepositoryRelationshipManager instance created
+2019-06-19 19:47:39,855 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,856 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-19 19:47:39,858 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:02,447 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:50:02,448 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,449 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-19 19:50:02,473 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:50:02,474 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,515 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,516 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,542 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-19 19:50:02,543 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:02,547 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-19 19:50:02,548 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-19 19:50:02,548 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,662 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,664 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,665 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:50:02,666 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,670 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,671 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,673 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:02,674 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,679 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,680 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,681 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-19 19:50:02,682 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:02,683 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:50:02,689 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-19 19:50:02,690 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-19 19:50:02,690 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:02,691 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:50:02,691 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connection engine
+2019-06-19 19:50:03,034 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,035 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: User, Password: Pass
+2019-06-19 19:50:03,197 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'Warehouse 1' to repository database
+2019-06-19 19:50:03,406 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
+2019-06-19 19:50:03,406 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-19 19:50:03,414 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-19 19:50:03,414 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-19 19:50:03,416 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,422 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,423 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,424 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-19 19:50:03,425 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,426 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-19 19:50:03,431 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-19 19:50:03,432 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,437 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,439 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,446 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-19 19:50:03,447 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:03,448 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-19 19:50:03,448 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
+2019-06-19 19:50:03,449 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,453 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,454 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,456 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:50:03,456 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,460 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,461 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,463 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:03,464 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,468 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,469 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,472 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Init Connection Manager
+2019-06-19 19:50:03,473 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,474 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:50:03,480 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Connected to database successfully
+2019-06-19 19:50:03,480 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connecting to database...
+2019-06-19 19:50:03,481 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:03,481 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Connected to database successfully
+2019-06-19 19:50:03,482 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Returning the connection engine
+2019-06-19 19:50:03,703 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:03,704 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: User, Password: Pass
+2019-06-19 19:50:03,705 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object 'Warehouse 1' to repository database
+2019-06-19 19:50:03,925 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Repository object saved successfully
+2019-06-19 19:50:03,926 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-19 19:50:03,931 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-19 19:50:03,931 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-19 19:50:03,932 - yapsy_loaded_plugin_SQLite_Connection_Manager_3 - DEBUG - Returning the connection engine
+2019-06-19 19:50:04,115 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation is in progress
+2019-06-19 19:50:04,122 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-19 19:50:04,123 - yapsy_loaded_plugin_SQLite_MetaData_Generator_1 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-19 19:50:04,123 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-19 19:50:04,314 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:04,315 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Request to get all schema names available
+2019-06-19 19:50:04,319 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Schema name 'main' added to the list
+2019-06-19 19:50:04,320 - yapsy_loaded_plugin_SQLite_Repository_Manager_1 - DEBUG - Returning back list of schema names
+2019-06-19 19:50:04,321 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,326 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,327 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,330 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Init Connection Manager
+2019-06-19 19:50:04,331 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,332 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-19 19:50:04,337 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Connected to database successfully
+2019-06-19 19:50:04,338 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,342 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,344 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,352 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - Init SQLite Browser instance
+2019-06-19 19:50:04,352 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:04,353 - yapsy_loaded_plugin_SQLite_Connection_Manager_4 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-19 19:50:04,353 - yapsy_loaded_plugin_SQLite_Metadata_Browser_2 - DEBUG - SQLite Browser connected to database successfully
+2019-06-19 19:50:04,354 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,358 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,359 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,361 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:50:04,362 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,366 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,367 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,369 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:04,370 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,374 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,375 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,377 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Init Connection Manager
+2019-06-19 19:50:04,378 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,378 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:50:04,386 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Connected to database successfully
+2019-06-19 19:50:04,388 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connecting to database...
+2019-06-19 19:50:04,388 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:04,389 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Connected to database successfully
+2019-06-19 19:50:04,389 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Returning the connection engine
+2019-06-19 19:50:04,592 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:04,593 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: User, Password: Pass
+2019-06-19 19:50:04,595 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object 'Warehouse 1' to repository database
+2019-06-19 19:50:04,803 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Repository object saved successfully
+2019-06-19 19:50:04,804 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-19 19:50:04,809 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-19 19:50:04,809 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-19 19:50:04,809 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Returning the connection engine
+2019-06-19 19:50:05,026 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation is in progress
+2019-06-19 19:50:05,030 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-19 19:50:05,031 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-19 19:50:05,031 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-19 19:50:05,248 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:05,248 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all schema names available
+2019-06-19 19:50:05,253 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Schema name 'main' added to the list
+2019-06-19 19:50:05,253 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning back list of schema names
+2019-06-19 19:50:05,254 - yapsy_loaded_plugin_SQLite_Connection_Manager_5 - DEBUG - Returning the connection engine
+2019-06-19 19:50:05,471 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-19 19:50:05,472 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-19 19:50:05,474 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:05,475 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:05,475 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:05,476 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:05,482 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-19 19:50:05,482 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-19 19:50:05,484 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:05,485 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:05,486 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:05,487 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:05,488 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-19 19:50:05,488 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-19 19:50:05,489 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-19 19:50:05,491 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:05,491 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:05,492 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:05,492 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-19 19:50:05,492 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:05,493 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-19 19:50:05,493 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:05,494 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-19 19:50:05,494 - yapsy_loaded_plugin_SQLite_MetaData_Generator_2 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-19 19:50:05,495 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-19 19:50:05,495 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-19 19:50:05,496 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-19 19:50:05,715 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:05,715 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Request to get all table names available
+2019-06-19 19:50:05,720 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-19 19:50:05,720 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-19 19:50:05,721 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-19 19:50:05,721 - yapsy_loaded_plugin_SQLite_Repository_Manager_2 - DEBUG - Returning the list of table names available
+2019-06-19 19:50:05,722 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,726 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,727 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,730 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Init Connection Manager
+2019-06-19 19:50:05,731 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,731 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-19 19:50:05,736 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Connected to database successfully
+2019-06-19 19:50:05,737 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,742 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,743 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,752 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - Init SQLite Browser instance
+2019-06-19 19:50:05,753 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:05,753 - yapsy_loaded_plugin_SQLite_Connection_Manager_6 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-19 19:50:05,753 - yapsy_loaded_plugin_SQLite_Metadata_Browser_3 - DEBUG - SQLite Browser connected to database successfully
+2019-06-19 19:50:05,754 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,758 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,759 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,761 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:50:05,762 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,766 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,767 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,769 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:05,770 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,799 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,800 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,803 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Init Connection Manager
+2019-06-19 19:50:05,803 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,804 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:50:05,809 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Connected to database successfully
+2019-06-19 19:50:05,810 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connecting to database...
+2019-06-19 19:50:05,810 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:05,810 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Connected to database successfully
+2019-06-19 19:50:05,811 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Returning the connection engine
+2019-06-19 19:50:05,992 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:05,993 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: User, Password: Pass
+2019-06-19 19:50:05,995 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object 'Warehouse 1' to repository database
+2019-06-19 19:50:06,214 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Repository object saved successfully
+2019-06-19 19:50:06,215 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-19 19:50:06,248 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-19 19:50:06,249 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-19 19:50:06,249 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Returning the connection engine
+2019-06-19 19:50:06,449 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation is in progress
+2019-06-19 19:50:06,453 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-19 19:50:06,453 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-19 19:50:06,454 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-19 19:50:06,670 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:06,671 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all schema names available
+2019-06-19 19:50:06,675 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Schema name 'main' added to the list
+2019-06-19 19:50:06,676 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning back list of schema names
+2019-06-19 19:50:06,676 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Returning the connection engine
+2019-06-19 19:50:06,882 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-19 19:50:06,883 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'CUSTOMER_MASTER' and added to list
+2019-06-19 19:50:06,885 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:06,885 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:06,886 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:06,886 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been created under table 'CUSTOMER_MASTER'
+2019-06-19 19:50:06,890 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
+2019-06-19 19:50:06,891 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-19 19:50:06,893 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:06,893 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:06,894 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:06,894 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-19 19:50:06,895 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-19 19:50:06,896 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-19 19:50:06,896 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseTable instance created for table 'SALES_DETAILS' and added to list
+2019-06-19 19:50:06,900 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:06,901 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-19 19:50:06,901 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:06,902 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'customer_id' has datatype as NUMBER
+2019-06-19 19:50:06,902 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:06,903 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_id' has datatype as NUMBER
+2019-06-19 19:50:06,903 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been created under table 'SALES_DETAILS'
+2019-06-19 19:50:06,904 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' marked as 'contains_numeric_column' as the column                                  'product_qty' has datatype as NUMBER
+2019-06-19 19:50:06,904 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Table 'SALES_DETAILS' has been created under schema 'main'
+2019-06-19 19:50:06,905 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
+2019-06-19 19:50:06,905 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-19 19:50:06,906 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'SALES_DETAILS' from list to repository                          database
+2019-06-19 19:50:07,115 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:07,115 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all table names available
+2019-06-19 19:50:07,120 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'CUSTOMER_MASTER' to the list
+2019-06-19 19:50:07,121 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'PRODUCT_MASTER' to the list
+2019-06-19 19:50:07,121 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding table name 'SALES_DETAILS' to the list
+2019-06-19 19:50:07,121 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning the list of table names available
+2019-06-19 19:50:07,122 - yapsy_loaded_plugin_SQLite_Connection_Manager_7 - DEBUG - Returning the connection engine
+2019-06-19 19:50:07,337 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-19 19:50:07,337 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,338 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-19 19:50:07,339 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-19 19:50:07,383 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'CUSTOMER_MASTER'
+2019-06-19 19:50:07,384 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'name'                          with datatype as 'VARCHAR(255)'
+2019-06-19 19:50:07,384 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' is a dim candidate
+2019-06-19 19:50:07,385 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'name' has been added to table 'CUSTOMER_MASTER'
+2019-06-19 19:50:07,386 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'address'                          with datatype as 'VARCHAR(1000)'
+2019-06-19 19:50:07,386 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' is a dim candidate
+2019-06-19 19:50:07,387 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'address' has been added to table 'CUSTOMER_MASTER'
+2019-06-19 19:50:07,388 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-19 19:50:07,388 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'name' from list to repository                          database
+2019-06-19 19:50:07,388 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'address' from list to repository                          database
+2019-06-19 19:50:07,604 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:07,609 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'PRODUCT_MASTER'
+2019-06-19 19:50:07,610 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,611 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-19 19:50:07,611 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-19 19:50:07,614 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'PRODUCT_MASTER'
+2019-06-19 19:50:07,615 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_name'                          with datatype as 'VARCHAR(255)'
+2019-06-19 19:50:07,616 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' is a dim candidate
+2019-06-19 19:50:07,617 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_name' has been added to table 'PRODUCT_MASTER'
+2019-06-19 19:50:07,618 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'cost'                          with datatype as 'FLOAT'
+2019-06-19 19:50:07,619 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' is a fact candidate
+2019-06-19 19:50:07,620 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'cost' has been added to table 'PRODUCT_MASTER'
+2019-06-19 19:50:07,621 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-19 19:50:07,621 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_name' from list to repository                          database
+2019-06-19 19:50:07,621 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'cost' from list to repository                          database
+2019-06-19 19:50:07,826 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:07,831 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - ERROR - Preparing to create columns meta for table 'SALES_DETAILS'
+2019-06-19 19:50:07,832 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,832 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a primary key
+2019-06-19 19:50:07,833 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' is a fact candidate
+2019-06-19 19:50:07,835 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'id' has been added to table 'SALES_DETAILS'
+2019-06-19 19:50:07,836 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'customer_id'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,837 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' is a fact candidate
+2019-06-19 19:50:07,837 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'customer_id' has been added to table 'SALES_DETAILS'
+2019-06-19 19:50:07,838 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_id'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,839 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' is a fact candidate
+2019-06-19 19:50:07,840 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_id' has been added to table 'SALES_DETAILS'
+2019-06-19 19:50:07,841 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - WarehouseColumn instance created for column 'product_qty'                          with datatype as 'INTEGER'
+2019-06-19 19:50:07,842 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' is a fact candidate
+2019-06-19 19:50:07,843 - yapsy_loaded_plugin_SQLite_MetaData_Generator_3 - DEBUG - Column 'product_qty' has been added to table 'SALES_DETAILS'
+2019-06-19 19:50:07,843 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-19 19:50:07,844 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'customer_id' from list to repository                          database
+2019-06-19 19:50:07,844 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_id' from list to repository                          database
+2019-06-19 19:50:07,845 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Saving repository object instance 'product_qty' from list to repository                          database
+2019-06-19 19:50:08,048 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:08,053 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '1'
+2019-06-19 19:50:08,058 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-19 19:50:08,058 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'name' to the list
+2019-06-19 19:50:08,059 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'address' to the list
+2019-06-19 19:50:08,059 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '1'
+2019-06-19 19:50:08,063 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '2'
+2019-06-19 19:50:08,067 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-19 19:50:08,068 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_name' to the list
+2019-06-19 19:50:08,068 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'cost' to the list
+2019-06-19 19:50:08,069 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '2'
+2019-06-19 19:50:08,071 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Request to get all column names available under table with id: '3'
+2019-06-19 19:50:08,077 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'id' to the list
+2019-06-19 19:50:08,077 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'customer_id' to the list
+2019-06-19 19:50:08,078 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_id' to the list
+2019-06-19 19:50:08,078 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Adding column name 'product_qty' to the list
+2019-06-19 19:50:08,079 - yapsy_loaded_plugin_SQLite_Repository_Manager_3 - DEBUG - Returning all column names available under table with id: '3'
+2019-06-19 19:50:08,080 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,085 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,086 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,088 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Init Connection Manager
+2019-06-19 19:50:08,089 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,090 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-19 19:50:08,096 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Connected to database successfully
+2019-06-19 19:50:08,097 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,101 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,103 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,111 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - Init SQLite Browser instance
+2019-06-19 19:50:08,111 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:08,112 - yapsy_loaded_plugin_SQLite_Connection_Manager_8 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-19 19:50:08,112 - yapsy_loaded_plugin_SQLite_Metadata_Browser_4 - DEBUG - SQLite Browser connected to database successfully
+2019-06-19 19:50:08,113 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,118 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,119 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,121 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:50:08,122 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,127 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,128 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,129 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - RepositoryManager instance created
+2019-06-19 19:50:08,130 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,135 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,136 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,168 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Init Connection Manager
+2019-06-19 19:50:08,169 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,170 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:50:08,175 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Connected to database successfully
+2019-06-19 19:50:08,176 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connecting to database...
+2019-06-19 19:50:08,176 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Returning the connected session to database
+2019-06-19 19:50:08,177 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Connected to database successfully
+2019-06-19 19:50:08,177 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Returning the connection engine
+2019-06-19 19:50:08,390 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-19 19:50:08,391 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseDatabase instance will be created: Name: Warehouse 1, DBTYPE: SQLITE, ConnectionString: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db,                      Username: User, Password: Pass
+2019-06-19 19:50:08,393 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object 'Warehouse 1' to repository database
+2019-06-19 19:50:08,592 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Repository object saved successfully
+2019-06-19 19:50:08,593 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get names of all WarehouseDatabase objects
+2019-06-19 19:50:08,598 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Adding 'Warehouse 1' database name to the list
+2019-06-19 19:50:08,599 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning the WarehouseDatabase names list
+2019-06-19 19:50:08,599 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Returning the connection engine
+2019-06-19 19:50:08,793 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation is in progress
+2019-06-19 19:50:08,797 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - WarehouseSchema instance created for schema 'main' and added to list
+2019-06-19 19:50:08,798 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Schemas metadata creation completed and will be returned now
+2019-06-19 19:50:08,798 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'main' from list to repository                          database
+2019-06-19 19:50:09,015 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:50:09,015 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Request to get all schema names available
+2019-06-19 19:50:09,020 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Schema name 'main' added to the list
+2019-06-19 19:50:09,021 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Returning back list of schema names
+2019-06-19 19:50:09,021 - yapsy_loaded_plugin_SQLite_Connection_Manager_9 - DEBUG - Returning the connection engine
+2019-06-19 19:50:09,238 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-19 19:50:09,246 - yapsy_loaded_plugin_SQLite_MetaData_Generator_4 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-19 19:50:09,246 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
+2019-06-19 19:50:09,459 - yapsy_loaded_plugin_SQLite_Repository_Manager_4 - DEBUG - All repository object instances have bee saved successfully
+2019-06-19 19:54:09,937 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:54:09,938 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:09,939 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:54:09,964 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:54:09,965 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,083 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,084 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,086 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:54:10,087 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,091 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,092 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,os,sys')>
+2019-06-19 19:54:10,094 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:54:10,095 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-19 19:54:10,095 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-19 19:54:10,096 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:54:10,096 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: PBDM, DBTYPE: ORACLE, ConnectionString: jdbc:odbc:driver,                      Username: ajeet, Password: singh
+2019-06-19 19:57:16,007 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-19 19:57:16,008 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,009 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/meta.db
+2019-06-19 19:57:16,034 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:57:16,035 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,153 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,154 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,156 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-19 19:57:16,157 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,161 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,162 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('os,__builtins__,sys')>
+2019-06-19 19:57:16,164 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-19 19:57:16,165 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-19 19:57:16,165 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-19 19:57:16,166 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-19 19:57:16,166 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseDatabase instance will be created: Name: PBDM, DBTYPE: ORACLE, ConnectionString: jdbc:odbc:driver,                      Username: ajeet, Password: singh
+2019-06-19 19:57:16,326 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object 'PBDM' to repository database
+2019-06-19 19:57:16,539 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Repository object saved successfully
