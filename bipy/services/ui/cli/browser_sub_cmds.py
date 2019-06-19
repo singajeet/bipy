@@ -17,6 +17,101 @@ class BrowserSubCmds:
             BrowserSubCmds.__INSTANCE = object.__new__(cls)
         return BrowserSubCmds.__INSTANCE
 
+    def list_fk_columns(self, sub_params):
+        """Print the foreign key columns used in the provided table
+
+            Args:
+                sub_params (Array): Array of strings containing table name
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+            print("============================== FOREIGN KEY COLUMNS ============================")
+            table = sub_params[0]
+            fk_cols = browser.fk_columns(table, self._warehouse_conn)
+            for col in fk_cols:
+                print("==>%s" % (col))
+            print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Print foreign key columns under an provided table")
+            print("USAGE: FK-COLUMNS <table-name>")
+            print("NOTE: <table-name> parameters is mandatory")
+            print("")
+
+    def print_table_opts(self, sub_params):
+        """Print the table option for the provided table
+
+            Args:
+                sub_params (Array): Array of strings containing table name
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+                print("============================== TABLE OPTIONS ============================")
+                table = sub_params[0]
+                options = browser.table_options(table, self._warehouse_conn)
+                for opt in options:
+                    print("==>%s" % (opt))
+                print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Print primary key name under an provided table")
+            print("USAGE: TABLE-OPT <table-name>")
+            print("NOTE: <table-name> parameters is mandatory")
+            print("")
+
+    def print_pk_name(self, sub_params):
+        """Print the primary key name used in the provided table
+
+            Args:
+                sub_params (Array): Array of strings containing table name
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+                print("============================== PRIMARY KEY NAME ============================")
+                table = sub_params[0]
+                pk_name = browser.pk_name(table, self._warehouse_conn)
+                print("==>%s" % (pk_name))
+                print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Print primary key name under an provided table")
+            print("USAGE: PK-NAME <table-name>")
+            print("NOTE: <table-name> parameters is mandatory")
+            print("")
+
+    def list_pk_columns(self, sub_params):
+        """Print the primary key columns used in the provided table
+
+            Args:
+                sub_params (Array): Array of strings containing table name
+        """
+        if sub_params.__len__() == 0:
+            print("Missing table name parameter. Please use --help to get more info")
+        elif sub_params[0].lower() != "--help" and sub_params[0] != "":
+                print("============================== PRIMARY KEY COLUMNS ============================")
+                table = sub_params[0]
+                pk_cols = browser.pk_columns(table, self._warehouse_conn)
+                for col in pk_cols:
+                    print("==>%s" % (col))
+                print("===================================================================")
+        elif sub_params[0].lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Print primary key columns under an provided table")
+            print("USAGE: PK-COLUMNS <table-name>")
+            print("NOTE: <table-name> parameters is mandatory")
+            print("")
+
     def print_column_type(self, sub_params):
         """Print details of column type that exists under a given table
 
@@ -31,7 +126,7 @@ class BrowserSubCmds:
                 print("============================== COLUMN TYPE ============================")
                 table = sub_params[0]
                 column = sub_params[1]
-                column_type = browser.column_type(table, column)
+                column_type = browser.column_type(table, column, self._warehouse_conn)
                 print("==>Table: %s, Column: %s, Type: %s" % (table, column, column_type))
                 print("===================================================================")
             else:
@@ -57,7 +152,7 @@ class BrowserSubCmds:
         elif sub_params[0].lower() != "--help" and sub_params[0] != "":
             print("============================== COLUMNS NAMES ============================")
             table = sub_params[0]
-            columns = browser.column_names(table)
+            columns = browser.column_names(table, self._warehouse_conn)
             for col in columns:
                 print("==>%s" % (col))
             print("===================================================================")
@@ -82,7 +177,7 @@ class BrowserSubCmds:
         elif sub_params[0].lower() != "--help" and sub_params[0] != "":
             print("============================== COLUMNS ============================")
             table = sub_params[0]
-            columns = browser.columns(table)
+            columns = browser.columns(table, self._warehouse_conn)
             for col in columns:
                 print("==>%s" % (col))
             print("===================================================================")
@@ -110,7 +205,7 @@ class BrowserSubCmds:
             if sub_params.__len__() == 2:
                 schema = sub_params[1]
             print("========================= VIEW DEF =============================")
-            print(browser.view_definition(view, schema))
+            print(browser.view_definition(view, schema, self._warehouse_conn))
             print("================================================================")
         elif sub_params[0].lower() == "--help":
             print("")
@@ -221,10 +316,33 @@ class BrowserSubCmds:
         """
         if params.__len__() == 0:
             self._warehouse_conn = browser.connect()
+            return self._warehouse_conn
         elif str(params[0]).lower() == "--help":
             print("")
             print("HELP:")
             print("-----")
             print("Connects to an Warehouse database configured in the system")
+            print("No parameters are required to run this command")
+            print("")
+
+    def disconnect(self, params):
+        """Disconnects the connection to browser and warehouse
+
+            Args:
+                params (Array): An array of string params
+        """
+        if params.__len__() == 0:
+            result = browser.close()
+            if result:
+                print("Disconnected successfully!")
+                del self._warehouse_conn
+                return result
+            else:
+                print("Unable to disconnect. Please try again!")
+        elif str(params[0]).lower() == "--help":
+            print("")
+            print("HELP:")
+            print("-----")
+            print("Closes an Connection to an Warehouse database configured in the system")
             print("No parameters are required to run this command")
             print("")

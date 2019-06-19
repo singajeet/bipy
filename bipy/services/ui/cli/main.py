@@ -31,8 +31,9 @@ class BipyCli:
         'BROWSE': ['CONNECT', 'SCHEMAS', 'DATABASES', 'TABLES', 'VIEWS',
                    'MAT-VIEWS', 'PROCS', 'FUNCS', 'PACKAGES', 'DONE', 'HELP',
                    'EXIT', 'QUIT', 'VIEW-DEF', 'COLUMNS', 'COLUMN-NAMES',
-                   'COLUMN-TYPE'
-                  ],
+                   'COLUMN-TYPE', 'PK-COLUMNS', 'PK-NAME', 'TABLE-OPTS',
+                   'FK-COLUMNS', 'CLOSE', 'DISCONNECT'
+                   ],
         'HELP': [],
         'EXIT': [],
         'QUIT': []
@@ -153,7 +154,7 @@ class BipyCli:
                 sub_cmd (String): A sub command issues by the user
         """
         if str(sub_cmd).upper() == "CONNECT":
-            self._sub_commands.connect(sub_params)
+            self._warehouse_conn = self._sub_commands.connect(sub_params)
         elif str(sub_cmd).upper() == "SCHEMAS":
             self._sub_commands.list_schemas(sub_params)
         elif str(sub_cmd).upper() == "TABLES":
@@ -168,9 +169,19 @@ class BipyCli:
             self._sub_commands.list_column_names(sub_params)
         elif str(sub_cmd).upper() == 'COLUMN-TYPE':
             self._sub_commands.print_column_type(sub_params)
+        elif str(sub_cmd).upper() == "PK-COLUMNS":
+            self._sub_commands.list_pk_columns(sub_params)
+        elif str(sub_cmd).upper() == "PK-NAME":
+            self._sub_commands.print_pk_name(sub_params)
+        elif str(sub_cmd).upper() == "TABLE-OPTS":
+            self._sub_commands.print_table_opts(sub_params)
+        elif str(sub_cmd).upper() == "FK-COLUMNS":
+            self._sub_commands.list_fk_columns(sub_params)
+        elif str(sub_cmd).upper() == "CLOSE" or str(sub_cmd).upper() == "DISCONNECT":
+            self._sub_commands.disconnect(sub_params)
+            del self._warehouse_conn
         elif str(sub_cmd).upper() == "HELP":
             help.print_browse_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
-
 
     def bottom_toolbar(self):
         val = ("<left><b>Warehouse DB:</b>%s</left>\

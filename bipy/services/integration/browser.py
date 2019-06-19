@@ -211,6 +211,11 @@ def fk_columns(table, conn=None):
 @hug.cli()
 @hug.get()
 def close(conn=None):
+    """Closes the connection to warehouse database
+
+        Args:
+            conn (ConnectionManager): An instance of connection
+    """
     try:
         if conn is None:
             conn = connect()
