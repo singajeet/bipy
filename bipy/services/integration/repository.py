@@ -23,6 +23,9 @@ def _browser():
     util = Utility()
     config = util.CONFIG
     br = util.get_plugin(config.PATH_BROWSER)
+    wh_conn = util.get_plugin(config.PATH_CONNECTION_MANAGERS)
+    wh_conn.connect(config.URL_TEST_DB)
+    br.connect(wh_conn)
     return br
 
 
