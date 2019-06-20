@@ -8,7 +8,7 @@ import hug
 from bipy.services.utils import Utility
 
 
-def _connect():
+def _repo_connect():
     """Connects to an repository database for storing and reading back the metadata objects
     """
     utils = Utility()
@@ -18,13 +18,21 @@ def _connect():
     return conn
 
 
-def _browser():
+def _wh_connect():
+    """Connects to an repository database for storing and reading back the metadata objects
+    """
+    utils = Utility()
+    config = utils.CONFIG
+    conn = utils.get_plugin(config.PATH_CONNECTION_MANAGERS)
+    conn.connect(config.URL_TEST_DB)
+    return conn
+
+
+def _browser(wh_conn):
     """Returns instance of database browser"""
     util = Utility()
     config = util.CONFIG
     br = util.get_plugin(config.PATH_BROWSER)
-    wh_conn = util.get_plugin(config.PATH_CONNECTION_MANAGERS)
-    wh_conn.connect(config.URL_TEST_DB)
     br.connect(wh_conn)
     return br
 
@@ -37,18 +45,18 @@ def _base_meta_gen():
     return bmg
 
 
-def _repo_manager(conn):
+def _repo_manager(repo_conn):
     """Returns an instance of repository manager"""
     util = Utility()
     config = util.CONFIG
     repo_mgr = util.get_plugin(config.PATH_REPO_MGR)
-    repo_mgr.connect(conn)
+    repo_mgr.connect(repo_conn)
     return repo_mgr
 
 
 @hug.cli()
 @hug.get()
-def create_database(db_name, db_type, db_url, user, password, conn=None):
+def create_database(db_name, db_type, db_url, user, password, repo_conn=None):
     """Create database Meta objects and save back to repoistory
 
         Args:
@@ -59,10 +67,10 @@ def create_database(db_name, db_type, db_url, user, password, conn=None):
             password (String): password for the username passed
     """
     try:
-        if conn is None:
-            conn = _connect()
+        if repo_conn is None:
+            repo_conn = _repo_connect()
         bmg = _base_meta_gen()
-        rm = _repo_manager(conn)
+        rm = _repo_manager(repo_conn)
         db_obj = bmg.generate_database_meta(db_name, db_type, db_url,
                                             user, password)
         rm.save(db_obj)
@@ -73,7 +81,7 @@ def create_database(db_name, db_type, db_url, user, password, conn=None):
 
 @hug.cli()
 @hug.get()
-def create_schemas(schema_list, database, conn=None):
+def create_schemas(schema_list, database, repo_conn=None):
     """Creates schema objects and save it to the repoaitory
 
         Args:
@@ -84,10 +92,10 @@ def create_schemas(schema_list, database, conn=None):
                                 be created
     """
     try:
-        if conn is None:
-            conn = _connect()
+        if repo_conn is None:
+            repo_conn = _repo_connect()
         bmg = _base_meta_gen()
-        rm = _repo_manager(conn)
+        rm = _repo_manager(repo_conn)
         db = rm.get_database(database)
         if db is not None:
             schema_arr = str(schema_list).split(',')
@@ -102,7 +110,7 @@ def create_schemas(schema_list, database, conn=None):
 
 @hug.cli()
 @hug.get()
-def create_tables(table_list, schema, conn=None):
+def create_tables(table_list, schema, repo_conn=None, wh_conn=None):
     """Create tables objects and save it in the repository
 
         Args:
@@ -110,13 +118,17 @@ def create_tables(table_list, schema, conn=None):
                                     with no space in between, eg.,
                                     table1,table2,table3
             schema (String): Name of schema under which tables needs to be created
+            repo_conn (ConnectionManager): A connection to repository database
+            wh_conn (ConnectionManager): A connecrion to warehouse database
     """
     try:
-        if conn is None:
-            conn = _connect()
+        if repo_conn is None:
+            repo_conn = _repo_connect()
+        if wh_conn is None:
+            wh_conn = _wh_connect()
         bmg = _base_meta_gen()
-        br = _browser()
-        rm = _repo_manager(conn)
+        br = _browser(wh_conn)
+        rm = _repo_manager(repo_conn)
         sch = rm.get_schema(schema)
         if sch is not None:
             table_arr = str(table_list).split(',')
