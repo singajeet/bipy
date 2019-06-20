@@ -10,6 +10,7 @@ from prompt_toolkit.formatted_text import HTML
 from bipy.services.utils import Utility
 from bipy.services.ui.cli import help
 from bipy.services.ui.cli.browser_sub_cmds import BrowserSubCmds
+from bipy.services.ui.cli.connect_sub_cmds import ConnectSubCmds
 
 
 class BipyCli:
@@ -21,6 +22,7 @@ class BipyCli:
     _util = None
     _config = None
     _sub_commands = None
+    _connect_sub_cmds = None
 
     __CMD = "."
     __SUB_CMD = "."
@@ -28,12 +30,17 @@ class BipyCli:
     __SESSION = None
 
     __COMPLETER_DICT_LIST = {
-        'BROWSE': ['CONNECT', 'SCHEMAS', 'DATABASES', 'TABLES', 'VIEWS',
+        'BROWSE': ['SCHEMAS', 'DATABASES', 'TABLES', 'VIEWS',
                    'MAT-VIEWS', 'PROCS', 'FUNCS', 'PACKAGES', 'DONE', 'HELP',
                    'EXIT', 'QUIT', 'VIEW-DEF', 'COLUMNS', 'COLUMN-NAMES',
                    'COLUMN-TYPE', 'PK-COLUMNS', 'PK-NAME', 'TABLE-OPTS',
-                   'FK-COLUMNS', 'CLOSE', 'DISCONNECT'
+                   'FK-COLUMNS'
                    ],
+        'SELECT': ['DATABASE', 'SCHEMAS', 'TABLES', 'VIEWS', 'COLUMNS',
+                   'DONE', 'EXIT', 'QUIT', 'HELP'
+                   ],
+        'CONNECT': ['WAREHOUSE', 'REPOSITORY', 'DISCONNECT', 'EXIT',
+                    'QUIT', 'HELP', 'DONE'],
         'HELP': [],
         'EXIT': [],
         'QUIT': []
@@ -75,6 +82,7 @@ class BipyCli:
         self._util = Utility()
         self._config = self._util.CONFIG
         self._sub_commands = BrowserSubCmds()
+        self._connect_sub_cmds = ConnectSubCmds()
         self.run()
 
     def run(self):
@@ -119,6 +127,12 @@ class BipyCli:
             if str(cmd).upper() == "BROWSE":
                 self.__SUB_CMD_COMPLETER = WordCompleter(self.__COMPLETER_DICT_LIST['BROWSE'], ignore_case=True)
                 self.__SUB_CMD_COMPLETER_LIST = self.__COMPLETER_DICT_LIST['BROWSE']
+            elif str(cmd).upper() == 'SELECT':
+                self.__SUB_CMD_COMPLETER = WordCompleter(self.__COMPLETER_DICT_LIST['SELECT'], ignore_case=True)
+                self.__SUB_CMD_COMPLETER_LIST = self.__COMPLETER_DICT_LIST['SELECT']
+            elif str(cmd).upper() == 'CONNECT':
+                self.__SUB_CMD_COMPLETER = WordCompleter(self.__COMPLETER_DICT_LIST['CONNECT'], ignore_case=True)
+                self.__SUB_CMD_COMPLETER_LIST = self.__COMPLETER_DICT_LIST['CONNECT']
             elif str(cmd).upper() == "HELP":
                 help.print_main_cmd_help(self.__MAIN_CMD_COMPLETER_LIST)
         elif cmd != "":
@@ -142,10 +156,45 @@ class BipyCli:
             self.set_sub_prompt_mode(sub_cmd)
             if self.__CMD == "BROWSE":
                 self._process_browse_sub_cmds(sub_cmd, sub_params)
+            elif self.__CMD == 'SELECT':
+                self._process_select_sub_cmds(sub_cmd, sub_params)
+            elif self.__CMD == 'CONNECT':
+                self._process_connect_sub_cmds(sub_cmd, sub_params)
         elif sub_cmd != "":
             print("Invalid sub commamd provided! Please type <Main Cmd> HELP to get more information")
         else:
             self.set_prompt_mode(".")
+
+    def _process_connect_sub_cmds(self, sub_cmd, sub_params):
+        """Process all the sub commands under the main CONNECT command
+
+            Args:
+                sub_cmd (String): A sub command issues by the user
+        """
+        if str(sub_cmd).upper() == "WAREHOUSE":
+            self._warehouse_conn = self._connect_sub_cmds.connect_warehouse(sub_params)
+        elif str(sub_cmd).upper() == "REPOSITORY":
+            self._repo_conn = self._connect_sub_cmds.connect_repo(sub_params)
+        elif str(sub_cmd).upper() == "DISCONNECT":
+            self._connect_sub_cmds.disconnect(sub_params)
+            if self._warehouse_conn is not None:
+                del self._warehouse_conn
+            if self._repo_conn is not None:
+                del self._repo_conn
+        elif str(sub_cmd).upper() == "HELP":
+            help.print_connect_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
+        else:
+            print("Invalid sub command provided! Please type HELP to get more information")
+
+    def _process_select_sub_cmds(self, sub_cmd, sub_params):
+        """Process all sub commands available under main command SELECT
+
+            Args:
+                sub_cmd (String): A sub command issues by the user
+        """
+        if self._repo_conn is None:
+            print("Please connect to Repository Database")
+            return
 
     def _process_browse_sub_cmds(self, sub_cmd, sub_params):
         """Process all sub commands available under main command BROWSE
@@ -153,33 +202,37 @@ class BipyCli:
             Args:
                 sub_cmd (String): A sub command issues by the user
         """
-        if str(sub_cmd).upper() == "CONNECT":
-            self._warehouse_conn = self._sub_commands.connect(sub_params)
-        elif str(sub_cmd).upper() == "SCHEMAS":
-            self._sub_commands.list_schemas(sub_params)
+        if self._warehouse_conn is None:
+            print("Please connect to Warehouse Database!")
+            return
+        # if str(sub_cmd).upper() == "CONNECT":
+        #    self._warehouse_conn = self._sub_commands.connect(sub_params)
+        # el
+        if str(sub_cmd).upper() == "SCHEMAS":
+            self._sub_commands.list_schemas(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "TABLES":
-            self._sub_commands.list_tables(sub_params)
+            self._sub_commands.list_tables(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "VIEWS":
-            self._sub_commands.list_views(sub_params)
+            self._sub_commands.list_views(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "VIEW-DEF":
-            self._sub_commands.print_view_def(sub_params)
+            self._sub_commands.print_view_def(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "COLUMNS":
-            self._sub_commands.list_columns(sub_params)
+            self._sub_commands.list_columns(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "COLUMN-NAMES":
-            self._sub_commands.list_column_names(sub_params)
+            self._sub_commands.list_column_names(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == 'COLUMN-TYPE':
-            self._sub_commands.print_column_type(sub_params)
+            self._sub_commands.print_column_type(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "PK-COLUMNS":
-            self._sub_commands.list_pk_columns(sub_params)
+            self._sub_commands.list_pk_columns(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "PK-NAME":
-            self._sub_commands.print_pk_name(sub_params)
+            self._sub_commands.print_pk_name(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "TABLE-OPTS":
-            self._sub_commands.print_table_opts(sub_params)
+            self._sub_commands.print_table_opts(sub_params, self._warehouse_conn)
         elif str(sub_cmd).upper() == "FK-COLUMNS":
-            self._sub_commands.list_fk_columns(sub_params)
-        elif str(sub_cmd).upper() == "CLOSE" or str(sub_cmd).upper() == "DISCONNECT":
-            self._sub_commands.disconnect(sub_params)
-            del self._warehouse_conn
+            self._sub_commands.list_fk_columns(sub_params, self._warehouse_conn)
+        # elif str(sub_cmd).upper() == "CLOSE" or str(sub_cmd).upper() == "DISCONNECT":
+        #    self._sub_commands.disconnect(sub_params)
+        #    del self._warehouse_conn
         elif str(sub_cmd).upper() == "HELP":
             help.print_browse_sub_cmd_help(self.__SUB_CMD_COMPLETER_LIST)
 

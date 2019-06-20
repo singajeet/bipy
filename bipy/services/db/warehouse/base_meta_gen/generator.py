@@ -243,7 +243,7 @@ class MetaGenerator(categories.SQLite):
         """Generates an list of columns as repo objects
 
             Args:
-                 column_list (List): A list of columns as dict object
+                 column_list (List): A list of column names
                  table (WarehouseTable): A table instance (WarehouseTable)
                  browser (Browser): An database browser instance
         """
@@ -256,7 +256,8 @@ class MetaGenerator(categories.SQLite):
         columns = []
         LOGGER.error("Preparing to create columns meta for table '%s'" \
                      % (table.name))
-        for column in column_list:
+        for col in column_list:
+            column = browser.get_column(col, table.name)
             col_obj = WarehouseColumn()
             col_obj.name = column['name']
             raw_column_type = column['type']

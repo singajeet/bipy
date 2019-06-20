@@ -156,6 +156,24 @@ class Browser(categories.SQLite):
         """
         return self.inspector.get_columns(table_name)
 
+    def get_column(self, column_name, table_name):
+        """
+            Returns an dict object as properties of column in a provided table
+
+            Args:
+                column_name (String): Name of the Column
+                table_name (String): Name pf table which contains column
+        """
+        LOGGER.debug("Preparing to find column '%s' in table '%s' and return\
+                     it back" % (column_name, table_name))
+        for col in self.inspector.get_columns(table_name):
+            if str(col['name']).upper() == str(column_name).upper():
+                LOGGER.debug("Column found and returning same as dict obj")
+                return col
+        LOGGER.debug("Column '%s' not found in table '%s'"
+                     % (column_name, table_name))
+        return None
+
     def get_column_names(self, table_name):
         """
             Return list of column names

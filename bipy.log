@@ -3968,3 +3968,300 @@
 2019-06-20 12:50:19,041 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Table 'CUSTOMER_MASTER' has been created under schema 'main'
 2019-06-20 12:50:19,045 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'CUSTOMER_MASTER' from list to repository                          database
 2019-06-20 12:50:19,105 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully
+2019-06-20 13:13:00,255 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 13:13:00,257 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,260 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 13:13:00,323 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 13:13:00,325 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,385 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,391 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,405 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 13:13:00,409 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,413 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 13:13:00,437 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 13:13:00,440 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,731 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,741 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,752 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 13:13:00,756 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,828 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,835 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,868 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 13:13:00,870 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 13:13:00,873 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 13:13:00,875 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 13:13:00,877 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,898 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,904 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 13:13:00,913 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 13:13:00,914 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 13:13:00,917 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 13:13:00,920 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 13:13:00,921 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get WarehouseSchema object with name: 'main'
+2019-06-20 13:13:01,286 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Tables metadata (under schema 'main') creation is in progress
+2019-06-20 13:13:01,289 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseTable instance created for table 'PRODUCT_MASTER' and added to list
+2019-06-20 13:13:01,306 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'id' has been created under table 'PRODUCT_MASTER'
+2019-06-20 13:13:01,308 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'id' has datatype as NUMBER
+2019-06-20 13:13:01,314 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'product_name' has been created under table 'PRODUCT_MASTER'
+2019-06-20 13:13:01,319 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'cost' has been created under table 'PRODUCT_MASTER'
+2019-06-20 13:13:01,321 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Table 'PRODUCT_MASTER' marked as 'contains_numeric_column' as the column                                  'cost' has datatype as NUMBER
+2019-06-20 13:13:01,341 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Table 'PRODUCT_MASTER' has been created under schema 'main'
+2019-06-20 13:13:01,343 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'PRODUCT_MASTER' from list to repository                          database
+2019-06-20 13:13:01,421 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully
+2019-06-20 14:48:33,661 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 14:48:33,665 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:33,669 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 14:48:33,742 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 14:48:33,745 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:33,805 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:33,809 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:33,819 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 14:48:33,821 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:33,824 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 14:48:33,843 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 14:48:33,846 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,122 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,131 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,152 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 14:48:34,155 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,204 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,208 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,230 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 14:48:34,232 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 14:48:34,234 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 14:48:34,242 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 14:48:34,244 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,267 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,271 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:48:34,281 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 14:48:34,282 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 14:48:34,284 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 14:48:34,286 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 14:48:34,287 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get WarehouseSchema object with name: 'main'
+2019-06-20 14:48:34,639 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Views metadata (under schema 'main') creation is in progress
+2019-06-20 14:48:34,669 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - View 'revenue_details' has been created under schema 'main'
+2019-06-20 14:48:34,671 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'revenue_details' from list to repository                          database
+2019-06-20 14:48:34,724 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully
+2019-06-20 14:52:27,402 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 14:52:27,405 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,408 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 14:52:27,476 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 14:52:27,478 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,545 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,551 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,561 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 14:52:27,565 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,568 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 14:52:27,589 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 14:52:27,593 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,858 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,865 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,874 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 14:52:27,877 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,941 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,946 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:27,976 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 14:52:27,979 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 14:52:27,981 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 14:52:27,982 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 14:52:27,985 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:28,022 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:28,027 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 14:52:28,039 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 14:52:28,041 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 14:52:28,044 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 14:52:28,045 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 14:52:28,047 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get table with name: 'CUSTOMER_MASTER'
+2019-06-20 14:52:28,399 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-20 15:01:58,709 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 15:01:58,712 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:58,714 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 15:01:58,777 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:01:58,779 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:58,830 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:58,836 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:58,847 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 15:01:58,850 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:58,853 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 15:01:58,873 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 15:01:58,877 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,148 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,154 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,161 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 15:01:59,164 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,232 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,237 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,271 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 15:01:59,274 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 15:01:59,278 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 15:01:59,282 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 15:01:59,284 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,310 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,315 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:01:59,326 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 15:01:59,327 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 15:01:59,329 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 15:01:59,330 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:01:59,332 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get table with name: 'CUSTOMER_MASTER'
+2019-06-20 15:01:59,690 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-20 15:25:38,691 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 15:25:38,694 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:38,697 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 15:25:38,767 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:25:38,770 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:38,830 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:38,836 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:38,846 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 15:25:38,851 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:38,853 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 15:25:38,874 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 15:25:38,879 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,155 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,162 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,170 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 15:25:39,173 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,257 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,263 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,295 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 15:25:39,298 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 15:25:39,300 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 15:25:39,302 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 15:25:39,311 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,337 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,342 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:25:39,351 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 15:25:39,353 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 15:25:39,355 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 15:25:39,358 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:25:39,359 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get table with name: 'CUSTOMER_MASTER'
+2019-06-20 15:25:39,715 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-20 15:25:39,718 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Preparing to find column 'iid' in table 'CUSTOMER_MASTER' and return                     it back
+2019-06-20 15:25:39,735 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Column 'iid' not found in table 'CUSTOMER_MASTER'
+2019-06-20 15:26:05,889 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 15:26:05,892 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:05,895 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 15:26:05,960 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:26:05,963 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,023 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,028 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,038 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 15:26:06,041 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,044 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 15:26:06,063 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 15:26:06,071 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,339 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,345 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,360 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - SQLite Metadata generator instance created
+2019-06-20 15:26:06,363 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,426 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,436 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,467 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 15:26:06,469 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning the connected session to database
+2019-06-20 15:26:06,471 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 15:26:06,473 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 15:26:06,475 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,508 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,513 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 15:26:06,526 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - RepositoryManager instance created
+2019-06-20 15:26:06,528 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connecting to database...
+2019-06-20 15:26:06,530 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 15:26:06,538 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 15:26:06,539 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Request to get table with name: 'CUSTOMER_MASTER'
+2019-06-20 15:26:06,896 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - ERROR - Preparing to create columns meta for table 'CUSTOMER_MASTER'
+2019-06-20 15:26:06,899 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Preparing to find column 'id' in table 'CUSTOMER_MASTER' and return                     it back
+2019-06-20 15:26:06,916 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Column found and returning same as dict obj
+2019-06-20 15:26:06,918 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseColumn instance created for column 'id'                          with datatype as 'INTEGER'
+2019-06-20 15:26:06,919 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'id' is a primary key
+2019-06-20 15:26:06,922 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'id' is a fact candidate
+2019-06-20 15:26:06,944 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'id' has been added to table 'CUSTOMER_MASTER'
+2019-06-20 15:26:06,946 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Preparing to find column 'name' in table 'CUSTOMER_MASTER' and return                     it back
+2019-06-20 15:26:06,949 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Column found and returning same as dict obj
+2019-06-20 15:26:06,951 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseColumn instance created for column 'name'                          with datatype as 'VARCHAR(255)'
+2019-06-20 15:26:06,953 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'name' is a dim candidate
+2019-06-20 15:26:06,956 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'name' has been added to table 'CUSTOMER_MASTER'
+2019-06-20 15:26:06,960 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Preparing to find column 'address' in table 'CUSTOMER_MASTER' and return                     it back
+2019-06-20 15:26:06,962 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Column found and returning same as dict obj
+2019-06-20 15:26:06,965 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - WarehouseColumn instance created for column 'address'                          with datatype as 'VARCHAR(1000)'
+2019-06-20 15:26:06,968 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'address' is a dim candidate
+2019-06-20 15:26:06,971 - yapsy_loaded_plugin_SQLite_MetaData_Generator_0 - DEBUG - Column 'address' has been added to table 'CUSTOMER_MASTER'
+2019-06-20 15:26:06,974 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'id' from list to repository                          database
+2019-06-20 15:26:06,977 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'name' from list to repository                          database
+2019-06-20 15:26:06,979 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'address' from list to repository                          database
+2019-06-20 15:26:07,037 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully
+2019-06-20 20:14:47,260 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 20:14:47,264 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:14:47,266 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:14:47,401 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 20:14:55,172 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:14:55,225 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:14:55,229 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:14:55,238 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 20:14:55,241 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:14:55,243 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 20:14:55,266 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 20:27:02,361 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 20:27:02,364 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:02,368 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:27:02,426 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 20:27:08,947 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:08,987 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:08,992 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:09,002 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 20:27:09,005 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:09,007 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 20:27:09,029 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 20:27:26,499 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:26,552 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:26,558 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:26,568 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-20 20:27:26,572 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:27:26,574 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:27:26,594 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-20 20:35:55,761 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 20:35:55,764 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:35:55,767 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:35:55,823 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 20:39:01,211 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 20:39:01,214 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:01,217 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:39:01,273 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 20:39:15,804 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:15,846 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:15,850 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:15,858 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Init Connection Manager
+2019-06-20 20:39:15,861 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:15,864 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:39:15,884 - yapsy_loaded_plugin_SQLite_Connection_Manager_1 - DEBUG - Connected to database successfully
+2019-06-20 20:39:21,835 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:21,867 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:21,875 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:21,883 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Init Connection Manager
+2019-06-20 20:39:21,885 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:39:21,888 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/meta.db
+2019-06-20 20:39:21,907 - yapsy_loaded_plugin_SQLite_Connection_Manager_2 - DEBUG - Connected to database successfully
+2019-06-20 20:59:54,493 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 20:59:54,496 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 20:59:54,499 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 20:59:54,592 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 21:10:59,538 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 21:10:59,541 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:10:59,542 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 21:10:59,617 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 21:12:06,344 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-20 21:12:06,348 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:06,351 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////data/data/com.termux/files/home/projects/python/bipy/bipy/data/test.db
+2019-06-20 21:12:06,411 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-20 21:12:14,719 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:14,773 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:14,779 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:14,810 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - Init SQLite Browser instance
+2019-06-20 21:12:14,813 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 21:12:14,816 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 21:12:14,819 - yapsy_loaded_plugin_SQLite_Metadata_Browser_0 - DEBUG - SQLite Browser connected to database successfully
+2019-06-20 21:12:20,155 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:20,193 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:20,199 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('sys,os,__builtins__')>
+2019-06-20 21:12:20,227 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - Init SQLite Browser instance
+2019-06-20 21:12:20,229 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connected session to database
+2019-06-20 21:12:20,231 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning an instance of 'Inspector'                    to browse metadata of DB
+2019-06-20 21:12:20,233 - yapsy_loaded_plugin_SQLite_Metadata_Browser_1 - DEBUG - SQLite Browser connected to database successfully
