@@ -11,6 +11,7 @@ from bipy.services.utils import Utility
 from bipy.services.ui.cli import help
 from bipy.services.ui.cli.browser_sub_cmds import BrowserSubCmds
 from bipy.services.ui.cli.connect_sub_cmds import ConnectSubCmds
+from bipy.services.ui.cli.select_sub_cmds import SelectionSubCmds
 
 
 class BipyCli:
@@ -23,6 +24,7 @@ class BipyCli:
     _config = None
     _sub_commands = None
     _connect_sub_cmds = None
+    _select_sub_cmds = None
 
     __CMD = "."
     __SUB_CMD = "."
@@ -83,6 +85,7 @@ class BipyCli:
         self._config = self._util.CONFIG
         self._sub_commands = BrowserSubCmds()
         self._connect_sub_cmds = ConnectSubCmds()
+        self._select_sub_cmds = SelectionSubCmds()
         self.run()
 
     def run(self):
@@ -195,6 +198,18 @@ class BipyCli:
         if self._repo_conn is None:
             print("Please connect to Repository Database")
             return
+        if str(sub_cmd).upper() == "DATABASE":
+            self._select_sub_cmds.select_database(sub_params, self._repo_conn)
+        elif str(sub_cmd).upper() == "SCHEMAS":
+            self._select_sub_cmds.select_schemas(sub_params, self._repo_conn)
+        elif str(sub_cmd).upper() == "TABLES":
+            self._select_sub_cmds.select_tables(sub_params, self._repo_conn, self._warehouse_conn)
+        elif str(sub_cmd).upper() == "VIEWS":
+            self._select_sub_cmds.select_views(sub_params, self._repo_conn, self._warehouse_conn)
+        elif str(sub_cmd).upper() == "COLUMNS":
+            self._select_sub_cmds.select_columns(sub_params, self._repo_conn, self._warehouse_conn)
+        else:
+            print("Invalid sub command provided! Please type HELP to get more information")
 
     def _process_browse_sub_cmds(self, sub_cmd, sub_params):
         """Process all sub commands available under main command BROWSE
