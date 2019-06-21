@@ -7,8 +7,6 @@ from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 import bipy.services.db.categories as categories
 from bipy.logging import logger
-from bipy.services.security.privileges import Privileges
-from bipy.services.decorators.security import authorize
 
 # ----------init logs---------------------------------
 LOGGER = logger.get_logger(__name__)

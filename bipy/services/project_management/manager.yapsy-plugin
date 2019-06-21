@@ -1,0 +1,8 @@
+[Core]
+Name = Project Manager
+Module = manager
+
+[Documentation]
+Author = Ajeet Singh
+Version = 1.0
+Description = This plugin helps in creating an analysis project

@@ -14,8 +14,6 @@ from bipy.services.db.repository.meta_objects import WarehouseView
 from bipy.services.db import categories
 from bipy.services.db.repository.types import DataTypes
 from bipy.logging import logger
-from bipy.services.security.privileges import Privileges
-from bipy.services.decorators.security import authorize
 
 
 LOGGER = logger.get_logger(__name__)
@@ -31,7 +29,7 @@ class MetaGenerator(categories.SQLite):
         DB Browsing, Meta generation and saving objects in repository loosely coupled.
         This class will be an singleton class.
 
-	>>> from bipy.services.db.categories import SQLite
+    >>> from bipy.services.db.categories import SQLite
 
     >>> from bipy.services.utils import Utility
 
@@ -46,7 +44,7 @@ class MetaGenerator(categories.SQLite):
     >>> connections[0].name
     'SQLite Connection Manager'
 
-	>>> conn = connections[0].plugin_object
+    >>> conn = connections[0].plugin_object
 
     >>> browsers = util.get_all_plugins(conf.PATH_BROWSER)
 
@@ -77,7 +75,7 @@ class MetaGenerator(categories.SQLite):
     >>> db
     Warehouse [Name=Warehouse 1, Type=SQLITE]
 
-	>>>
+    >>>
     """
 
     __instance = None
@@ -131,10 +129,9 @@ class MetaGenerator(categories.SQLite):
         for schema in schema_list:
             schema_obj = WarehouseSchema()
             schema_obj.name = schema
-            #schema_obj.database_id = database.id
             database.schemas.append(schema_obj)
             schemas.append(schema_obj)
-            LOGGER.debug("WarehouseSchema instance created for schema '%s' and added to list" \
+            LOGGER.debug("WarehouseSchema instance created for schema '%s' and added to list"
                          % (schema))
         LOGGER.debug("Schemas metadata creation completed and will be returned now")
         return schemas
@@ -154,28 +151,26 @@ class MetaGenerator(categories.SQLite):
             LOGGER.error("Browser parameter should not be a None value")
             raise ValueError("Browser parameter should not be a None value")
         tables = []
-        LOGGER.debug("Tables metadata (under schema '%s') creation is in progress" \
+        LOGGER.debug("Tables metadata (under schema '%s') creation is in progress"
                      % (schema.name))
         for table in table_list:
             table_obj = WarehouseTable()
             table_obj.name = table
-            LOGGER.debug("WarehouseTable instance created for table '%s' and added to list"\
-                          % (table))
+            LOGGER.debug("WarehouseTable instance created for table '%s' and added to list"
+                         % (table))
             columns = browser.get_columns(table)
             table_obj.number_of_columns = columns.__len__()
             for col in columns:
-                LOGGER.debug("Column '%s' has been created under table '%s'" \
+                LOGGER.debug("Column '%s' has been created under table '%s'"
                              % (col['name'], table))
                 if col['type'].__str__() in ['INTEGER', 'NUMERIC', 'FLOAT', 'DOUBLE', 'LONG']:
                     table_obj.contains_numeric_column = True
                     LOGGER.debug("Table '%s' marked as 'contains_numeric_column' as the column\
                                   '%s' has datatype as NUMBER" % (table, col['name']))
-            #table_obj.schema_id = schema.id
             schema.tables.append(table_obj)
             LOGGER.debug("Table '%s' has been created under schema '%s'" % (table, schema.name))
             tables.append(table_obj)
         return tables
-
 
     def generate_views_meta(self, view_list, schema, browser):
         """Generates an list of views as repository objects
@@ -254,7 +249,7 @@ class MetaGenerator(categories.SQLite):
             LOGGER.error("Table parameter should not be a None value")
             raise ValueError("Table parameter should not be a None value")
         columns = []
-        LOGGER.error("Preparing to create columns meta for table '%s'" \
+        LOGGER.error("Preparing to create columns meta for table '%s'"
                      % (table.name))
         for col in column_list:
             column = browser.get_column(col, table.name)
@@ -262,7 +257,7 @@ class MetaGenerator(categories.SQLite):
             col_obj.name = column['name']
             raw_column_type = column['type']
             LOGGER.debug("WarehouseColumn instance created for column '%s'\
-                          with datatype as '%s'" % \
+                          with datatype as '%s'" %
                          (col_obj.name, str(raw_column_type)))
             if column['primary_key'] == 1:
                 LOGGER.debug("Column '%s' is a primary key" % (col_obj.name))
@@ -276,15 +271,14 @@ class MetaGenerator(categories.SQLite):
             col_obj.column_type = DataTypes[col_type].value
             if col_type in ['FLOAT', 'DOUBLE', 'LONG', 'INTEGER', 'NUMERIC']:
                 col_obj.is_fact_candidate = True
-                LOGGER.debug("Column '%s' is a fact candidate" \
+                LOGGER.debug("Column '%s' is a fact candidate"
                              % (col_obj.name))
             else:
                 col_obj.is_dim_candidate = True
-                LOGGER.debug("Column '%s' is a dim candidate" \
+                LOGGER.debug("Column '%s' is a dim candidate"
                              % (col_obj.name))
-            #col_obj.table_id = table.id
             table.columns.append(col_obj)
-            LOGGER.debug("Column '%s' has been added to table '%s'" \
+            LOGGER.debug("Column '%s' has been added to table '%s'"
                          % (col_obj.name, table.name))
             columns.append(col_obj)
         return columns
