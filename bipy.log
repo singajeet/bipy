@@ -4535,3 +4535,9 @@
 2019-06-20 23:53:41,331 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'product_id' from list to repository                          database
 2019-06-20 23:53:41,331 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - Saving repository object instance 'product_qty' from list to repository                          database
 2019-06-20 23:53:41,612 - yapsy_loaded_plugin_SQLite_Repository_Manager_0 - DEBUG - All repository object instances have bee saved successfully
+2019-06-22 23:16:24,302 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Init Connection Manager
+2019-06-22 23:28:06,921 - config - DEBUG - unable to resolve 'PATHS.ROOT' in <Namespace('__builtins__,sys,os')>
+2019-06-22 23:28:06,922 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connecting to target database server using URL: sqlite:////home/armin/projects/python/bipy/bipy/data/test.db
+2019-06-22 23:28:07,297 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Connected to database successfully
+2019-06-22 23:28:46,541 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connection engine
+2019-06-22 23:29:16,757 - yapsy_loaded_plugin_SQLite_Connection_Manager_0 - DEBUG - Returning the connection engine
