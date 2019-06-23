@@ -14,7 +14,27 @@
   } );
   </script>
   <style>
-  .ui-menu { width: 150px; }
+  .ui-menu { width: 500px; }
+  #menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: scroll;
+  float: left;
+}
+
+/* Make jQuery UI Menu into a horizontal menubar with vertical dropdown */
+#menu > li { /* Menubar buttons */
+  display: inline-block;
+}
+#menu > li > ul > li { /* Menubar buttons inside dropdown */
+  display: inline-block;
+}
+  #menu > li > div > span.ui-icon-caret-1-e {
+  /* Caret on menubar */
+  background:url(https://www.drupal.org/files/issues/ui-icons-222222-256x240.png) no-repeat -64px -16px !important;
+}
   </style>
 </head>
 <body>
@@ -23,37 +43,37 @@
   <li>
     <div>File</div>
     <ul id="file">
+	<li>
+	<div><span class="ui-icon ui-icon-new"></span>New...</div>
+	</li>
+	<li>
+	<div><span class="ui-icon ui-icon-open"></span>Open</div>
+	</li>
       <li>
         <div><span class="ui-icon ui-icon-disk"></span>Save</div>
       </li>
       <li>
-        <div><span class="ui-icon ui-icon-zoomin"></span>Zoom In</div>
+        <div><span class="ui-icon ui-icon-close"></span>Close</div>
       </li>
       <li>
-        <div><span class="ui-icon ui-icon-zoomout"></span>Zoom Out</div>
+        <div><span class="ui-icon ui-icon-close-all"></span>Close All</div>
       </li>
       <li class="ui-state-disabled">
         <div><span class="ui-icon ui-icon-print"></span>Print...</div>
       </li>
       <li>
-        <div>Playback</div>
+        <div>Import</div>
         <ul>
           <li>
-            <div><span class="ui-icon ui-icon-seek-start"></span>Prev</div>
+            <div><span class="ui-icon ui-icon-import"></span>Import from zip file...</div>
           </li>
           <li>
-            <div><span class="ui-icon ui-icon-stop"></span>Stop</div>
-          </li>
-          <li>
-            <div><span class="ui-icon ui-icon-play"></span>Play</div>
-          </li>
-          <li>
-            <div><span class="ui-icon ui-icon-seek-end"></span>Next</div>
+            <div><span class="ui-icon ui-icon-stop"></span>Import from project...</div>
           </li>
         </ul>
       </li>
       <li>
-        <div>Learn more about this menu</div>
+	<div><span class="ui-icon ui-icon-exit"></span>Exit</div>
       </li>
     </ul>
   </li>
@@ -61,15 +81,47 @@
       <div>Edit</div>
       <ul id="edit">
         <li>
-            <div>Cut</div>
+	<div><span class="ui-icon ui-icon-cut"></span>Cut</div>
         </li>
         <li>
-            <div>Copy</div>
+	<div><span class="ui-icon ui-icon-copy"></span>Copy</div>
         </li>
         <li>
-            <div>Paste</div>
+	<div><span class="ui-icon ui-icon-paste"></span>Paste</div>
         </li>
       </ul>
+  </li>
+  <li>
+	<div>Analysis</div>
+	 <ul id="analysis">
+	  <li>
+		<div><span class="ui-icon ui-icon-run"></span>Run...</div>
+	  </li>
+	 </ul>
+  </li>
+  <li>
+	  <div>Warehouse</div>
+	   <ul id="warehouse">
+		<li>
+			<div><span class="ui-icon ui-icon-browser"></span>Browse...</div>
+		</li>
+	   </ul>
+  </li>
+  <li>
+	  <div>Repository</div>
+	  <ul id="repository">
+		<li>
+			<div><span class="ui-icon ui-icon-database"></span>Generate Meta...</div>
+		</li>
+	  </ul>
+  </li>
+  <li>
+	  <div>Help</div>
+	  <ul id="help">
+		  <li>
+			  <div><span class="ui-icon ui-icon-about"></span>About</div>
+		  </li>
+	  </ul>
   </li>
 </ul>
  
