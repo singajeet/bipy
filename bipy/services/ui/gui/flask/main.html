@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Menu - Icons</title>
+  <title>BIPY - BusinessIntelligence PY</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="jstree/dist/themes/default/style.min.css" />
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -11,127 +11,115 @@
   <script src="jstree/dist/jstree.min.js"></script>
   <script>
   $( function() {
-    $( "#menu" ).menu({
-    position: { my: "left top", at: "left bottom" }
-  });
+  //   $( "#menu" ).menu({
+  //   position: { my: "left top", at: "left bottom" }
+  // });
+  $("#tabs").tabs()
   //----------- JS Tree ----------------
    // 6 create an instance when the DOM is ready
-    $('#jstree').jstree();
+    $('#jstree').jstree({
+       "core" : {
+         // so that create works
+         "check_callback" : true
+       },
+      "plugins" : [ "contextmenu", "dnd" ]
+    });
     // 7 bind to events triggered on the tree
     $('#jstree').on("changed.jstree", function (e, data) {
       console.log(data.selected);
     });
+    $('#new_button').button()
   } );
   </script>
   <style>
-  .ui-menu { width: 500px; }
+  .ui-menu { width: 1262px; }
   
   
   </style>
 </head>
-<body>
-<div> 
-<ul id="menu" style="list-style-type: none; width: 100%; position: absolute">
-  <li style="float: left;">
-    <div>File</div>
-    <ul id="file" style="width: 150px">
-	<li>
-	<div><span class="ui-icon ui-icon-document"></span>New...</div>
-	</li>
-	<li>
-	<div><span class="ui-icon ui-icon-folder-open"></span>Open</div>
-	</li>
-      <li>
-        <div><span class="ui-icon ui-icon-disk"></span>Save</div>
-      </li>
-      <li>
-        <div><span class="ui-icon ui-icon-close"></span>Close</div>
-      </li>
-      <li>
-        <div><span class="ui-icon ui-icon-closethick"></span>Close All</div>
-      </li>
-      <li class="ui-state-disabled">
-        <div><span class="ui-icon ui-icon-print"></span>Print...</div>
-      </li>
-      <li>
-        <div>Import</div>
-        <ul>
-          <li>
-            <div><span class="ui-icon ui-icon-arrowreturn-1-n"></span>Import from zip file...</div>
-          </li>
-          <li>
-            <div><span class="ui-icon ui-icon-arrowreturn-1-n"></span>Import from project...</div>
-          </li>
-        </ul>
-      </li>
-      <li>
-	<div><span class="ui-icon ui-icon-circle-close"></span>Exit</div>
-      </li>
-    </ul>
-  </li>
-  <li style="float: left">
-      <div>Edit</div>
-      <ul id="edit" style="width: 150px">
-        <li>
-	<div><span class="ui-icon ui-icon-scissors"></span>Cut</div>
-        </li>
-        <li>
-	<div><span class="ui-icon ui-icon-copy"></span>Copy</div>
-        </li>
-        <li>
-	<div><span class="ui-icon ui-icon-clipboard"></span>Paste</div>
-        </li>
-      </ul>
-  </li>
-  <li style="float: left">
-	<div>Analysis</div>
-	 <ul id="analysis" style="width: 150px">
-	  <li>
-		<div><span class="ui-icon ui-icon-play"></span>Run...</div>
-	  </li>
-	 </ul>
-  </li>
-  <li style="float: left">
-	  <div>Warehouse</div>
-	   <ul id="warehouse" style="width:150px">
-		<li>
-			<div><span class="ui-icon  ui-icon-search"></span>Browse...</div>
-		</li>
-	   </ul>
-  </li>
-  <li style="float: left">
-	  <div>Repository</div>
-	  <ul id="repository" style="width:150px">
-		<li>
-			<div><span class="ui-icon ui-icon-script"></span>Generate Meta...</div>
-		</li>
-	  </ul>
-  </li>
-  <li style="float: left">
-	  <div>Help</div>
-	  <ul id="help" style="width:150px">
-		  <li>
-			  <div><span class="ui-icon ui-icon-help"></span>About</div>
-		  </li>
-	  </ul>
-  </li>
-</ul>
-</div> 
-<div style="border: solid 1px red; width=100%; height=10px">
-	<span>divider</span>
-</div>
+<body style="height: 100%">
+  <table style="height: 100%; width: 100%">
+    <tr height="20%">
+      <td colspan="2">
+        <div id="tabs" style="height: 150px">
+          <ul>
+            <li><a href="#file-tab">File</a></li>
+            <li><a href="#edit-tab">Edit</a></li>
+            <li><a href="#analysis-tab">Analysis</a></li>
+            <li><a href="#design-tab">Design</a></li>
+            <li><a href="#warehouse-tab">Warehouse</a></li>
+            <li><a href="#repository-tab">Repository</a></li>
+            <li><a href="#help-tab">Help</a></li>
+          </ul>
+          <div id="file-tab" style="padding-left:5px; padding-top:10px;padding-bottom:90px">
+              <button class="ui-button ui-widget ui-corner-all" id="new_button" style="height:90px">
+                <span class="ui-icon ui-icon-gear ui-widget-icon-block"></span>New...
+              </button>
+          </div>
+          <div id="edit-tab"></div>
+          <div id="analysis-tab"></div>
+          <div id="design-tab"></div>
+          <div id="warehouse-tab"></div>
+          <div id="repository-tab"></div>
+          <div id="help-tab"></div>
+        </div>      
+      </td>
+    </tr>
+    <tr>
+      <td width="30%" height="100%">        
+        <table width="100%" height="100%">
+          <tr height="5%">
+            <td>
+              <h3 class="ui-widget-header" style="margin: 0px">Project</h3>      
+            </td>
+          </tr>
+          <tr height="95%">
+            <td>
+              <div id="jstree" style="border: solid 1px blue;height: 100%">                          
+                <ul>
+                  <li>Project 1
+                    <ul>
+                      <li id="data_sources">Data Sets
+                        <ul>
+                          <li id="data_source_1">Data Set 1</li>
+                          <li id="data_source_2">Data Set 2</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Facts
+                        <ul>
+                          <li id="fact1">Fact 1</li>
+                          <li id="fact2">Fact 2</li>
+                          <li id="fact3">Fact 3</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Dimensions
+                        <ul>
+                          <li id="dim1">Dimension 1</li>
+                          <li id="dim2">Dimension 2</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Metrics
+                        <ul>
+                          <li>--No Metrics--</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Project 2</li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+        
+        
+      </td>
+      <td></td>
+    </tr>
+  </table>
 
-<div id="jstree" style="padding-top:30px;">
-    <!-- in this example the tree is populated from inline HTML -->
-    <ul>
-      <li>Root node 1
-        <ul>
-          <li id="child_node_1">Child node 1</li>
-          <li>Child node 2</li>
-        </ul>
-      </li>
-      <li>Root node 2</li>
-    </ul>
-  </div>
 </body>
 </html>
